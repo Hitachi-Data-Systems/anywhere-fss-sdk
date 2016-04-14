@@ -1,0 +1,5 @@
+com.hds.hcpaw.fss.api
+com.hds.hcpaw.fss.api.conn
+com.hds.hcpaw.fss.api.exception
+com.hds.hcpaw.fss.api.model
+com.hds.hcpaw.fss.api.version
