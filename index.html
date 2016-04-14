@@ -20,13 +20,18 @@
 
     <section class="main-content">
       <h1>
-<a id="anywhere-file-sync-and-share-sdk" class="anchor" href="#anywhere-file-sync-and-share-sdk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Anywhere File Sync and Share SDK</h1>
+<a id="hcp-anywhere-file-sync-and-share-sdk" class="anchor" href="#hcp-anywhere-file-sync-and-share-sdk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HCP Anywhere File Sync and Share SDK</h1>
 
-<p>HCP Anywhere FSS API is an API for connecting to HCP Anywhere, accessible via HTTP. This SDK provides convenient access to the HCP Anywhere FSS API. </p>
+<p>The HCP Anywhere File Sync and Share API is an API for connecting to HCP Anywhere. This SDK provides convenient access to the HCP Anywhere FSS API. </p>
 
-<p>In order to make calls to the sub APIs, you must first authenticate with HCP Anywhere to retrieve an AuthToken. An AuthToken can be acquired from the server by calling the authenticate method, which requires you to provide the username and password you use to access HCP Anywhere. The returned AuthToken can be saved for later use.</p>
+<p>In order to make calls to the sub APIs, you must acquire an AuthToken. An AuthToken can be acquired from the server by calling the authenticate method, which requires you to provide the username and password you use to access HCP Anywhere. The returned AuthToken can be saved for later use.</p>
 
 <p>Once an AuthToken is acquired, you can make calls to the sub APIs by supplying the token and any other required arguments of the sub APIs.</p>
+
+<h1>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h1>
+
+<p>Javadoc is available as a JAR via Maven Central or <a href="http://hitachi-data-systems.github.io/anywhere-fss-sdk/javadoc/">via github</a>.</p>
 
 <h2>
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
@@ -36,10 +41,17 @@ AuthToken authToken = api.authenticate("jdoe", "passwd");
 User me = api.getUserAPI().getInfo(authToken);
 </code></pre>
 
+<p>A complete example is provided in the repository under /example.</p>
+
 <h2>
-<a id="using-the-anywhere-file-sync-and-share-sdk" class="anchor" href="#using-the-anywhere-file-sync-and-share-sdk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the Anywhere File Sync and Share SDK</h2>
+<a id="using-the-hcp-anywhere-file-sync-and-share-sdk" class="anchor" href="#using-the-hcp-anywhere-file-sync-and-share-sdk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using the HCP Anywhere File Sync and Share SDK</h2>
 
 <p>The SDK is availble at Maven Central.</p>
+
+<h1>
+<a id="questions" class="anchor" href="#questions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Questions?</h1>
+
+<p>Reach out to Hitachi Data Systems at our community portal <a href="http://community.hds.com">http://community.hds.com</a>.</p>
 
 <h1>
 <a id="copyright-and-license" class="anchor" href="#copyright-and-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copyright and License</h1>
