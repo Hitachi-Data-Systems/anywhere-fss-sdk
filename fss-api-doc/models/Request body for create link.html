@@ -1,0 +1,47 @@
+
+  
+<ul class="parameter">
+  <li class="param-required-true">path (required) : String
+    <br/> The path to the file or folder for which to create a link.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">expirationDays (required) : Integer
+    <br/> The number of days until the link expires. The settings on the Management Console determine the default number of days until the link expires.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">publicLink (optional) : Boolean
+    <br/> Whether the link is publicly accessible (accessible without first providing login credentials). The settings on the Management Console determine the default accessibility of a link (public or internal).
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">accessCode (optional) : Boolean
+    <br/> Whether the server should create an access code for the link. If a link has an access code, the file or folder cannot be accessed without first providing the access code to HCP Anywhere.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">permissions (required) : String
+    <br/> The access permissions for the file or folder that the link points to.
+    
+      <dl class="param-enum">
+        <dt>Enum:
+          
+            <dd>READ - The user can view and download files.</dd>
+          
+            <dd>UPLOAD - If the link is to a folder, the user can upload files to the folder.</dd>
+          
+        </dt>
+      </dl>
+    
+  </li>
+</ul>
+  

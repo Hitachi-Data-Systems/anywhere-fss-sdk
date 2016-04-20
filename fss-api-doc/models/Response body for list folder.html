@@ -1,0 +1,84 @@
+
+  
+<ul class="parameter">
+  <li class="param-required-true">pageToken (required) : String
+    <br/> The token used to get the more content from the folder that was not listed in the previous response. To get more content from the folder, the page token is provided in the request body. A page token is only returned if there is additional content (files and folders) in the folder to list.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">entries (required) : Object
+    <br/> The contents of the folder to list. The number of entries returned can be at most the number of entries specified in the pageSize parameter.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">type (required) : String
+    <br/> The type of entry (file or folder).
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">parent (required) : String
+    <br/> The path to the entry.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">name (required) : String
+    <br/> The name of the entry.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">changeTime (required) : Long
+    <br/> The time (in milliseconds) the entry was last modified since epoch.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">size (optional) : Long
+    <br/> If the entry is a file, the size of the file in bytes.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">hash (optional) : String
+    <br/> If the entry is a file, the hex encoded sha-384 hash of the file.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">access (required) : String
+    <br/> The type of operations a user can perform on the entry.
+    
+      <dl class="param-enum">
+        <dt>Enum:
+          
+            <dd>NO ACCESS - The user cannot access the file or folder.</dd>
+          
+            <dd>VIEWER - The user can view and download the file or folder. However, if the entry is a folder, the user cannot upload files to the folder.</dd>
+          
+            <dd>COLLABORATOR - The user can download, upload, move, and delete files and folders.</dd>
+          
+        </dt>
+      </dl>
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">etag (required) : String
+    <br/> The etag of the entry. The etag identifies the version of the file or folder and is supplied as a parameter in some of the other File Sync and Share API endpoints.
+    
+  </li>
+</ul>
+  

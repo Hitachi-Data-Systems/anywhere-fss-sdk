@@ -1,0 +1,70 @@
+
+  
+<ul class="parameter">
+  <li class="param-required-true">type (required) : String
+    <br/> The type of entry (file or folder). For an update file response, this will always be file.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">parent (required) : String
+    <br/> The path to the file.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">name (required) : String
+    <br/> The name of the file.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">changeTime (required) : Long
+    <br/> The time (in milliseconds) the file was last modified since epoch.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">size (required) : Long
+    <br/> The size of the file in bytes.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">hash (required) : String
+    <br/> The hex encoded sha-384 hash of the file.
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">access (required) : String
+    <br/> The type of operations a user can perform on the entry.
+    
+      <dl class="param-enum">
+        <dt>Enum:
+          
+            <dd>NO ACCESS - The user cannot access the file.</dd>
+          
+            <dd>VIEWER - The user can view and download the file.</dd>
+          
+            <dd>COLLABORATOR - The user can view, download, move, and delete the file.</dd>
+          
+        </dt>
+      </dl>
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">etag (required) : String
+    <br/> The etag of the entry. The etag identifies the version of the file or folder and is supplied as a parameter in some of the other File Sync and Share API endpoints.
+    
+  </li>
+</ul>
+  
