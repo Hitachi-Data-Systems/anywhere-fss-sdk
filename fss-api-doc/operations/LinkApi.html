@@ -43,7 +43,7 @@
   </ul>
   <div class="request-body-content"></div>
   <h3 class="section">Example Request</h3>
-  Here is an example of a create link request in cURL. In this example, the link is created to a folder called "Team-Projects" and and the access token is "abc=". In an actual example, the access token is much longer. <br><br><p><pre> curl -kiX POST https://anywhere.example.com/fss/public/link/create -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "/Team-Projects", "expirationDays": 30, "publicLink": true, "accessCode": true, "permissions": [‘READ’]}'</pre></p>
+  Here is an example of a create link request in cURL. In this example, the link is created to a folder called "Team-Projects" and and the access token is "abc=". In an actual example, the access token is much longer. <br><br><p><pre> curl -kiX POST https://anywhere.example.com/fss/public/link/create -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "/Team-Projects", "expirationDays": 30, "public": true, "accessCode": true, "permissions": ['READ']}'</pre></p>
   
    <p class="x-hds-example-text-description"></p>
   <h3 class="section">Example Response</h3>

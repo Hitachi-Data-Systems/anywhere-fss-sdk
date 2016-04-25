@@ -152,11 +152,11 @@
           <div class="main-content">
            <h2>Getting Started</h2>
 	   <h3>Welcome to the HCP Anywhere File Sync and Share API Reference Guide</h3>
-            <p>This is your guide to using the HCP Anywhere File Sync and Share API. The File Sync and Share API is a set of HTTP endpoints which allows you to integrate custom and third-party applications with HCP Anywhere. </p> 
+            <p>This is your guide to using the HCP Anywhere File Sync and Share API. The File Sync and Share API is a set of HTTP endpoints that allows you to integrate custom and third-party applications with HCP Anywhere. </p> 
             <p>Each of the File Sync and Share endpoints can be used to perform a different operation in HCP Anywhere. These operations include uploading and updating files, creating folders and links, deleting files and folders, and retrieving metadata about files and folders.</p> 
             <p><b>Note:</b> In order to use the File Sync and Share API, the File Sync and Share API needs to be enabled in the Management Console by the HCP Anywhere administrator.</p>
 	   <h3>Authentication</h3>
-	    <p>To use the File Sync and Share API, you need to first authenticate with the system. This is done by submitting the username and password you use to access HCP Anywhere to the OAuth endpoint. If the request is successful, an access token is returned which holds your login credentials.</p>
+	    <p>To use the File Sync and Share API, you first need to authenticate with the system. This is done by submitting the username and password you use to access HCP Anywhere to the OAuth endpoint. If the request is successful, an access token is returned that holds your login credentials.</p>
             <p>For information on requesting an access token, see the <a href="index.html#!/AuthenticationApi#loginOauthPost">authentication endpoint</a>.</p>
             <p>Once you have an access token, you can use the other File Sync and Share API endpoints by supplying the access token and any other required parameters of the endpoint. The access token is supplied as a header in each request. In cURL, the authorization header looks like this:</p>
 	    <p style="margin-left: 20px">-H "Authorization: Bearer abc="</p>
@@ -169,15 +169,15 @@
 		   <li>Content type accepted as a response</li>
 	           <li>File Sync and Share API version used in the request</li>
 		</ul>
-           <h4>Content type header</h4>
+           <h4>Content Type Header</h4>
              <p>The content type header specifies the type of content that is used in a request. For most requests, this is application/json. However, there are a few exceptions to this. Basic authentication uses an application/x-www-form-urlencoded content header while both upload and update use an appliction/octet-stream content header.</p>
 <p>For the endpoints that use JSON, the content type header looks like this in cURL:</p>
            <p style="margin-left: 20px">-H "Content-Type: application/json"</p>
-           <h4>Accept header</h4>
+           <h4>Accept Header</h4>
              <p>The accept header specifies the type of content that is accepted as a response from a request. For most requests, this is application/json. However, the download file endpoint does not accept application/json in a response. Instead, the download file endpoint accepts application/octet-stream in a response.</p>
              <p>For the endpoints that accept JSON, the accept header looks like this in cURL:</p>
               <p style="margin-left: 20px">-H "Accept: application/json"</p>
-           <h4>Versioning header</h4>
+           <h4>Versioning Header</h4>
              <p>The version header specifies what version of the File Sync and Share API you’re using.</p>
 	     <p>The HCP Anywhere server is backwards compatible. That means that older versions of the File Sync and Share API can make requests to newer versions of the server. However, version 2.1.1 of HCP Anywhere is the first version of the File Sync and Share API and therefore the oldest version that can be used to make requests.</p>  
 	     <p>For version 2.1.1 of the File Sync and Share API, the version header looks like this in  cURL:</p>
@@ -198,7 +198,7 @@
            <h3>Additional Resources</h3>
                <p>In addition to this document, there is a Java software development kit (SDK) available in the Maven Central Repository. The SDK uses the File Sync and Share API to access HCP Anywhere. There is also a sample program that uses the SDK on GitHub. The sample program is just one example of how you might use File Sync and Share SDK. </p>
 	       <p><b>Maven</b>—To access the Maven Central Repository, see <a href="http://search.maven.org" target="_blank">http://search.maven.org</a>. For more information on using the Maven Central Repository, see <a href="http://central.sonatype.org/" target="_blank">http://central.sonatype.org/</a>.</p>
-	       <p><b>GitHub</b>—To access GitHub, see <a href="https://github.com/Hitachi-Data-Systems" target="_blank">https://github.com/Hitachi-Data-Systems</a>.</p>
+	       <p><b>GitHub</b>—To access GitHub, see <a href="http://hitachi-data-systems.github.io/anywhere-fss-sdk" target="_blank">http://hitachi-data-systems.github.io/anywhere-fss-sdk</a>.</p>
            <h3>Document Part Number</h3>
               <p>MK-HCPAW012-00</p>
               <br>

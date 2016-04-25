@@ -43,7 +43,7 @@
   </ul>
   <div class="request-body-content"></div>
   <h3 class="section">Example Request</h3>
-  Here is an example of a delete request in cURL. In this example, the file to delete is "Sales-Presentation.docx" and the access token is "abc=". In an actual request, the access token is much longer. <br><br><p><pre> curl -kiX POST https://anywhere.example.com/fss/public/path/delete -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "Work-Projects/Sales-Reports/Sales-Presentation.docx", "recursive": false, "etag": "ePM=="}'</pre></p>
+  Here is an example of a delete request in cURL. In this example, the file to delete is "Sales-Presentation.docx" and the access token is "abc=". In an actual request, the access token is much longer. <br><br><p><pre> curl -kiX POST https://anywhere.example.com/fss/public/path/delete -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "/Work-Projects/Sales-Reports/Sales-Presentation.docx", "recursive": false, "etag": "ePM=="}'</pre></p>
   
    <p class="x-hds-example-text-description"></p>
   <h3 class="section">Example Response</h3>
@@ -111,7 +111,7 @@
   </ul>
   <div class="request-body-content"></div>
   <h3 class="section">Example Request</h3>
-  Here is an example of a get file metadata request. In this example, the file to get metadata about is "Sales-Presentations.docx" and the access token is "abc=". In an actual request, the access token is much longer. <br><br><p><pre> curl -kiX POST https://anywhere.example.com/fss/public/path/info/get -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "/Work-Projects/Sales-Reports/Sales-Presentations.docx"}'</pre></p>
+  Here is an example of a get file metadata request. In this example, the file to get metadata about is "Sales-Presentations.docx" and the access token is "abc=". In an actual request, the access token is much longer. <br><br><p><pre> curl -kiX POST https://anywhere.example.com/fss/public/path/info/get -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "/Work-Projects/Sales-Reports/Sales-Presentation.docx"}'</pre></p>
   
    <p class="x-hds-example-text-description"></p>
   <h3 class="section">Example Response</h3>
