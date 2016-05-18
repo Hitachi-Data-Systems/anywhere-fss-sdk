@@ -1,5 +1,4 @@
 
-<h2>Request Body for Move</h2>
   
 <ul class="parameter">
   <li class="param-required-true">sourcePath (required) : String
@@ -17,14 +16,14 @@
   
 <ul class="parameter">
   <li class="param-required-true">etag (required) : String
-    <br/> The etag of the file or folder. The etag identifies the version of the file or folder. The etag of a file or folder is acquired in a getMetadata request
+    <br/> The etag of the file or folder. The etag identifies the version of the file or folder and is part of the file or folder metadata.
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-">createParents (optional) : Boolean
-    <br/> Whether the operation should create any missing folders in the given destinationPath. If false is entered for this parameter, then the operation fails if any folders in the given path do not exist.
+    <br/> Whether the operation should create any missing folders in the given destinationPath. If false is entered for this parameter, then the operation fails if any folders in the given destinationPath do not exist.
     
   </li>
 </ul>
