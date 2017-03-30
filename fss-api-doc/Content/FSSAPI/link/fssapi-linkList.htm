@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Link endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>List links</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-linkIntro.htm">Link endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">List links</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>List links</h1>
+                <p>This request lists all  the existing links for a user.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/link/list</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>The <span class="FileName">link/list</span> endpoint can contain request body parameters. However, you do not need to provide any parameters in the request body.&#160;If you are not passing in any parameters, you need to include an empty JSON  body in the request.</p>
+                <p><span class="GUI">Request body parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>pageSize (optional) : Integer</p>
+                <p class="NormalIndent-1">The maximum number of items to return in the request. The default is 100.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>filter (optional): String</p>
+                <p class="NormalIndent-1">The search criteria.  Files and folders that match or partially match the string are returned. The string needs be at least 3 characters long. If this parameter is not supplied, all the files are folders are returned.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sortingCriterion (optional): Enum</p>
+                <p class="NormalIndent-1">The way in which  the links are sorted in the response body (NAME, EXPIRATION, PERMISSIONS, PUBLIC, HAS_ACCESS_CODE). If you enter "NAME", the links are sorted alphabetically by name from A-Z. If you enter "PERMISSIONS", the links are also sorted by name but for each file the public links to the file are listed first, followed by the upload links, followed by the links with both permissions.  If you enter "PUBLIC", the public links are listed first, followed by the files with internal links. If you enter "HAS_ACCESS_CODE", the links with an access code are listed first, followed by the links without an access code.</p>
+                <p class="NormalIndent-1">The default is "NAME". The way in which the links are sorted also depends on the "sortingDirection" parameter.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sortingDirection (optional):&#160;Enum</p>
+                <p class="NormalIndent-1">The direction in which the links are sorted. To ascend through the list of links, enter "ASC". To descend through the list of links, enter "DESC". </p>
+                <p class="NormalIndent-1">For example, if "NAME" is supplied for the "sortingCriterion" parameter and "ASC"&#160;is supplied for this parameter, the links are returned in alphabetical order from A-Z. If "NAME" is supplied for the "ordering" parameter and "DESC"&#160;is supplied for this parameter, the items are sorted alphabetically from Z-A.</p>
+                <p class="NormalIndent-1">The default is "ASC".</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>pageToken (optional) : String</p>
+                <p class="NormalIndent-1">The page token returned in the body of the previous response. The page token identifies where in the list of  you are. </p>
+                <h2>Example Request</h2>
+                <p>This section contains an example of a <span class="FileName">link/list</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/list -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" - d '{"pageSize": 20}'</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response to a successful <span class="FileName">link/list</span> request. In an actual response, the pageToken is much longer.</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"pageToken": "MnRQq",<br />&#160;&#160;&#160;&#160;"links": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"url":"https://anywhere.example.com/u/jFv48p7b-PeeW_jy/Team_Project?l",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"path":"/Team Project",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"expirationDate":1467831494000,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"public":true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"permissions":["READ"],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"token":"jFv48p7b-PeeW_jy",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "FOLDER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"itemName": "Team&#160;Project"<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"url":"https://anywhere.example.com/a/JoCR6zQAke00gJHr/Sales Reports?l",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"path":"/Sales Reports",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"expirationDate":1470340385769,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"public":false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"permissions":["READ","Upload"],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"token":"JoCR6zQAke00gJHr",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "FOLDER"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"itemName": "Sales Reports"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a <span class="FileName">link/list</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>pageToken (required) : String</p>
+                <p class="NormalIndent-1">A page token is returned in every response and identifies where in the list of <MadCap:conditionalText data-mc-conditions="fssapiConditions.Link">links</MadCap:conditionalText> you are. You can supply this page token in the body of a request to return the next set of <MadCap:conditionalText data-mc-conditions="fssapiConditions.Link">links</MadCap:conditionalText>.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>links (required) : Object</p>
+                <p class="NormalIndent-1">A list of the user's active links:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>url (required) : String</p>
+                <p class="NormalIndent-2">The actual link.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>path (required) : String</p>
+                <p class="NormalIndent-2">The path to the file or folder that the link points to.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>expirationDate (required) : Long</p>
+                <p class="NormalIndent-2">The time at which the link expires. This time is returned in Unix format.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>public (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, the link is publicly accessible (accessible without first entering login credentials). If false, the link is internally accessible (accessible only by other HCP Anywhere users in the network).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accessCode (optional) : String</p>
+                <p class="NormalIndent-2">An additional code assigned to the  link by HCP Anywhere.&#160;The person who creates the link decides if the link  requires this additional code. </p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>permissions (required) : Enum</p>
+                <p class="NormalIndent-2">The type of operations  a person can perform on the file or folder when accessed through the link:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>READ — The user can view and download files.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>UPLOAD — If the link is to a folder, the user can upload files to the folder.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>token (required) : String</p>
+                <p class="NormalIndent-2">A unique string assigned to the link by HCP Anywhere. The link token is supplied as a parameter in some of the other link endpoints.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required) : Enum</p>
+                <p class="NormalIndent-2">The type of item (FILE or FOLDER).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>itemName (required) : String</p>
+                <p class="NormalIndent-2">The name of the file or folder that the links points to.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required) : Enum</p>
+                <p class="NormalIndent-2">The type of item (FILE, FOLDER, or BROKEN). If the item that the link points to has been moved, renamed, or deleted, the type  is BROKEN.</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

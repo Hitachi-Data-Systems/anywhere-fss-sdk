@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Shared folder endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Accept invitation</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-sharedIntro.htm">Shared folder endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Accept invitation</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Accept invitation</h1>
+                <p>This request accepts an invitation to join a shared or team folder.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/share/acceptInvitation</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>The <span class="FileName">share/acceptInvitation</span> endpoint requires only request body parameters. The  request body  must be in JSON format.</p>
+                <p><span class="GUI">Request body parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>fsId (required) : Long</p>
+                <p class="NormalIndent-1">A unique identifying number assigned to the invitation by HCP Anywhere. You can acquire the fsId of an invitation using a <a href="fssapi-sharedListInvitations.htm">share/listInvitations</a> request.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sync (required) : Boolean</p>
+                <p class="NormalIndent-1">If true, the shared folder and all its contents synchronize with the given user's <span class="userVariableswatchedDirectory">desktop application folder</span>.  If false, the shared folder does not appear in the given user's <span class="userVariableswatchedDirectory">desktop application folder</span> or use space on the user's computer.</p>
+                <p class="NormalIndent-1">For more information on synchronization, see the <a href="fssapi-sharedSync.htm">share/updateSettings</a> endpoint.</p>
+                <h2>Example Request</h2>
+                <p>This section contains an example of an <span class="FileName">share/acceptInvitation</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/acceptInvitation -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"fsId": 1729382256910270467, "sync": true}'</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response to a successful <span class="FileName">share/acceptInvitation</span> request.</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"path":"/Marketing Projects",<br />&#160;&#160;&#160;&#160;"type":"SHARED",<br />&#160;&#160;&#160;&#160;"label": "Shared Folder",<br />&#160;&#160;&#160;&#160;"sync": true,<br />&#160;&#160;&#160;&#160;"role": "MANAGER",<br />&#160;&#160;&#160;&#160;"size":13047,<br />&#160;&#160;&#160;&#160;"owner" {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"username": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName": "John&#160;Smith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userId": "8388608"<br />&#160;&#160;&#160;}<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a <span class="FileName">share/acceptInvitation</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required) : String</p>
+                <p class="NormalIndent-1">The path to the shared or team folder.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>type (required)</p>
+                <p class="NormalIndent-1">The type of shared folder (SHARED or TEAM).</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>label (required) : String</p>
+                <p class="NormalIndent-1">The label of the shared  or team folder.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sync (required): Boolean</p>
+                <p class="NormalIndent-1">If true, the collaborative folder and all its contents are being synchronization with the user's HCP Anywhere desktop application. If a folder is synchronized, the shared folder appears in their desktop application folder and is downloaded to your computer. If false, the collaborative folder does not appear in their desktop application folder or use space on their local hard drive.</p>
+                <p class="NormalIndent-1">For more information on synchronization, see the <a href="fssapi-sharedSync.htm">share/updateSettings</a> endpoint.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>role (required) : String</p>
+                <p class="NormalIndent-1">The role of the folder. The folder role is always "MANAGER". </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>size (required):&#160;String</p>
+                <p class="NormalIndent-1">The size of the folder in bytes.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>owner (conditional) : String</p>
+                <p class="NormalIndent-1">If the folder is a shared folder,  information about the Owner of the folder is returned. The person who creates the shared folder is the Owner of the folder. The Owner of the folder manages folder membership.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>username: String</p>
+                <p class="NormalIndent-2">The user's username. The username is acquired from the identity provider (SAML or AD) of the HCP Anywhere system.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>displayName: String</p>
+                <p class="NormalIndent-2">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of the HCP Anywhere system.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>userId: String</p>
+                <p class="NormalIndent-2">The unique identifying string assigned to the user by HCP Anywhere.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>teamFolder (conditional): Object</p>
+                <p class="NormalIndent-1">If the folder is a team folder, some additional team folder settings:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>contact: String</p>
+                <p class="NormalIndent-2">The contact of the team folder.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>quota: Long</p>
+                <p class="NormalIndent-2">The total storage capacity of the team folder. This is returned in bytes.</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

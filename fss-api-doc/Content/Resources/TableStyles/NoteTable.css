@@ -1,0 +1,827 @@
+/* MadCap Table Style: */
+
+/*<meta Version="7" />*/
+
+mcTableStyle
+{
+	name: NoteTable;
+	border-collapse: collapse;
+	border-left-style: none;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-right-style: none;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-top-style: none;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-bottom-style: none;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	max-id: 4;
+	cell-padding-top: 4px;
+	cell-padding-bottom: 4px;
+	margin-bottom: 13pt;
+	page-break-inside: avoid;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: NoteIcon;
+	id: 0;
+	vertical-align: top;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 4;
+	name: NoteText;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Header1;
+	id: 2;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Body1;
+	id: 1;
+	page-break-inside: avoid;
+}
+
+mcTableFootStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Footer1;
+	id: 3;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-NoteTable
+{
+	border-collapse: collapse;
+	border-left-style: none;
+	border-left-color: #000000;
+	border-left-width: 1px;
+	border-right-style: none;
+	border-right-color: #000000;
+	border-right-width: 1px;
+	border-top-style: none;
+	border-top-color: #000000;
+	border-top-width: 1px;
+	border-bottom-style: none;
+	border-bottom-color: #000000;
+	border-bottom-width: 1px;
+	margin-bottom: 13pt;
+	page-break-inside: avoid;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-NoteTable .Column-NoteIcon
+{
+	
+}
+
+.TableStyle-NoteTable .Column-NoteText
+{
+	
+}
+
+.TableStyle-NoteTable .Head-Header1
+{
+	
+}
+
+.TableStyle-NoteTable .HeadI-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .HeadI-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadE-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .HeadE-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadF-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .HeadF-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadH-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .HeadH-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadD-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .HeadD-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadC-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .HeadC-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadB-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .HeadB-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadA-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .HeadA-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadG-NoteIcon-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .HeadG-NoteIcon-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadI-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .HeadI-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadE-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .HeadE-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadF-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .HeadF-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadH-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .HeadH-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadD-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .HeadD-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadC-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .HeadC-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadB-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .HeadB-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadA-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .HeadA-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .HeadG-NoteText-Header1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .HeadG-NoteText-Header1 p
+{
+	
+}
+
+.TableStyle-NoteTable .Foot-Footer1
+{
+	
+}
+
+.TableStyle-NoteTable .FootI-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .FootI-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootE-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: none;
+}
+
+.TableStyle-NoteTable .FootE-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootF-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: none;
+}
+
+.TableStyle-NoteTable .FootF-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootH-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .FootH-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootD-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: none;
+}
+
+.TableStyle-NoteTable .FootD-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootC-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .FootC-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootB-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .FootB-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootA-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .FootA-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootG-NoteIcon-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .FootG-NoteIcon-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootI-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .FootI-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootE-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: none;
+}
+
+.TableStyle-NoteTable .FootE-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootF-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: none;
+}
+
+.TableStyle-NoteTable .FootF-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootH-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .FootH-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootD-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-top-style: none;
+}
+
+.TableStyle-NoteTable .FootD-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootC-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .FootC-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootB-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .FootB-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootA-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .FootA-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .FootG-NoteText-Footer1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .FootG-NoteText-Footer1 p
+{
+	
+}
+
+.TableStyle-NoteTable .Body-Body1
+{
+	page-break-inside: avoid;
+}
+
+.TableStyle-NoteTable .BodyI-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .BodyI-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyE-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .BodyE-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyF-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .BodyF-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyH-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .BodyH-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyD-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .BodyD-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyC-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .BodyC-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyB-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-right-style: none;
+}
+
+.TableStyle-NoteTable .BodyB-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyA-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .BodyA-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyG-NoteIcon-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.TableStyle-NoteTable .BodyG-NoteIcon-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyI-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .BodyI-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyE-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .BodyE-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyF-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .BodyF-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyH-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .BodyH-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyD-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoteTable .BodyD-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyC-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .BodyC-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyB-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .BodyB-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyA-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .BodyA-NoteText-Body1 p
+{
+	
+}
+
+.TableStyle-NoteTable .BodyG-NoteText-Body1
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.TableStyle-NoteTable .BodyG-NoteText-Body1 p
+{
+	
+}
+
+

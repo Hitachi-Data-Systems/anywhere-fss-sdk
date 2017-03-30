@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="User endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Get user information</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-userIntro.htm">User endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Get user information</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Get user information</h1>
+                <p>This request returns information about a user. This information includes, but is not limited to, the user's account settings, default link settings, and storage usage.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/user/get</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>There are no parameters for a <span class="FileName">user/get</span> request.</p>
+                <h2>Example Request</h2>
+                <p> In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/user/get -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response for a successful <span class="FileName">user/get</span> request.</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"username": "jsmith",<br />&#160;&#160;&#160;&#160;"displayName": "John Smith",<br />&#160;&#160;&#160;&#160;"userid": "8388608",<br />&#160;&#160;&#160;&#160;"quotaBytes": 48318382080,<br />&#160;&#160;&#160;&#160;"usageBytes": 6632340,<br />&#160;&#160;&#160;&#160;"hasAuthProviderEmail": true,<br />&#160;&#160;&#160;&#160;"email": "email@example.com",<br />&#160;&#160;&#160;&#160;"sharingEnabled":true,<br />&#160;&#160;&#160;&#160;"linkSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sharingEnabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"publicSharingEnabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uploadEnabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"publicUploadEnabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sharingDefaultPublic": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"defaultDaysToShare": 30,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"maxDaysToShare": 30,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"allowLinksWithoutExpiration": false<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"accountSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"emailQuota": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"emailDevices": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"emailAuth": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"emailShareFile": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"emailUpload": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"emailShareFolder": true<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"allowedClients": [IOS, ANDROID, WINDOWS_NSC, MACOSX_NSC,&#160;BROWSER, PUBLIC_API],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"language": "browser"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"teamFolderSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enabled": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"teamFolderQuotaThreshold": 1073741824<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"fileCount": 100,<br />&#160;&#160;&#160;&#160;"directoryCount": 23,<br />&#160;&#160;&#160;&#160;"conflicts": 1,<br />&#160;&#160;&#160;&#160;"registered": true,<br />&#160;&#160;&#160;&#160;"configSettings": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"maxFileUploadSize": 10737418240,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"iOSAppURL": "https://itunes.apple.com/app/id577511005",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"androidAppURL":"https://play.google.com/store/apps/details?id=com.hds.aw.android",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"windowsPhoneMobileAppLinkURL":"http://www.windowsphone.com/s?appid=6121c95f-e10b-4958-8bc9-d161c10add03",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enableiOSDownloadLink": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enableAndroidDownloadLink": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enableWindowsPhoneDownloadLink": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enableWindowsDownloadLink": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enableMacDownloadLink": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"enableOutlookDownloadLink": true<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;"inUpgrade": false<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a get <span class="FileName">user/get</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>username (required) : String</p>
+                <p class="NormalIndent-1">The user's username. The username is acquired from the authentication provider (SAML or AD) of that user.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>displayName (required) : String</p>
+                <p class="NormalIndent-1">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of that user.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>userid (required): String</p>
+                <p class="NormalIndent-1">A unique identifying string assigned to the user by HCP Anywhere.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>quotaBytes (required): Long</p>
+                <p class="NormalIndent-1">The total amount of HCP Anywhere storage space allotted to the user. This number is returned in bytes. The total amount of HCP Anywhere storage space allotted to a user  is determined by the profiles which they are in.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>usageBytes (required): Long</p>
+                <p class="NormalIndent-1">The amount of  storage space the user is currently using in HCP Anywhere. This number is returned in bytes.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>hasAuthProviderEmail (required): Boolean</p>
+                <p class="NormalIndent-1">If true, the user has an email address configured by their authentication provider (AD&#160;or SAML). </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>email (required): Long</p>
+                <p class="NormalIndent-1">The user's email address. If the user has email notifications configured, this email address receives those notifications. </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>linkSettings (required) : Object</p>
+                <p class="NormalIndent-1">The user's default link settings. The link settings are configured by the HCP Anywhere administrator. </p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>sharingEnabled (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, link sharing is enabled on the HCP Anywhere server.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>publicSharingEnabled (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, public link sharing is enabled on the HCP Anywhere server.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>uploadEnabled (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, upload link sharing is enabled on the HCP Anywhere server.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>publicUploadEnabled (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, public upload link sharing is enabled on the HCP Anywhere server.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>sharingDefaultPublic (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, public links are the default way for the user to share. If false, internal links are the default way for the user to share.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>defaultDaysToShare (required) : Integer</p>
+                <p class="NormalIndent-2">The default number of days a link created by the user remains active.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>maxDaysToShare (required) : Integer</p>
+                <p class="NormalIndent-2">The maximum number of days a link created by the user can remain active.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>accountSettings (required): String</p>
+                <p class="NormalIndent-1">The user's account settings.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>emailQuota (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the user is sent an email when their HCP Anywhere account is nearing storage capacity. </p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>emailDevices (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the user is sent an email when a device is registered to their account.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>emailAuth (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the user is sent an email when their is a login failure occurs for their account.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>emailShareFile (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the user is sent an email when one of their files or folders are accessed through a link.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>emailUpload (required): boolean</p>
+                <p class="NormalIndent-2">If true, the user is sent an email when someone uploads a file to a folder that was accessed through one of the user's links.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>emailShareFolder (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the user is sent an email when they are invited to a shared or team folder.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>allowedClients (required): Array</p>
+                <p class="NormalIndent-2">The type of HCP Anywhere applications that the person can use (install and register). If "PUBLIC_API" is returned, the user can use the File Sync and Share API. If "Windows_NSC" or "MacOSX_NSC" are returned, the user can use the 3.0 version of the desktop applications.&#160;If "Windows" or "Mac" are returned, the user can use desktop applications released before 3.0.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>language (required): Enum</p>
+                <p class="NormalIndent-2">The language settings for the user's HCP Anywhere account. The language settings are used to determine the language displayed in the HCP Anywhere User&#160;Portal</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>teamFolderSettings (required): Object</p>
+                <p class="NormalIndent-1">The  team folder settings for the user.&#160;A team folder is a type of collaborative folder that uses storage space set aside by the HCP Anywhere administrator instead of using a person's personal HCP Anywhere storage space.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enabled (required):&#160;Boolean</p>
+                <p class="NormalIndent-2">If true, the user can create team folders.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>teamFolderQuotaThreshold (required):&#160;Long</p>
+                <p class="NormalIndent-2">The maximum quota that the user can set the team folder to have. This number is returned in bytes.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>fileCount (required): Integar</p>
+                <p class="NormalIndent-1">The number of files in the user's HCP Anywhere account.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>directoryCount (required): Integar</p>
+                <p class="NormalIndent-1">The number of folders in the user's HCP Anywhere account.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>conflicts (required): Integar</p>
+                <p class="NormalIndent-1">The number of conflict files in the user's HCP Anywhere account. A conflict occurs when two users modify the content of a file at the same time. Typically, conflicts occur in collaborative folders since multiple people have access to the same files. </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sharingEnabled (required): Boolean</p>
+                <p class="NormalIndent-1">If true, the user can create internal links and share folders.&#160;If false, the user cannot create internal links or share folders.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>registered (required):&#160;Boolean</p>
+                <p class="NormalIndent-1">If true, the user is registered with HCP Anywhere.&#160;A user becomes registered when they first access the HCP Anywhere User Portal or one of the HCP Anywhere applications. If false, the user is not registered with&#160;HCP Anywhere.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>configSettings (required): Object</p>
+                <p class="NormalIndent-1">Some additional user settings which are configured on the HCP Anywhere server.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>maxFileUploadSize (required): Long</p>
+                <p class="NormalIndent-2">The maximum size that a file can be when uploaded to HCP Anywhere. Files over this size cannot be uploaded. This size is returned in bytes.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>iOSAppURL (required):&#160;String</p>
+                <p class="NormalIndent-2">The URL where the HCP Anywhere iOS&#160;mobile application is located. From this location, the app can be downloaded.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>androidAppURL (required):&#160;String</p>
+                <p class="NormalIndent-2">The URL where the HCP Anywhere android&#160;mobile application is located. From this location, the app can be downloaded.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>windowsPhoneAppURL (required):&#160;String</p>
+                <p class="NormalIndent-2">The URL where the HCP Anywhere Windows&#160;Pone mobile application is located. From this location, the app can be downloaded.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enableiOSDownloadLink (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the download link for the HCP Anywhere iOS&#160;mobile application is available on the HCP Anywhere website. This link is located in the <span class="GUI">App Downloads</span> window.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enableAndroidDownloadLink (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the download link for the HCP Anywhere android&#160;mobile application is available on the HCP Anywhere website. This link is located in the <span class="GUI">App Downloads</span> window.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enableWindowsPhoneDownloadLink (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the download link for the HCP Anywhere Windows&#160;Phone mobile application is available on the HCP Anywhere website. This link is located in the <span class="GUI">App Downloads</span> window.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enableWindowsDownloadLink (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the download link for the HCP Anywhere Windows&#160;desktop application  is available on the HCP Anywhere website. This link is located in the <span class="GUI">App Downloads</span> window.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enableMacDownloadLink (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the download link for the HCP Anywhere Mac&#160;desktop application  is available on the HCP Anywhere website. This link is located in the <span class="GUI">App Downloads</span> window.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>enableOutlookDownloadLink (required): Boolean</p>
+                <p class="NormalIndent-2">If true, the download link for the HCP Anywhere Outlook&#160;Add-in  is available on the HCP Anywhere website. This link is located in the <span class="GUI">App Downloads</span> window.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>inUpgrade (required): Boolean</p>
+                <p class="NormalIndent-1">If true, the HCP Anywhere system for the user is in the middle of an upgrade.</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

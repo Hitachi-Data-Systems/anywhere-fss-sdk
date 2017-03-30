@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Path endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Search</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-pathIntro.htm">Path endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Search</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Search</h1>
+                <p>This request searches for files and folders in HCP Anywhere.</p>
+                <p>When search a folder, the request also searches through the subdirectories of that folder.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/path/search</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>The <span class="FileName">path/search</span>  endpoint requires only request body parameters. The  request body  needs to be in JSON format.</p>
+                <p><span class="GUI">Request body parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required) : String</p>
+                <p class="NormalIndent-1">The path to the folder in which to search.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>substring (required) : String</p>
+                <p class="NormalIndent-1">The string which is searched for in the folder. Files and folders that match or partially match the string are returned. The string needs be at least 3 characters long. </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>includeDeleted (optional): Boolean</p>
+                <p class="NormalIndent-1">If true, both existing and deleted items  are returned. If false, only existing files and folders are returned.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>maxResults (optional) : Integer</p>
+                <p class="NormalIndent-1">The maximum number of results for the search to return.&#160;The default is 100.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>pointInTime (optional): Long</p>
+                <p class="NormalIndent-1">The  point in time at which to search. This needs to be supplied in Unix format in milliseconds.  For example, if pointInTime is set to "1480569120000" (12:00pm on December 1, 2016), the files and folders that match your search criteria are returned as they were at 12:00pm on December 1, 2016. To find the different times available to you, use a <a href="../user/fssapi-userListRestorePoints.htm">user/restorePoints/list</a> request. A restore point is a snapshot of the filesystem at a certain point in time.</p>
+                <p class="NormalIndent-1">If this parameter is not supplied, the request searches for files and folders as they are now. </p>
+                <h2>Example Request</h2>
+                <p>This section contains an example of a <span class="FileName">path/search</span> request in cURL. In this example, the folder to search within is "Work-Projects", the string to search for is "Sales", and the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/path/search -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" -d '{"path": "/Work-Projects", "substring": "Sales", "maxResults": "2"}'</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response for a successful <span class="FileName">path/search</span> request. In an actual response, the etags are much longer.</p>
+                <p class="APICode">{ <br />&#160;&#160;&#160;&#160;"entries": [<br />&#160;&#160;&#160;&#160;&#160;{ <br />&#160;&#160;&#160;&#160;&#160;&#160;"type": "FOLDER",<br />&#160;&#160;&#160;&#160;&#160;&#160;"parent": "/Work-Projects",<br />&#160;&#160;&#160;&#160;&#160;&#160;"name": "Sales-Reports",&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;"changeTime": 1456870069777,<br />&#160;&#160;&#160;&#160;&#160;&#160;"access": "COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;"etag": "ytn==",<br />&#160;&#160;&#160;&#160;&#160;&#160;"state": "CREATE"<br />&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;"type": "FOLDER",<br />&#160;&#160;&#160;&#160;&#160;&#160;"parent": "/Work-Projects/Sales-Reports",<br />&#160;&#160;&#160;&#160;&#160;&#160;"name": "Sales-Q1",<br />&#160;&#160;&#160;&#160;&#160;&#160;"changeTime": 1456870095676,<br />&#160;&#160;&#160;&#160;&#160;&#160;"access": "COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;"etag": "jnd==",<br />&#160;&#160;&#160;&#160;&#160;&#160;"state": "CREATE",<br />&#160;&#160;&#160;&#160;}<br />&#160;&#160;]<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a <span class="FileName"> path/search</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>entries (required) : Object</p>
+                <p class="NormalIndent-1">The contents (files and folders) within the folder being searched that match the given search criteria:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required) : Enum</p>
+                <p class="NormalIndent-2">The type of item (FILE or FOLDER).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>parent (required) : String</p>
+                <p class="NormalIndent-2">The path to the folder that contains the item.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
+                <p class="NormalIndent-2">The name of the file or folder.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>changeTime (required) : Long</p>
+                <p class="NormalIndent-2">The time at which the item was last accessed or modified. This time is returned in Unix format.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>size (conditional) : Long</p>
+                <p class="NormalIndent-2">If the item is a file, the size of the file in bytes.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>hash (conditional) : String</p>
+                <p class="NormalIndent-2">If the item is a file, the hex encoded sha-384 hash of the file.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>access (required) : String</p>
+                <p class="NormalIndent-2">The type of operations the given user can perform on the item:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>NO ACCESS  — The person cannot access the file or folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>VIEWER  — The person can view and download the file or folder. However, if the item is a folder, the person cannot upload files to the folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>COLLABORATOR  — The person can download, upload, move, and delete files and folders.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>etag (required) : String</p>
+                <p class="NormalIndent-2">The etag of the item. The etag identifies the version of the file or folder and is supplied as a parameter in some of the other File Sync and Share API endpoints.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>state (required) : String</p>
+                <p class="NormalIndent-2">The state of the item (CREATE or DELETE).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>sharing (conditional): Object</p>
+                <p class="NormalIndent-2">If the item is a shared folder, team folder, or <span class="userVariablesNASShare">mobilized data share</span> or within one of these, some additional folder information.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>canUserManage: Boolean</p>
+                <p class="NormalIndent-3">If true, the user is the Owner of the shared folder or the Manager of the team folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isMountPoint: Boolean</p>
+                <p class="NormalIndent-3">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and <span class="userVariablesNASShare">mobilized data share</span>s are mount points, although the items within them are not.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>label (conditional) : String</p>
+                <p class="NormalIndent-3">If the item is a shared or team folder, the label of the folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>type:Enum</p>
+                <p class="NormalIndent-3">The type of collaborative folder (SHARED, TEAM, or MOBILIZED).</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>teamFolder (conditional): Object</p>
+                <p class="NormalIndent-3">If the item is a team folder or within a team folder, some additional team folder information:</p>
+                <p class="ListBullet-4" data-mc-autonum="•"><span class="autonumber"><span class="Bullet4">•</span></span>contact: String</p>
+                <p class="NormalIndent-4">The contact of the team folder.</p>
+                <p class="ListBullet-4" data-mc-autonum="•"><span class="autonumber"><span class="Bullet4">•</span></span>quota: Long</p>
+                <p class="NormalIndent-4">The total storage capacity of the team folder. This is returned in bytes.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>backup (conditional): Object</p>
+                <p class="NormalIndent-2">If the item is a backup file or folder, some additional backup information:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isActive: Boolean</p>
+                <p class="NormalIndent-3">If true, the backup folder is connected to the HCP Anywhere desktop application.&#160;</p>
+                <p class="NormalIndent-3">The backup folder can be disconnected from the desktop application if the desktop application is deregistered or if the backup feature is disabled by the system administrator.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isMountPoint: Boolean</p>
+                <p class="NormalIndent-3">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. The backup parent folder, which is automatically created when backup is enabled and the given user's desktop application is installed, is always a mount point.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>operatingSystem: Enum</p>
+                <p class="NormalIndent-3">The type of device on which the desktop application is installed (WINDOWS,&#160;WINDOWS NSC, or&#160;MAC). For version 3.0 or later of the Windows desktop application, the operatingSystem is "WINDOWS&#160;NSC".</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

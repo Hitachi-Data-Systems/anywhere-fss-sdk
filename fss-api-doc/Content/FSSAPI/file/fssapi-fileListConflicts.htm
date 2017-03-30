@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="File endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>List file conflicts</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-fileIntro.htm">File endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">List file conflicts</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>List file conflicts</h1>
+                <p>This request lists the existing conflict files in a user's HCP Anywhere account.</p>
+                <p>HCP&#160;Anywhere creates a conflict file when two people edit a file at the same time. Typically, conflicts occur in collaborative folders since multiple people have access to the same files. </p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/file/conflict/list</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>There are no parameters for a <span class="FileName">file/conflict/list</span> request.</p>
+                <h2>Example Request</h2>
+                <p>In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/conflict/list -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response to a successful <span class="FileName">file/conflict/list</span> request.</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"entries": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "FILE",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"parent": "/",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "Q1 Overview ( jsmith's conflict 2016-10-19 ).docx",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"changeTime": 1469740333000,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"size": 13529,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"hash": "91a94",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"access": "COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"etag": "YtRQq==",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state": "CREATE"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a <span class="FileName">file/conflict/list</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>entries (required): Object</p>
+                <p class="NormalIndent-1">A list of conflict files in the user's HCP Anywhere:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required) : Enum</p>
+                <p class="NormalIndent-2">The type of item (FILE or FOLDER). For this response, the type is always FILE.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>parent (required) : String</p>
+                <p class="NormalIndent-2">The path to the folder that contains the file.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
+                <p class="NormalIndent-2">The name of the file.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>changeTime (required) : Long</p>
+                <p class="NormalIndent-2">The time at which the file was last accessed or modified. This time is returned in Unix format.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>size (required) : Long</p>
+                <p class="NormalIndent-1">The size of the file in bytes.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>hash (required) : String</p>
+                <p class="NormalIndent-2">The hex encoded sha-384 hash of the file.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>access (required) : String</p>
+                <p class="NormalIndent-2">The type of operations the given user can perform on thefile:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>NO ACCESS  — The person cannot access the file.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>VIEWER  — The person can view and download the file.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>COLLABORATOR  — The person can download, upload, move, and delete the file.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>etag (required) : String</p>
+                <p class="NormalIndent-2">The etag of the file. The etag identifies the version of the file and is supplied as a parameter in some of the other File Sync and Share API endpoints.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>state (required) : String</p>
+                <p class="NormalIndent-2">The state of the item (CREATE or DELETE).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>sharing (conditional): Object</p>
+                <p class="NormalIndent-2">If the file is within  a shared folder, team folder, or <span class="userVariablesNASShare">mobilized data share</span>, some additional folder information.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>canUserManage: Boolean</p>
+                <p class="NormalIndent-3">If true, the user is the Owner of the shared folder or the Manager of the team folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isMountPoint: Boolean</p>
+                <p class="NormalIndent-3">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and <span class="userVariablesNASShare">mobilized data share</span>s are always mount points although the items within them are not.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>label (conditional) : String</p>
+                <p class="NormalIndent-3">If the item is a shared or team folder, the label of the folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>type:Enum</p>
+                <p class="NormalIndent-3">The type of collaborative folder (SHARED, TEAM, or MOBILIZED).</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>teamFolder (conditional): Object</p>
+                <p class="NormalIndent-3">If the item is a team folder or within a team folder, some additional team folder information:</p>
+                <p class="ListBullet-4" data-mc-autonum="•"><span class="autonumber"><span class="Bullet4">•</span></span>contact: String</p>
+                <p class="NormalIndent-4">The contact of the team folder.</p>
+                <p class="ListBullet-4" data-mc-autonum="•"><span class="autonumber"><span class="Bullet4">•</span></span>quota: Long</p>
+                <p class="NormalIndent-4">The total storage capacity of the team folder. This is returned in bytes.</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Response codes</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/StandardTable.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbs">Response codes</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Response codes</h1>
+                <p>The table below describes the most common  codes  returned in response to a  File Sync and Share API request.</p>
+                <table style="width: 5.5in;mc-table-style: url('../../Resources/TableStyles/StandardTable.css');margin-right: auto;" class="TableStyle-StandardTable" cellspacing="0">
+                    <caption>  <![CDATA[ ]]></caption>
+                    <col class="TableStyle-StandardTable-Column-Column1" />
+                    <col class="TableStyle-StandardTable-Column-Column1" />
+                    <col class="TableStyle-StandardTable-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-StandardTable-Head-Header1">
+                            <th class="TableStyle-StandardTable-HeadE-Column1-Header1">HTTP&#160;Response Code</th>
+                            <th class="TableStyle-StandardTable-HeadE-Column1-Header1">Error string</th>
+                            <th class="TableStyle-StandardTable-HeadD-Column1-Header1">Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">200</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">OK</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">
+                                <p>The operation was successful. </p>
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">204</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">OK</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">The delete was successful.</td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">400</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Bad Request</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">The request contains an invalid input parameter. See the error message in the response body for more information.</td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">401</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Unauthorized</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">The request contains an invalid or expired authentication token. </td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">403</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Client Not Allowed</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">
+                                <p>The File Sync and Share API is not enabled for the user making the request. The&#160;File Sync and Share API can be enabled in the HCP Anywhere Management Console by an HCP Anywhere administrator.</p>
+                                <p>For more information, see <a href="fssapi-IntroEnablingFSSAPI.htm" class="MCXref xref">Enabling the File Sync and Share API</a>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">404</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Not Found</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">The item specified in the request was not found in HCP Anywhere. Typically, this means that the path supplied in the request does not exist. </td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">409</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Conflict</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">A conflict was encountered while trying to perform the request.</td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">413</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Request&#160;Entity Too Large</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">An HCP Anywhere limit was encountered while trying to perform the request. See the error message  in the response body for more information.</td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">500</td>
+                            <td class="TableStyle-StandardTable-BodyE-Column1-Body1">Internal Server Error</td>
+                            <td class="TableStyle-StandardTable-BodyD-Column1-Body1">An internal server error occurred.</td>
+                        </tr>
+                        <tr class="TableStyle-StandardTable-Body-Body1">
+                            <td class="TableStyle-StandardTable-BodyB-Column1-Body1">503</td>
+                            <td class="TableStyle-StandardTable-BodyB-Column1-Body1">Service Unavailable</td>
+                            <td class="TableStyle-StandardTable-BodyA-Column1-Body1">The server is temporarily unable to perform the request. Try the request again, gradually
+increasing the delay between each successive
+attempt.
+If this error persists, contact your HCP Anywhere
+administrator.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

@@ -1,215 +1,234 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="assets/css/anywhereStyles.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>
-  <script src="assets/js/main.js" type="text/javascript"></script>
-  <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-
-  <title>REST API Resources</title>
-</head>
-<body data-spy="scroll" data-target="#sidebar">
-<div class="header navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="top-bar navbar-header">
-      <a id="logo" class="navbar-brand" href="/"><span>HCP Anywhere File Sync and Share API</span><span class="light"> Reference Guide</span></a>
-    </div>
-  </div>
-</div>
-<div class="model-container"></div>
-<div class="content">
-  <div class="box">
-    <div id="sidebar" class="sidebar container-sidebar container-fluid">
-      <ul class="nav nav-pills nav-stacked" role="tablist">
-        <li class="section-box">
-          <a class="section-header" href="index.html">Overview</a>
-          <ul>
-            <li>
-              <a href="index.html">Getting started</a>
-            </li>
-          </ul>
-        </li>
-        
-          
-            <li class="section-box">
-              <a class="section-header" href="#!/PathApi">Path</a>
-              <ul>
-                
-                  
-                    <li>
-                      <a href="#!/PathApi#pathDeletePost">Delete</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/PathApi#pathInfoGetPost">Get file/folder metadata</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/PathApi#pathMovePost">Move/rename</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/PathApi#pathSearchPost">Search</a>
-                    </li>
-                  
-                
-              </ul>
-            </li>
-          
-            <li class="section-box">
-              <a class="section-header" href="#!/UserApi">User</a>
-              <ul>
-                
-                  
-                    <li>
-                      <a href="#!/UserApi#userGetPost">Get user metadata</a>
-                    </li>
-                  
-                
-              </ul>
-            </li>
-          
-            <li class="section-box">
-              <a class="section-header" href="#!/AuthenticationApi">Authentication</a>
-              <ul>
-                
-                  
-                    <li>
-                      <a href="#!/AuthenticationApi#loginOauthPost">Authenticate</a>
-                    </li>
-                  
-                
-              </ul>
-            </li>
-          
-            <li class="section-box">
-              <a class="section-header" href="#!/FolderApi">Folder</a>
-              <ul>
-                
-                  
-                    <li>
-                      <a href="#!/FolderApi#folderCreatePost">Create folder</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/FolderApi#folderEntriesListPost">List folder contents</a>
-                    </li>
-                  
-                
-              </ul>
-            </li>
-          
-            <li class="section-box">
-              <a class="section-header" href="#!/FileApi">File</a>
-              <ul>
-                
-                  
-                    <li>
-                      <a href="#!/FileApi#fileStreamCreatePost">Upload new file</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/FileApi#fileStreamReadGet">Download file (GET)</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/FileApi#fileStreamReadPost">Download file (POST)</a>
-                    </li>
-                  
-                    <li>
-                      <a href="#!/FileApi#fileStreamUpdatePost">Update file</a>
-                    </li>
-                  
-                
-              </ul>
-            </li>
-          
-            <li class="section-box">
-              <a class="section-header" href="#!/LinkApi">Link</a>
-              <ul>
-                
-                  
-                    <li>
-                      <a href="#!/LinkApi#linkCreatePost">Create link</a>
-                    </li>
-                  
-                
-              </ul>
-            </li>
-          
-        
-      </ul>
-    </div>
-    <div class="container-fluid container-main">
-      <div class="row">
-        <div class="non-sidebar col-xs-12">
-          <div class="main-content">
-           <h2>Getting Started</h2>
-	   <h3>Welcome to the HCP Anywhere File Sync and Share API Reference Guide</h3>
-            <p>This is your guide to using the HCP Anywhere File Sync and Share API. The File Sync and Share API is a set of HTTP endpoints that allows you to integrate custom and third-party applications with HCP Anywhere. </p> 
-            <p>Each of the File Sync and Share endpoints can be used to perform a different operation in HCP Anywhere. These operations include uploading and updating files, creating folders and links, deleting files and folders, and retrieving metadata about files and folders.</p> 
-            <p><b>Note:</b> In order to use the File Sync and Share API, the File Sync and Share API needs to be enabled in the Management Console by the HCP Anywhere administrator.</p>
-	   <h3>Authentication</h3>
-	    <p>To use the File Sync and Share API, you first need to authenticate with the system. This is done by submitting the username and password you use to access HCP Anywhere to the OAuth endpoint. If the request is successful, an access token is returned that holds your login credentials.</p>
-            <p>For information on requesting an access token, see the <a href="index.html#!/AuthenticationApi#loginOauthPost">authentication endpoint</a>.</p>
-            <p>Once you have an access token, you can use the other File Sync and Share API endpoints by supplying the access token and any other required parameters of the endpoint. The access token is supplied as a header in each request. In cURL, the authorization header looks like this:</p>
-	    <p style="margin-left: 20px">-H "Authorization: Bearer abc="</p>
-	    <p>In an actual request, the access token is much longer than the “abc=” access token provided here.</p>
-           <h3>Request  Format</h3>
-	    <p>In general, the File Sync and Share API uses HTTP POST requests with JSON arguments and JSON responses. In each request, there are four header parameters that need to be supplied: </p>
-		<ul>
-		   <li>Access token</li>
-		   <li>Content type used in the request</li>
-		   <li>Content type accepted as a response</li>
-	           <li>File Sync and Share API version used in the request</li>
-		</ul>
-           <h4>Content Type Header</h4>
-             <p>The content type header specifies the type of content that is used in a request. For most requests, this is application/json. However, there are a few exceptions to this. Basic authentication uses an application/x-www-form-urlencoded content header while both upload and update use an appliction/octet-stream content header.</p>
-<p>For the endpoints that use JSON, the content type header looks like this in cURL:</p>
-           <p style="margin-left: 20px">-H "Content-Type: application/json"</p>
-           <h4>Accept Header</h4>
-             <p>The accept header specifies the type of content that is accepted as a response from a request. For most requests, this is application/json. However, the download file endpoint does not accept application/json in a response. Instead, the download file endpoint accepts application/octet-stream in a response.</p>
-             <p>For the endpoints that accept JSON, the accept header looks like this in cURL:</p>
-              <p style="margin-left: 20px">-H "Accept: application/json"</p>
-           <h4>Versioning Header</h4>
-             <p>The version header specifies what version of the File Sync and Share API you’re using.</p>
-	     <p>The HCP Anywhere server is backwards compatible. That means that older versions of the File Sync and Share API can make requests to newer versions of the server. However, version 2.1.1 of HCP Anywhere is the first version of the File Sync and Share API and therefore the oldest version that can be used to make requests.</p>  
-	     <p>For version 2.1.1 of the File Sync and Share API, the version header looks like this in  cURL:</p>
-              <p style="margin-left: 20px">-H "X-HCPAW-FSS-API-VERSION: 2.1.1"</p>
-           <h3>URL Request Structure</h3>
-             <p>For each File Sync and Share API endpoint, the URL has the same structure. The URL begins like this:</p>
-              <p style="margin-left: 20px">https://anywhere.example.com/fss/public</p>
-             <p>This is followed by the URI of whichever endpoint you are using. For example, the URL for an upload new file request looks like this in cURL: </p>
-             <p style="margin-left: 20px">https://anywhere.example.com/fss/public/file/stream/create</p>
-             <p>In an actual request, “anywhere.example.com” should be replaced with the server that the request is being made to.</p>
-           <h3>Response Headers</h3>
-             <p>For every successful request, this information is returned in the response header:</p>
-               <ul>
-                  <li>X-HCPAW-SUPPORTED-FSS-API-VERSIONS: The File Sync and Share API versions supported by the server</li>
-                  <li>X-HCPAW-FSS-API-VERSION: The File Sync and Share API version used in the request</li>
-                  <li> X-HCPAW-System-Id: The system id, which will always be the global unique identifier of the system</li>
-               </ul>
-           <h3>Additional Resources</h3>
-               <p>In addition to this document, there is a Java software development kit (SDK) available in the Maven Central Repository. The SDK uses the File Sync and Share API to access HCP Anywhere. There is also a sample program that uses the SDK on GitHub. The sample program is just one example of how you might use File Sync and Share SDK. </p>
-	       <p><b>Maven</b>—To access the Maven Central Repository, see <a href="http://search.maven.org" target="_blank">http://search.maven.org</a>. For more information on using the Maven Central Repository, see <a href="http://central.sonatype.org/" target="_blank">http://central.sonatype.org/</a>.</p>
-	       <p><b>GitHub</b>—To access GitHub, see <a href="http://hitachi-data-systems.github.io/anywhere-fss-sdk" target="_blank">http://hitachi-data-systems.github.io/anywhere-fss-sdk</a>.</p>
-           <h3>Document Part Number</h3>
-              <p>MK-HCPAW012-00</p>
-              <br>
-              <p><a href="trademarks.html">Trademarks</a> and <a href="Legal-Disclaimer.html">Legal Disclaimer</a>
-              <p>© 2016 Hitachi Data Systems Corporation. All rights reserved.</p>
-          </div>
+<html class="defaultSkin left-layout _Skins_UserHTML5_new" data-mc-runtime-file-type="Default;TriPane">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title></title>
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/TextEffects.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/Styles.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/normalize.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/foundation_custom.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/offcanvas.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/Web.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/Tablet.css" />
+        <link rel="Stylesheet" href="Skins/Default/Stylesheets/Mobile.css" />
+        <script type="text/javascript" src="Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script type="text/javascript" src="Resources/Scripts/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="Resources/Scripts/foundation.min.js">
+        </script>
+        <script type="text/javascript" src="Resources/Scripts/plugins.min.js">
+        </script>
+        <script type="text/javascript" src="Resources/Scripts/require.min.js">
+        </script>
+        <script type="text/javascript" src="Resources/Scripts/require.config.js">
+        </script>
+        <script type="text/javascript" src="Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="off-canvas hide-extras">
+        <div id="DEBUG_Log">
+            <div class="MCDebugLogHeader">
+            Log Console</div>
+            <div class="MCDebugLogBody">
+            </div>
+            <div class="MCDebugLogFooter">
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-</body>
+        <div id="header"><a class="homeLink" href="welcomeUser.htm"><h1 class="logo"><img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="Logo" /></h1></a>
+            <div class="search-bar search-bar-container needs-pie">
+                <input id="search-field" class="search-field needs-pie" type="text" placeholder="Search" />
+                <div class="search-filter-wrapper">
+                    <div class="search-filter"><span>All Files</span>
+                        <div class="search-filter-content">
+                            <ul>
+                                <li>All Files</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-submit-wrapper" dir="ltr">
+                    <div class="search-submit" title="Search">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="navigationResizeBar" class="show-for-xlarge-up columns navbar-offset">
+            <div id="show-hide-navigation" class="needs-pie" dir="ltr">
+            </div>
+        </div>
+        <div id="body" class="row collapse">
+            <div id="navigation" class="small-2 columns" role="complementary">
+                <form id="search-sidebar" class="search-bar-container needs-pie">
+                    <input id="search-field-sidebar" type="search" placeholder="Search" />
+                    <input id="responsive-search-index" type="search" class="tabs-panel-search" placeholder="Search Index" />
+                    <input id="responsive-search-glossary" type="search" class="tabs-panel-search" placeholder="Search Glossary" />
+                </form>
+                <div id="home" class="image-then-text tab-icon"><span id="home-icon" class="tabs-nav-icon"></span><span id="home-text" class="tabs-nav-text">Home</span>
+                </div>
+                <div class="tabs">
+                    <div class="tab">
+                        <ul class="tabs-nav clearfix image-then-text tab-icon">
+                            <li id="TocTab" class="needs-pie tabs-nav-active">
+                                <div><span class="tabs-nav-icon active" title="Contents"></span><span class="tabs-nav-text">Contents</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tabs-panel tabs-panel-active">
+                            <div id="toc" class="tabs-panel-content needs-pie">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <ul class="tabs-nav clearfix image-then-text tab-icon">
+                            <li id="IndexTab" class="needs-pie tabs-nav-inactive" style="display: none">
+                                <div><span class="tabs-nav-icon active" title="Index"></span><span class="tabs-nav-text">Index</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tabs-panel">
+                            <input type="text" id="search-index" class="tabs-panel-search" placeholder="Search Index" />
+                            <div id="index" class="tabs-panel-content searchable needs-pie popup-container" data-see-prefix="See" data-see-also-prefix="See Also">
+                                <div class="index-wrapper">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <ul class="tabs-nav clearfix image-then-text tab-icon">
+                            <li id="GlossaryTab" class="needs-pie tabs-nav-inactive" style="display: none">
+                                <div><span class="tabs-nav-icon active" title="Glossary"></span><span class="tabs-nav-text">Glossary</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tabs-panel">
+                            <input type="text" id="search-glossary" class="tabs-panel-search" placeholder="Search Glossary" />
+                            <div id="glossary" class="tabs-panel-content searchable needs-pie popup-container">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <ul class="tabs-nav clearfix image-then-text tab-icon">
+                            <li id="BrowseSequencesTab" class="needs-pie tabs-nav-inactive" style="display: none">
+                                <div><span class="tabs-nav-icon active" title="Browse"></span><span class="tabs-nav-text">Browse</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tabs-panel">
+                            <div id="browseSequences" class="tabs-panel-content needs-pie">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <ul class="tabs-nav clearfix image-then-text tab-icon">
+                            <li id="CommunityTab" class="needs-pie pulse-required tabs-nav-inactive" style="display: none">
+                                <div><span class="tabs-nav-icon active" title="Community"></span><span class="tabs-nav-text">Community</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tabs-panel">
+                            <div id="community" class="tabs-panel-content needs-pie popup-container pulse-required"><iframe id="community-frame-html5" name="community-frame-html5" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <ul class="tabs-nav clearfix image-then-text tab-icon">
+                            <li id="SearchTab" class="needs-pie tabs-nav-inactive">
+                                <div><span class="tabs-nav-icon active" title="Search Filters"></span><span class="tabs-nav-text">Search Filters</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tabs-panel">
+                            <div id="search" class="tabs-panel-content needs-pie">
+                                <ul class="tree">
+                                    <li class="SearchFilterEntry tree-node tree-node-leaf">
+                                        <div class="SearchFilter"><span class="label">All Files</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contentBody" class="small-10 expand-for-small-10 columns non-collapsable needs-pie" role="main">
+                <div id="responsiveHeader" class="needs-pie"><a class="homeLink" href="welcomeUser.htm"><h1 class="logo"><img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="Logo" /></h1></a>
+                    <div id="slideRight" class="toggle-topbar menu-icon"><a id="sidebarButton" href="#"><span></span></a>
+                    </div>
+                </div>
+                <div class="buttons toolbar-buttons popup-container">
+                    <div class="button-group-container-left">
+                        <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                            <img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                        </button>
+                        <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                            <img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="expand all" />
+                        </button>
+                        <button class="button needs-pie next-topic-button" title="Navigate next">
+                            <img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                        </button>
+                    </div>
+                    <div class="button-group-container-right">
+                        <button class="button needs-pie print-button" title="Print">
+                            <img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                        </button>
+                        <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                            <img src="Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                        </button>
+                    </div>
+                </div>
+                <div id="contentBodyInner">
+                    <!-- frameBorder="0" is for IE 8 and below --><iframe id="topic" class="content" name="topic" frameBorder="0"></iframe><iframe id="pulse" class="content" name="pulse" frameBorder="0"></iframe>
+                    <div id="searchPane">
+                        <h1 id="results-heading">Your search for <span class="query"></span> returned <span class="total-results"></span> result(s).</h1>
+                        <div id="pagination"><a class="previousPage">Previous</a><a class="nextPage">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-dialog needs-pie">
+            <div class="login-dialog-header needs-pie">
+            Create Profile
+        </div>
+            <div class="login-dialog-content needs-pie">
+                <div class="profile-item-wrapper clearfix" data-mc-style="Feedback User Profile Item Label">
+                    <div class="label-wrapper">
+                        <label>Username *</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="needs-pie" type="text" name="Username" data-required="true" />
+                    </div>
+                </div>
+                <div class="profile-item-wrapper clearfix">
+                    <div class="label-wrapper">
+                        <label>Email Address *</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="needs-pie" type="text" name="EmailAddress" data-required="true" />
+                    </div>
+                </div>
+                <div class="profile-item-wrapper email-notifications-wrapper">
+                    <div class="label-wrapper">
+                    Email Notifications
+                </div>
+                    <div class="email-notifications-group needs-pie">
+                    I want to receive an email when...
+                    <div><label><input type="checkbox" name="CommentReplyNotification" />a reply is left to one of my comments</label></div><div><label><input type="checkbox" name="CommentSameTopicNotification" />a comment is left on a topic that I commented on</label></div><div><label><input type="checkbox" name="CommentSameHelpSystemNotification" />a comment is left on any topic in the Help system</label></div></div>
+                </div>
+                <div class="login-dialog-buttons">
+                    <button class="submit-button needs-pie" type="submit">Submit</button>
+                    <button class="cancel-button needs-pie">Cancel</button>
+                </div>
+                <div class="status-message-box"><span class="message verification-email-sent-message">An email has been sent to verify your new profile.</span><span class="message required-fields-missing-message">Please fill out all required fields before submitting your information.</span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="Resources/Scripts/jquery.offcanvas.js">
+        </script>
+        <script>
+        $(document).foundation();
+    </script>
+    </body>
 </html>
-

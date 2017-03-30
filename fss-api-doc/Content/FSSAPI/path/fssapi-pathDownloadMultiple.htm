@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Path endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Download multiple items</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-pathIntro.htm">Path endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Download multiple files</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Download multiple items</h1>
+                <p>This request downloads multiple files and folders in HCP Anywhere. This endpoint can be used to:</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Download files and folders as they currently are.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Download files and folders as they were at a previous point in time. </p>
+                <p>With this endpoint, you can download a single item or multiple items. The downloaded items are returned in a .zip file.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/path/zip</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>The <span class="FileName">path/zip</span> endpoint supports supplying the <span class="FileName">path/zip</span> parameters in a request body or as query parameters. When using a request body, the  request body  must be in JSON format.</p>
+                <p><span class="GUI">Request body or query parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>pathList (required): Array</p>
+                <p class="NormalIndent-1">The path to each item you want to download. </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>pointInTime (optional): Long</p>
+                <p class="NormalIndent-1">The  point in time at which to download the items. This needs to be supplied in Unix format in milliseconds.  For example, if pointInTime is set to "1480569120000" (12:00pm on December 1, 2016), the request returns the files and folders as they were at 12:00pm on December 1, 2016. To find the different times available to you, use a <a href="../user/fssapi-userListRestorePoints.htm">user/restorePoints/list</a> request. A restore point is a snapshot of the filesystem at a certain point in time.</p>
+                <p class="NormalIndent-1">If this parameter is not included in the request, the files and folders in the pathList are downloaded as they are currently. </p>
+                <h2>Example Request</h2>
+                <p>This section contains an example of a JSON and form <span class="FileName">path/zip</span> request in cURL. In these two examples, the authentication token is "abc=". In an actual request, the authentication token is much longer. </p>
+                <p>The "-o" option is supplied in each request. The "-o" option allows you to save the file to a local path on your computer instead of having the file streamed to your terminal in bytes. If you are using the "-o" option, do not include an "i" in the request (such as "kiX"). This corrupts the file.</p>
+                <p><span class="GUI">JSON based request:</span>
+                </p>
+                <p class="APICode">curl -kX POST https://anywhere.example.com/fss/public/path/zip -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/zip" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"pathList": ["/Q1-Overview.docx", "/Q2-Overview.docx"]}' -o "C:\JSMITH\Desktop\Overviews.zip"</p>
+                <p>
+                    <br /><span class="GUI">Form based request:</span>
+                </p>
+                <p class="APICode">curl -kX POST "https://anywhere.example.com/fss/public/path/zip?pathList=/Q1-Overview.docx&amp;pathList=Q2-Overview.docx" -H "Authorization: Bearer abc=" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: application/zip" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -o "C:\JSMITH\Desktop\Overviews.zip"</p>
+                <h2>Example Response<br /></h2>
+                <p>In response to a successful <span class="FileName">path/zip</span> response, no information is returned in the response body. Instead, the .zip file is downloaded to the location that you specified in the "-o" option of the request.</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Link endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Create link</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-linkIntro.htm">Link endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Create link</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Create link</h1>
+                <p>This request creates a link to a file or folder.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/link/create</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>The <span class="FileName">link/create</span> endpoint requires only request body parameters. The  request body  must be in JSON format.</p>
+                <p><span class="GUI">Request body parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required) : String</p>
+                <p class="NormalIndent-1">The path to the file or folder where the link will point.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>accessCode (required) : Boolean</p>
+                <p class="NormalIndent-1">If true, an additional  access code is created for the link. In this case, to access the link, a person must have both the link and the access code.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>permissions (required) : String</p>
+                <p class="NormalIndent-1">The type of operations a person can perform on the  file or folder when accessed through the link:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>READ — The user can view and download files.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>UPLOAD — If the link points to a folder, the user can upload files to the folder.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>expirationDays (optional) : Integer</p>
+                <p class="NormalIndent-1">The number of days until the link expires. The settings on the Management Console determine the default number of days until the link expires.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>public (optional) : Boolean</p>
+                <p class="NormalIndent-1">If true, the link is publicly accessible (accessible without first providing login credentials). If false, the link is internally accessible (accessible only by other HCP Anywhere users in the network). The settings on the Management Console determine the default accessibility of a link (public or internal).</p>
+                <h2>Example Request</h2>
+                <p>This section contains an example of a <span class="FileName">link/create</span> request in cURL. In this example, the link points to a folder called "Team-Projects" and  the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/create -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Team-Projects", "expirationDays": 30, "public": true, "accessCode": true, "permissions": ['READ']}'</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response to a successful <span class="FileName">link/create</span> request. In an actual response, the etags are much longer.</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"url": "https://anywhere.example.com/u/79KZnP1SmZT90pmc/Work-Projects?l",<br />&#160;&#160;&#160;&#160;"path": "/Work Projects",<br />&#160;&#160;&#160;&#160;"expirationDate": 1459440864685,<br />&#160;&#160;&#160;&#160;"public": true,<br />&#160;&#160;&#160;&#160;"accessCode": "8h;nDy0z",<br />&#160;&#160;&#160;&#160;"permission": ["READ"],<br />&#160;&#160;&#160;&#160;&#160;"token": "79KZnP1SmZT90pmc",<br />&#160;&#160;&#160;&#160;&#160;"type":"FOLDER",<br />&#160;&#160;&#160;&#160;&#160;"itemName": "Work Projects"<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a <span class="FileName">link/create</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>url (required) : String</p>
+                <p class="NormalIndent-1">The actual link.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required) : String</p>
+                <p class="NormalIndent-1">The path to the file or folder that the link points to.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>expirationDate (required) : Long</p>
+                <p class="NormalIndent-1">The time at which the link expires. This time is returned in Unix format.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>public (required) : Boolean</p>
+                <p class="NormalIndent-1">If true, the link is publicly accessible (accessible without first entering login credentials). If false, the link is internally accessible (accessible only by other HCP Anywhere users in the network).</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>accessCode (conditional) : String</p>
+                <p class="NormalIndent-1">An additional code assigned to the given link by HCP Anywhere.&#160;The person who creates the link decides if the link  requires this additional code. </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>permissions (required) : String</p>
+                <p class="NormalIndent-1">The type of operations that a person can perform on the file or folder when accessed through the link:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>READ — The user can view and download files.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>UPLOAD — If the link is to a folder, the user can upload files to the folder.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>token (required) : String</p>
+                <p class="NormalIndent-1">The unique string assigned to the link by HCP Anywhere. The link token is supplied as a parameter in some of the other link endpoints.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>type (required) : Enum</p>
+                <p class="NormalIndent-1">The type of item (FILE or FOLDER).</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>itemName (required) : String</p>
+                <p class="NormalIndent-1">The name of the file or folder that the links points to.</p>
+                <h2>Additional Notes</h2>
+                <p>If an access code was used in the request, a cookie is returned in response header. That header looks like this:</p>
+                <p class="APICode">Set-Cookie: AW-Access-Code=1f04e79f3c8;Version=1;Path=/;Max-Age=600</p>
+                <p>
+                    <br />The cookie can be attached to subsequent link requests where otherwise the access code would be required. </p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+define({numchunks:1,prefix:'Glossary_Chunk',terms:[{t:'data center',c:0},{t:'datastore',c:0},{t:'DRS',c:0},{t:'Fault Tolerance',c:0},{t:'vCenter',c:0},{t:'vmNIC',c:0},{t:'vMotion',c:0},{t:'VMware vSphere Distributed Resource Scheduler',c:0},{t:'VMware vSphere Fault Tolerance',c:0},{t:'VMware vSphere vMotion',c:0}]});

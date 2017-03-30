@@ -1,0 +1,192 @@
+/*<meta />*/
+
+@import url('importPartials.css');
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+body
+{
+	font-size: 16px;
+	line-height: 17pt;
+	color: #696969;
+	margin-right: 30%;
+	font-family: Calibri;
+}
+
+p.Steps
+{
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: 1.23em;
+	page-break-after: avoid;
+}
+
+p
+{
+	margin-bottom: 13px;
+}
+
+p.ListBullet-5
+{
+	text-indent: -25px;
+	margin-left: 125px;
+	mc-auto-number-format: 'o';
+	mc-auto-number-class: Bullet2;
+}
+
+p.NormalIndent-5
+{
+	margin-left: 125px;
+}
+
+p.TopicHeading
+{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+p.Syntax
+{
+	font-family: 'Courier New', monospace;
+	font-size: 1em;
+	letter-spacing: -.07em;
+}
+
+p.Syntax1
+{
+	font-family: 'Courier New', monospace;
+	font-size: 1em;
+	margin-left: 25px;
+	letter-spacing: -.07em;
+}
+
+p.Syntax-2
+{
+	font-family: 'Courier New', monospace;
+	font-size: 1em;
+	margin-left: 50px;
+	letter-spacing: -.07em;
+}
+
+p.Syntax-3
+{
+	font-family: 'Courier New', monospace;
+	font-size: 1em;
+	margin-left: 75px;
+	letter-spacing: -.07em;
+}
+
+p.MasterPageDocTitleFAQ
+{
+	font-weight: bold;
+	font-size: 2em;
+	margin-bottom: 25px;
+}
+
+p.MasterPageDocTitle
+{
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+p.TaskIntro
+{
+	font-weight: bold;
+}
+
+p.APICode
+{
+	background: #f5f5f5;
+	border-radius: 10px;
+	margin-left: 10px;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: gray;
+	padding: 5px;
+}
+
+h1
+{
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #0a5179;
+	margin-top: 12px;
+	margin-bottom: 15px;
+}
+
+h2
+{
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #0a5179;
+}
+
+h3
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #0a5179;
+}
+
+h4
+{
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #0a5179;
+}
+
+h5
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #0a5179;
+}
+
+table.TableStyle-NoteTable
+{
+	width: 100%;
+	margin-left: 25px !important;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: #2a2a2a;
+	border-width: 1px;
+}
+
+MadCap|miniTocProxy,
+MadCap|miniTocProxy_0,
+div.MCMiniTocBox,
+div.MCMiniTocBox_0
+{
+	border-top: none;
+	mc-auto-number-format: 'This section contains these topics:';
+	mc-auto-number-offset: 0;
+	mc-auto-number-position: inside-head;
+	margin-top: 0px;
+	margin-left: 0;
+	mc-disabled: true;
+}
+
+/*For FAQ Master Page*/
+
+div.leftMenu
+{
+	float: left;
+	margin-right: 25px;
+	// max-width:25%;
+}
+
+div.bodyContentFAQ
+{
+	float: left;
+	width: 60%;
+}
+
+div.MasterPageBreadcrumbsFAQ
+{
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+
+.StepInTitle
+{
+	mc-auto-number-format: 'CH:Step {n+}{ }: ';
+}

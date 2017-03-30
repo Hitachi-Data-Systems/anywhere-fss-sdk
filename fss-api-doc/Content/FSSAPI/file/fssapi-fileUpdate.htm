@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="File endpoints">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Update file</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body class="MasterPage">
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        </p>
+        <div class="bodyContent">
+            <div class="MasterPageBreadcrumbs">
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-fileIntro.htm">File endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Update file</span>
+                </div>
+            </div>
+            <hr width="100%" size="0" align="center" />
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <h1>Update file</h1>
+                <p>This request updates an existing file in HCP Anywhere.</p>
+                <h2>URI</h2>
+                <p class="APICode">/fss/public/file/stream/update</p>
+                <h2>HTTP Method</h2>
+                <p class="APICode">POST</p>
+                <h2>Parameters</h2>
+                <p>The <span class="FileName">file/stream/update</span> endpoint requires  request body and query parameters. The  request body  needs to contain an octet-stream.</p>
+                <p><span class="GUI">Request body parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>file contents (required) : Object</p>
+                <p class="NormalIndent-1">The contents of the file. In cURL, you can use the "--data-binary" option to enter the path to the file you want to upload. </p>
+                <p><span class="GUI">Query parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required)</p>
+                <p class="NormalIndent-1">The path of the file you want to update. </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>size (optional)</p>
+                <p class="NormalIndent-1">The size (in bytes) of the file being uploaded.</p>
+                <p class="NormalIndent-1">If this parameter and the hash of the file are included in the request, HCP Anywhere checks that the size and hash match the the file being uploaded. If the size and hash do not match, the operation fails and a 400 (Bad&#160;Request) code is returned.</p>
+                <p class="NormalIndent-1">If only one or neither of these two parameters are included in the request, HCP Anywhere does not check the size or hash of the file. The file is simply uploaded to HCP Anywhere.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span> hash (optional)</p>
+                <p class="NormalIndent-1">The hex encoded sha-384 hash of the file being uploaded.</p>
+                <p class="NormalIndent-1">If this parameter and the size of the file are included in the request, HCP Anywhere checks that the size and hash match the file being uploaded. If the size and hash do not match, the operation fails and a 400 (Bad&#160;Request) code is returned.</p>
+                <p class="NormalIndent-1">If only one or neither of these two parameters are included in ther request, HCP Anywhere does not check the size or hash of the file. The file is simply uploaded to HCP Anywhere.</p>
+                <p><span class="GUI">Header parameters:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>etag (required)</p>
+                <p class="NormalIndent-1">The etag of the file you want to update.&#160;The etag needs to be provided in an If-Match header. The etag identifies the version of the file and is part of the file metadata. If the etag does not match a file at the given path, the operation fails and a 400 (Bad Request) code is returned.</p>
+                <h2>Example Request</h2>
+                <p>This section contains an example of a <span class="FileName">file/stream/update</span> request in cURL. In this example, the hash of the file is "37f2d" and the authentication token is "abc=". In an actual request, the hash and the authentication token are much longer.</p>
+                <p class="APICode">curl -kiX POST "https://anywhere.example.com/fss/public/file/stream/update?path=/Work-Projects/Sales-Reports/Sales-Presentation.docx&amp;size=2064&amp;hash=f8e25" -H "Accept: application/json" -H "Content-Type: application/octet-stream" -H "If-Match: xyz==" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 2.1.1" --data-binary @Users/JSMITH/Documents/Sales-Presentation.docx</p>
+                <h2>Example Response</h2>
+                <p>This section contains an example of a response to a successful <span class="FileName">file/stream/update</span> request. In an actual response, the etag and hash are much longer.</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"type": "FILE",<br />&#160;&#160;&#160;&#160;"parent": "/Work-Projects/Sales-Reports",<br />&#160;&#160;&#160;&#160;"name": "Sales-Presentation.docx",<br />&#160;&#160;&#160;&#160;"changeTime": 1456867234262,<br />&#160;&#160;&#160;&#160;"size": 2064,<br />&#160;&#160;&#160;&#160;"hash": "f8e25",<br />&#160;&#160;&#160;&#160;"access": "COLLABORATOR",<br />&#160;&#160;&#160;&#160;"etag": "xyz=="<br />}</p>
+                <h2>Description of Response</h2>
+                <p>This section describes the  contents of a  <span class="FileName">file/stream/update</span> response.</p>
+                <p><span class="GUI">Response content:</span>
+                </p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>type (required) : Enum</p>
+                <p class="NormalIndent-1">The type of item (FILE&#160;or FOLDER). For this response, the type is always FILE.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>name (required) : String</p>
+                <p class="NormalIndent-1">The name of the file.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>changeTime (required) : Long</p>
+                <p class="NormalIndent-1">The time at which the file was last accessed or modified. This time is returned in Unix format.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>size (required) : Long</p>
+                <p class="NormalIndent-1">The size of the file in bytes.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>hash (required) : String</p>
+                <p class="NormalIndent-1">The hex encoded sha-384 hash of the file.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>access (required) : Enum</p>
+                <p class="NormalIndent-1">The type of operations the user can perform on the file:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>NO ACCESS  — The user cannot access the file.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>VIEWER  — The user can  download the file. </p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>COLLABORATOR  — The user can download, edit, move, and delete the file.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>etag (required) : String</p>
+                <p class="NormalIndent-1">The etag of the file. The etag identifies the version of the file and is included as a parameter in some of the other File Sync and Share API endpoints.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>state (required) : Enum</p>
+                <p class="NormalIndent-1">The state of the file (CREATE or DELETE). For this response, the state is always CREATE.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sharing (conditional): Object</p>
+                <p class="NormalIndent-1">If the file is uploaded into a shared folder, team folder, or <span class="userVariablesNASShare">mobilized data share</span>, some additional folder information.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>canUserManage: Boolean</p>
+                <p class="NormalIndent-2">If true, the user is the Owner of the shared folder or the Manager of the team folder.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>isMountPoint: Boolean</p>
+                <p class="NormalIndent-2">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and mobilized data shares are  mount points, although the items within them are not.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>label (conditional) : String</p>
+                <p class="NormalIndent-2">If the item is a shared or team folder, the label of the  folder.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type: Enum</p>
+                <p class="NormalIndent-2">The type of collaborative folder (SHARED, TEAM, or MOBILIZED).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>teamFolder (conditional): Object</p>
+                <p class="NormalIndent-2">If the item is a team folder, some additional team folder information:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>contact: String</p>
+                <p class="NormalIndent-3">The contact of the team folder.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>quota: Long</p>
+                <p class="NormalIndent-3">The total storage capacity of the team folder.&#160;This is returned in bytes.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>backup (conditional): Object</p>
+                <p class="NormalIndent-1">If the file is uploaded into a backup folder, some additional backup information:</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>isActive: Boolean</p>
+                <p class="NormalIndent-2">If true, the backup folder is connected to the HCP Anywhere desktop application.&#160;</p>
+                <p class="NormalIndent-2">The backup folder can disconnected from the desktop application if the desktop application is deregistered or if the backup feature is disabled by the system administrator.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>isMountPoint: Boolean</p>
+                <p class="NormalIndent-2">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. The backup parent folder, which is automatically created when backup is enabled and the given user's desktop application is installed, is always a mount point.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>operatingSystem: Enum</p>
+                <p class="NormalIndent-2">The type of device on which the desktop application is installed (WINDOWS,&#160;WINDOWS NSC, or&#160;MAC). For version 3.0 or later of the Windows desktop application, the operatingSystem is "WINDOWS&#160;NSC".</p>
+            </div>
+            <div class="MasterPageBodyAndMiniTOCProxyContainer">
+                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
+            </div>
+            <!--BeginHideIfBranded-->
+            <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
+            </p>
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
+            </p>
+            <!--EndHideIfBranded-->
+            <!--BeginHideIfBranded-->
+            <!--EndHideIfBranded-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,2216 @@
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+/* line 79, sass/_variablesAndMixins.scss */
+p.ListNumber-1, p.ListNumberFirst-1, p.ListAlpha-1, p.ListAlphaFirst-1, p.ListNumber-2, p.ListNumberFirst-2, p.ListAlpha-2, p.ListAlphaFirst-2, p.ListNumber-3, p.ListNumberFirst-3, p.ListAlpha-3, p.ListAlphaFirst-3, p.ListNumber-4, p.ListNumberFirst-4, p.ListAlpha-4, p.ListAlphaFirst-4 {
+  text-indent: -25px;
+  mc-auto-number-class: Ordered-1;
+}
+@media print {
+  /* line 79, sass/_variablesAndMixins.scss */
+  p.ListNumber-1, p.ListNumberFirst-1, p.ListAlpha-1, p.ListAlphaFirst-1, p.ListNumber-2, p.ListNumberFirst-2, p.ListAlpha-2, p.ListAlphaFirst-2, p.ListNumber-3, p.ListNumberFirst-3, p.ListAlpha-3, p.ListAlphaFirst-3, p.ListNumber-4, p.ListNumberFirst-4, p.ListAlpha-4, p.ListAlphaFirst-4 {
+    text-indent: -0.25in;
+    mc-auto-number-offset: .25in;
+    mc-auto-number-position: outside-head;
+  }
+}
+
+/* line 87, sass/_variablesAndMixins.scss */
+p, td {
+  margin-top: 0;
+  widows: 3;
+  orphans: 3;
+  margin-bottom: 1.23em;
+  font-size: 1em;
+  mc-hyphenate: never;
+}
+@media print {
+  /* line 87, sass/_variablesAndMixins.scss */
+  p, td {
+    font-family: Verdana;
+    margin-left: 1in;
+    margin-bottom: 13.5pt;
+    font-size: 10.5pt;
+    line-height: 13.5pt;
+  }
+}
+
+/* line 7, sass/_paragraphs.scss */
+p.TaskIntro {
+  page-break-after: avoid;
+}
+@media print {
+  /* line 7, sass/_paragraphs.scss */
+  p.TaskIntro {
+    margin-top: 0;
+    margin-left: 1in;
+    margin-bottom: 13.5pt;
+    font-family: Verdana;
+    font-size: 10.5pt;
+    font-weight: normal;
+    widows: 3;
+    orphans: 3;
+    color: #000000;
+    mc-hyphenate: never;
+  }
+}
+
+/* line 24, sass/_paragraphs.scss */
+p.Steps {
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 1.23em;
+  page-break-after: avoid;
+}
+
+/***** fixing left-margins on paragraphs that appear within tables in print books***/
+@media print {
+  /* line 32, sass/_paragraphs.scss */
+  table p {
+    margin-left: 0in;
+  }
+}
+
+@media print {
+  /* line 44, sass/_paragraphs.scss */
+  table p.NormalIndent-1,
+  table p.ListNumber-1,
+  table p.ListNumberFirst-1,
+  table p.ListAlpha-1,
+  table p.ListAlphaFirst-1,
+  table p.ListBullet-1,
+  table p.MiniTOC1_0,
+  table p.MiniTOC1,
+  table p.CodeIndent-1,
+  table p.CodeIndent-1-SpaceAfter {
+    margin-left: 0.25in;
+  }
+}
+
+@media print {
+  /* line 44, sass/_paragraphs.scss */
+  table p.NormalIndent-2,
+  table p.ListNumber-2,
+  table p.ListNumberFirst-2,
+  table p.ListAlpha-2,
+  table p.ListAlphaFirst-2,
+  table p.ListBullet-2,
+  table p.MiniTOC2_0,
+  table p.MiniTOC2,
+  table p.CodeIndent-2,
+  table p.CodeIndent-2-SpaceAfter {
+    margin-left: 0.5in;
+  }
+}
+
+@media print {
+  /* line 44, sass/_paragraphs.scss */
+  table p.NormalIndent-3,
+  table p.ListNumber-3,
+  table p.ListNumberFirst-3,
+  table p.ListAlpha-3,
+  table p.ListAlphaFirst-3,
+  table p.ListBullet-3,
+  table p.MiniTOC3_0,
+  table p.MiniTOC3,
+  table p.CodeIndent-3,
+  table p.CodeIndent-3-SpaceAfter {
+    margin-left: 0.75in;
+  }
+}
+
+@media print {
+  /* line 44, sass/_paragraphs.scss */
+  table p.NormalIndent-4,
+  table p.ListNumber-4,
+  table p.ListNumberFirst-4,
+  table p.ListAlpha-4,
+  table p.ListAlphaFirst-4,
+  table p.ListBullet-4,
+  table p.CodeIndent-4,
+  table p.CodeIndent-4-SpaceAfter {
+    margin-left: 1in;
+  }
+}
+
+/** make this DRYer. Tried it - worked in webhelp but not in print
+* does Flare not accept certain CSS selectors?
+*/
+/* line 55, sass/_paragraphs.scss */
+p.Code, p[class*=Code], p[class^=Code] {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+}
+@media print {
+  /* line 55, sass/_paragraphs.scss */
+  p.Code, p[class*=Code], p[class^=Code] {
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+  }
+}
+
+/* line 67, sass/_paragraphs.scss */
+p.Code-SpaceAfter, p[class$="SpaceAfter"], p[class$="SpaceAfter"] {
+  margin-bottom: 1.23em;
+}
+@media print {
+  /* line 67, sass/_paragraphs.scss */
+  p.Code-SpaceAfter, p[class$="SpaceAfter"], p[class$="SpaceAfter"] {
+    margin-bottom: 13.5pt;
+  }
+}
+
+/* line 75, sass/_paragraphs.scss */
+p.CodeIndent-1 {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 25px;
+}
+@media print {
+  /* line 75, sass/_paragraphs.scss */
+  p.CodeIndent-1 {
+    margin-left: 1.25in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+  }
+}
+
+/* line 89, sass/_paragraphs.scss */
+p.CodeIndent-1-SpaceAfter {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 25px;
+  margin-bottom: 1.23em;
+}
+@media print {
+  /* line 89, sass/_paragraphs.scss */
+  p.CodeIndent-1-SpaceAfter {
+    margin-left: 1.25in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+    margin-bottom: 13.5pt;
+  }
+}
+
+/* line 75, sass/_paragraphs.scss */
+p.CodeIndent-2 {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 50px;
+}
+@media print {
+  /* line 75, sass/_paragraphs.scss */
+  p.CodeIndent-2 {
+    margin-left: 1.5in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+  }
+}
+
+/* line 89, sass/_paragraphs.scss */
+p.CodeIndent-2-SpaceAfter {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 50px;
+  margin-bottom: 1.23em;
+}
+@media print {
+  /* line 89, sass/_paragraphs.scss */
+  p.CodeIndent-2-SpaceAfter {
+    margin-left: 1.5in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+    margin-bottom: 13.5pt;
+  }
+}
+
+/* line 75, sass/_paragraphs.scss */
+p.CodeIndent-3 {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 75px;
+}
+@media print {
+  /* line 75, sass/_paragraphs.scss */
+  p.CodeIndent-3 {
+    margin-left: 1.75in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+  }
+}
+
+/* line 89, sass/_paragraphs.scss */
+p.CodeIndent-3-SpaceAfter {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 75px;
+  margin-bottom: 1.23em;
+}
+@media print {
+  /* line 89, sass/_paragraphs.scss */
+  p.CodeIndent-3-SpaceAfter {
+    margin-left: 1.75in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+    margin-bottom: 13.5pt;
+  }
+}
+
+/* line 75, sass/_paragraphs.scss */
+p.CodeIndent-4 {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 100px;
+}
+@media print {
+  /* line 75, sass/_paragraphs.scss */
+  p.CodeIndent-4 {
+    margin-left: 2in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+  }
+}
+
+/* line 89, sass/_paragraphs.scss */
+p.CodeIndent-4-SpaceAfter {
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.07em;
+  margin-left: 100px;
+  margin-bottom: 1.23em;
+}
+@media print {
+  /* line 89, sass/_paragraphs.scss */
+  p.CodeIndent-4-SpaceAfter {
+    margin-left: 2in;
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+    line-height: 12pt;
+    margin-bottom: 13.5pt;
+  }
+}
+
+/* line 107, sass/_paragraphs.scss */
+p.DraftWatermark, p.Draft {
+  text-align: center;
+  color: red;
+  font-size: 14pt;
+  font-family: Arial;
+  margin: 0;
+  font-weight: bold;
+  line-height: 17pt;
+}
+
+/* line 118, sass/_paragraphs.scss */
+p.ExampleHeading {
+  margin-bottom: 2pt;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 1.40em;
+  page-break-after: avoid;
+}
+@media print {
+  /* line 118, sass/_paragraphs.scss */
+  p.ExampleHeading {
+    font-family: Tahoma;
+    font-size: 10pt;
+    line-height: 13pt;
+    font-style: oblique;
+    margin-bottom: 13pt;
+  }
+}
+
+/* line 134, sass/_paragraphs.scss */
+p.Legal {
+  font-size: .9em;
+}
+@media print {
+  /* line 134, sass/_paragraphs.scss */
+  p.Legal {
+    margin-left: 0;
+    margin-bottom: 9pt;
+    font-size: 9pt;
+    margin-top: 0;
+    line-height: 11pt;
+    mc-hyphenate: never;
+  }
+}
+
+/*** unordered lists ***/
+/* line 148, sass/_paragraphs.scss */
+p.ListBullet-1, p.MiniTOC1_0,
+p.MiniTOC1 {
+  margin-left: 25px;
+  text-indent: -25px;
+  mc-auto-number-format: '•';
+  mc-auto-number-class: Bullet1;
+}
+@media print {
+  /* line 148, sass/_paragraphs.scss */
+  p.ListBullet-1, p.MiniTOC1_0,
+  p.MiniTOC1 {
+    text-indent: -0.25in;
+    mc-auto-number-offset: .25in;
+    mc-auto-number-position: outside-head;
+    margin-left: 1.25in;
+  }
+}
+
+/* line 148, sass/_paragraphs.scss */
+p.ListBullet-2, p.MiniTOC2_0,
+p.MiniTOC2 {
+  margin-left: 50px;
+  text-indent: -25px;
+  mc-auto-number-format: 'o';
+  mc-auto-number-class: Bullet2;
+}
+@media print {
+  /* line 148, sass/_paragraphs.scss */
+  p.ListBullet-2, p.MiniTOC2_0,
+  p.MiniTOC2 {
+    text-indent: -0.25in;
+    mc-auto-number-offset: .25in;
+    mc-auto-number-position: outside-head;
+    margin-left: 1.5in;
+  }
+}
+
+/* line 148, sass/_paragraphs.scss */
+p.ListBullet-3, p.MiniTOC3_0,
+p.MiniTOC3 {
+  margin-left: 75px;
+  text-indent: -25px;
+  mc-auto-number-format: '–';
+  mc-auto-number-class: Bullet3;
+}
+@media print {
+  /* line 148, sass/_paragraphs.scss */
+  p.ListBullet-3, p.MiniTOC3_0,
+  p.MiniTOC3 {
+    text-indent: -0.25in;
+    mc-auto-number-offset: .25in;
+    mc-auto-number-position: outside-head;
+    margin-left: 1.75in;
+  }
+}
+
+/* line 148, sass/_paragraphs.scss */
+p.ListBullet-4 {
+  margin-left: 100px;
+  text-indent: -25px;
+  mc-auto-number-format: '•';
+  mc-auto-number-class: Bullet4;
+}
+@media print {
+  /* line 148, sass/_paragraphs.scss */
+  p.ListBullet-4 {
+    text-indent: -0.25in;
+    mc-auto-number-offset: .25in;
+    mc-auto-number-position: outside-head;
+    margin-left: 2in;
+  }
+}
+
+/*** Display ***/
+/* line 170, sass/_paragraphs.scss */
+p.Display-1 {
+  margin-left: 25px;
+  font-family: Tahoma;
+  font-size: .95em;
+}
+
+/* line 170, sass/_paragraphs.scss */
+p.Display-2 {
+  margin-left: 50px;
+  font-family: Tahoma;
+  font-size: .95em;
+}
+
+/* line 170, sass/_paragraphs.scss */
+p.Display-3 {
+  margin-left: 75px;
+  font-family: Tahoma;
+  font-size: .95em;
+}
+
+/* line 170, sass/_paragraphs.scss */
+p.Display-4 {
+  margin-left: 100px;
+  font-family: Tahoma;
+  font-size: .95em;
+}
+
+/***ordered lists**/
+/* line 180, sass/_paragraphs.scss */
+p.ListNumber-1, p.ListNumberFirst-1 {
+  margin-left: 25px;
+  mc-auto-number-format: "1:{n+}.";
+}
+@media print {
+  /* line 180, sass/_paragraphs.scss */
+  p.ListNumber-1, p.ListNumberFirst-1 {
+    margin-left: 1.25in;
+  }
+}
+
+/* line 189, sass/_paragraphs.scss */
+p.ListNumberFirst-1 {
+  mc-auto-number-format: "1:{n=1}.";
+}
+
+/* line 194, sass/_paragraphs.scss */
+p.ListAlpha-1, p.ListAlphaFirst-1 {
+  margin-left: 25px;
+  mc-auto-number-format: "5:{A+}.";
+}
+@media print {
+  /* line 194, sass/_paragraphs.scss */
+  p.ListAlpha-1, p.ListAlphaFirst-1 {
+    margin-left: 1.25in;
+  }
+}
+
+/* line 208, sass/_paragraphs.scss */
+p.ListAlphaFirst-1 {
+  mc-auto-number-format: "5:{A=1}.";
+}
+
+/* line 218, sass/_paragraphs.scss */
+p.NormalIndent-1 {
+  margin-left: 25px;
+}
+@media print {
+  /* line 218, sass/_paragraphs.scss */
+  p.NormalIndent-1 {
+    margin-left: 1.25in;
+  }
+}
+
+/* line 180, sass/_paragraphs.scss */
+p.ListNumber-2, p.ListNumberFirst-2 {
+  margin-left: 50px;
+  mc-auto-number-format: "2:{n+}.";
+}
+@media print {
+  /* line 180, sass/_paragraphs.scss */
+  p.ListNumber-2, p.ListNumberFirst-2 {
+    margin-left: 1.5in;
+  }
+}
+
+/* line 189, sass/_paragraphs.scss */
+p.ListNumberFirst-2 {
+  mc-auto-number-format: "2:{n=1}.";
+}
+
+/* line 194, sass/_paragraphs.scss */
+p.ListAlpha-2, p.ListAlphaFirst-2 {
+  margin-left: 50px;
+  mc-auto-number-format: "6:{a+}.";
+}
+@media print {
+  /* line 194, sass/_paragraphs.scss */
+  p.ListAlpha-2, p.ListAlphaFirst-2 {
+    margin-left: 1.5in;
+  }
+}
+
+/* line 208, sass/_paragraphs.scss */
+p.ListAlphaFirst-2 {
+  mc-auto-number-format: "6:{a=1}.";
+}
+
+/* line 218, sass/_paragraphs.scss */
+p.NormalIndent-2 {
+  margin-left: 50px;
+}
+@media print {
+  /* line 218, sass/_paragraphs.scss */
+  p.NormalIndent-2 {
+    margin-left: 1.5in;
+  }
+}
+
+/* line 180, sass/_paragraphs.scss */
+p.ListNumber-3, p.ListNumberFirst-3 {
+  margin-left: 75px;
+  mc-auto-number-format: "3:{n+}.";
+}
+@media print {
+  /* line 180, sass/_paragraphs.scss */
+  p.ListNumber-3, p.ListNumberFirst-3 {
+    margin-left: 1.75in;
+  }
+}
+
+/* line 189, sass/_paragraphs.scss */
+p.ListNumberFirst-3 {
+  mc-auto-number-format: "3:{n=1}.";
+}
+
+/* line 194, sass/_paragraphs.scss */
+p.ListAlpha-3, p.ListAlphaFirst-3 {
+  margin-left: 75px;
+  mc-auto-number-format: "7:{a+}.";
+}
+@media print {
+  /* line 194, sass/_paragraphs.scss */
+  p.ListAlpha-3, p.ListAlphaFirst-3 {
+    margin-left: 1.75in;
+  }
+}
+
+/* line 208, sass/_paragraphs.scss */
+p.ListAlphaFirst-3 {
+  mc-auto-number-format: "7:{a=1}.";
+}
+
+/* line 218, sass/_paragraphs.scss */
+p.NormalIndent-3 {
+  margin-left: 75px;
+}
+@media print {
+  /* line 218, sass/_paragraphs.scss */
+  p.NormalIndent-3 {
+    margin-left: 1.75in;
+  }
+}
+
+/* line 180, sass/_paragraphs.scss */
+p.ListNumber-4, p.ListNumberFirst-4 {
+  margin-left: 100px;
+  mc-auto-number-format: "4:{n+}.";
+}
+@media print {
+  /* line 180, sass/_paragraphs.scss */
+  p.ListNumber-4, p.ListNumberFirst-4 {
+    margin-left: 2in;
+  }
+}
+
+/* line 189, sass/_paragraphs.scss */
+p.ListNumberFirst-4 {
+  mc-auto-number-format: "4:{n=1}.";
+}
+
+/* line 194, sass/_paragraphs.scss */
+p.ListAlpha-4, p.ListAlphaFirst-4 {
+  margin-left: 100px;
+  mc-auto-number-format: "8:{a+}.";
+}
+@media print {
+  /* line 194, sass/_paragraphs.scss */
+  p.ListAlpha-4, p.ListAlphaFirst-4 {
+    margin-left: 2in;
+  }
+}
+
+/* line 208, sass/_paragraphs.scss */
+p.ListAlphaFirst-4 {
+  mc-auto-number-format: "8:{a=1}.";
+}
+
+/* line 218, sass/_paragraphs.scss */
+p.NormalIndent-4 {
+  margin-left: 100px;
+}
+@media print {
+  /* line 218, sass/_paragraphs.scss */
+  p.NormalIndent-4 {
+    margin-left: 2in;
+  }
+}
+
+/* line 227, sass/_paragraphs.scss */
+p.MasterPageCopyright {
+  font-size: 8pt;
+  margin-left: 0;
+}
+
+/* line 233, sass/_paragraphs.scss */
+p.NoteToMe {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+/****** Note paragraph styles ************/
+/* line 241, sass/_paragraphs.scss */
+p.Caution {
+  mc-auto-number-format: '{b}Caution: {/b}';
+}
+
+/* line 245, sass/_paragraphs.scss */
+p.ConditionalSteps {
+  mc-auto-number-format: '{b}Conditional Steps: {/b}';
+}
+
+/* line 249, sass/_paragraphs.scss */
+p.Important {
+  mc-auto-number-format: '{b}Important: {/b}';
+}
+
+/* line 253, sass/_paragraphs.scss */
+p.Note {
+  mc-auto-number-format: '{b}Note: {/b}';
+}
+
+/* line 257, sass/_paragraphs.scss */
+p.Notes {
+  mc-auto-number-format: '{b}Notes: {/b}';
+}
+
+/* line 261, sass/_paragraphs.scss */
+p.RepeatStep {
+  mc-auto-number-format: '{b}Repeat Step: {/b}';
+}
+
+/* line 265, sass/_paragraphs.scss */
+p.Tip {
+  mc-auto-number-format: '{b}Tip:  {/b}';
+}
+
+/* line 269, sass/_paragraphs.scss */
+p.Tips {
+  mc-auto-number-format: '{b}Tips:  {/b}';
+}
+
+/* line 273, sass/_paragraphs.scss */
+p.Warning {
+  mc-auto-number-format: '{b}WARNING! {/b}';
+}
+
+/*use mixins to shorten this; all the headers share the same margins, etc.*/
+/* line 3, sass/_headers.scss */
+.NewPage {
+  page-break-before: always;
+}
+
+/* line 7, sass/_headers.scss */
+.FirstStepInTitle {
+  mc-auto-number-format: 'CH:Step {n=1}{ }: ';
+}
+
+/* line 11, sass/_headers.scss */
+.FirstStepInTitleConditional {
+  mc-auto-number-format: 'CH:Step {n=1}{ } (conditional): ';
+}
+
+/* line 15, sass/_headers.scss */
+.StepInTitle {
+  mc-auto-number-format: 'CH:Step {n+}{ }: ';
+}
+
+/* line 19, sass/_headers.scss */
+.StepInTitleConditional {
+  mc-auto-number-format: 'CH:Step {n+}{ } (conditional): ';
+}
+
+/* line 23, sass/_headers.scss */
+.FirstSubStepInTitle {
+  mc-auto-number-format: 'CH:Step {n}{a=1}: ';
+}
+
+/* line 27, sass/_headers.scss */
+.FirstSubStepInTitleConditional {
+  mc-auto-number-format: 'CH:Step {n}{a=1} (conditional): ';
+}
+
+/* line 31, sass/_headers.scss */
+.SubStepInTitle {
+  mc-auto-number-format: 'CH:Step {n}{a+}: ';
+}
+
+/* line 35, sass/_headers.scss */
+.SubStepInTitleConditional {
+  mc-auto-number-format: 'CH:Step {n}{a+} (conditional): ';
+}
+
+/* line 40, sass/_headers.scss */
+h1 {
+  mc-heading-level: 2;
+  font-size: 1.52em;
+  margin-bottom: 1.2em;
+  page-break-before: avoid;
+  color: #444444;
+  mc-hyphenate: never;
+  page-break-after: avoid;
+  margin-top: 1.40em;
+  font-weight: normal;
+}
+@media print {
+  /* line 40, sass/_headers.scss */
+  h1 {
+    color: #000000;
+    font-size: 24pt;
+    text-align: right;
+    margin-bottom: 29pt;
+    margin-top: 0;
+    font-weight: bold;
+    line-height: 29pt;
+    mc-auto-number-format: 'Chapter {chapnum}: ';
+    mc-auto-number-class: NoDisplay;
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 62, sass/_headers.scss */
+h1.TOCTitle {
+  mc-heading-level: 0;
+  mc-auto-number-position: none;
+}
+
+/* line 72, sass/_headers.scss */
+h1.Unnumbered {
+  page-break-before: avoid;
+  margin-left: 0;
+  mc-auto-number-position: none;
+  mc-auto-number-format: none;
+  mc-auto-number-class: NoDisplay;
+}
+
+/* line 82, sass/_headers.scss */
+h1.Appendix {
+  mc-auto-number-format: 'Appendix {chapnum}: ';
+  mc-auto-number-class: NoDisplay;
+}
+
+/* line 88, sass/_headers.scss */
+h1.AppendixUnnumbered {
+  mc-auto-number-format: 'Appendix: ';
+  mc-auto-number-class: NoDisplay;
+}
+
+/* line 94, sass/_headers.scss */
+h2 {
+  mc-heading-level: 3;
+  font-size: 1.23em;
+  margin-bottom: 1.2em;
+  mc-hyphenate: never;
+  page-break-after: avoid;
+  margin-top: 1.40em;
+  font-weight: normal;
+}
+@media print {
+  /* line 94, sass/_headers.scss */
+  h2 {
+    color: navy;
+    font-size: 16pt;
+    margin-top: 20pt;
+    margin-bottom: 13.5pt;
+    line-height: 18.5pt;
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 99, sass/_headers.scss */
+h3 {
+  mc-heading-level: 4;
+  font-size: 1.23em;
+  margin-bottom: 1.2em;
+  mc-hyphenate: never;
+  page-break-after: avoid;
+  margin-top: 1.40em;
+  font-weight: normal;
+}
+@media print {
+  /* line 99, sass/_headers.scss */
+  h3 {
+    color: navy;
+    font-size: 14pt;
+    margin-top: 16pt;
+    margin-bottom: 13.5pt;
+    line-height: 16.5pt;
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 115, sass/_headers.scss */
+h4 {
+  mc-heading-level: 5;
+  font-size: 1.23em;
+  margin-bottom: 1.2em;
+  mc-hyphenate: never;
+  page-break-after: avoid;
+  margin-top: 1.40em;
+  font-weight: normal;
+}
+@media print {
+  /* line 115, sass/_headers.scss */
+  h4 {
+    font-size: 12pt;
+    color: #00008f;
+    margin-top: 14pt;
+    margin-bottom: 13.5pt;
+    line-height: 14pt;
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 130, sass/_headers.scss */
+h5, h6 {
+  font-size: 1em;
+  mc-heading-level: 0;
+  margin-bottom: 2pt;
+  font-weight: bold;
+  color: #000000;
+  mc-hyphenate: never;
+  page-break-after: avoid;
+  margin-top: 1.40em;
+}
+@media print {
+  /* line 130, sass/_headers.scss */
+  h5, h6 {
+    margin-left: 1in;
+    font-size: 10.5pt;
+    margin-bottom: .2em;
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 147, sass/_headers.scss */
+h6 {
+  font-size: .85em;
+}
+
+/* line 153, sass/_headers.scss */
+h5.bugDescription, h6.bugDescription {
+  margin-left: 0;
+  margin-top: 0;
+  font-size: .9em;
+  font-family: Verdana;
+}
+
+/***h5's for 3rd party stuff*****/
+/* line 163, sass/_headers.scss */
+h5.LicenseHeading, h6.LicenseHeading {
+  mc-heading-level: 3;
+}
+
+/* line 169, sass/_headers.scss */
+h5.PackageHeading, h6.PackageHeading, h5.LicenseHeading, h6.LicenseHeading {
+  font-size: 11.5pt;
+  margin-top: 22pt;
+  line-height: 14pt;
+  border-top-length: 5.5in;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #000000;
+}
+@media print {
+  /* line 169, sass/_headers.scss */
+  h5.PackageHeading, h6.PackageHeading, h5.LicenseHeading, h6.LicenseHeading {
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 184, sass/_headers.scss */
+h5.VendorAndCopyrightHeading, h6.VendorAndCopyrightHeading {
+  font-size: 11.5pt;
+  line-height: 14pt;
+  margin-top: 0;
+  page-break-before: avoid;
+}
+@media print {
+  /* line 184, sass/_headers.scss */
+  h5.VendorAndCopyrightHeading, h6.VendorAndCopyrightHeading {
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+/* line 2, sass/_images.scss */
+p img {
+  vertical-align: middle;
+}
+
+/* line 7, sass/_images.scss */
+img.FullWidth {
+  width: 100%;
+  height: auto;
+}
+@media print {
+  /* line 7, sass/_images.scss */
+  img.FullWidth {
+    width: 5.5in;
+  }
+}
+
+/* line 16, sass/_images.scss */
+img.Note {
+  width: 41px;
+  height: 37px;
+  float: right;
+  margin-right: 3px;
+}
+@media print {
+  /* line 16, sass/_images.scss */
+  img.Note {
+    width: .41in;
+    height: .37in;
+    margin-right: .04in;
+  }
+}
+
+/* line 29, sass/_images.scss */
+img.Warning {
+  float: right;
+  margin-right: 6px;
+}
+@media print {
+  /* line 29, sass/_images.scss */
+  img.Warning {
+    margin-right: .06in;
+  }
+}
+
+/* line 38, sass/_images.scss */
+img.Tip {
+  width: 34px;
+  height: 50px;
+  float: right;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+@media print {
+  /* line 38, sass/_images.scss */
+  img.Tip {
+    width: .34in;
+    height: .5in;
+    margin-left: .08in;
+    margin-right: .10in;
+  }
+}
+
+/* line 53, sass/_images.scss */
+[class^="icon-"].StandaloneImage {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+/* line 58, sass/_images.scss */
+[class^="icon-"].orange {
+  color: #d14912;
+}
+
+/* line 1, sass/_tables.scss */
+caption {
+  text-align: left;
+  font-style: italic;
+  font-size: 9pt;
+  margin-bottom: 3pt;
+  line-height: 11pt;
+}
+
+/* line 9, sass/_tables.scss */
+table {
+  caption-side: top;
+  mc-caption-repeat: true;
+  mc-caption-continuation: ' (Continued)';
+  width: 100%;
+}
+@media print {
+  /* line 9, sass/_tables.scss */
+  table {
+    width: 5.5in;
+    margin-left: 1in;
+  }
+}
+
+/* line 23, sass/_tables.scss */
+table.TableStyle-NoteTable,
+table.TableStyle-TipTable,
+table.TableStyle-ImportantTable,
+table.TableStyle-CautionTable {
+  width: 100%;
+  margin-left: 0;
+}
+
+@media print {
+  /* line 33, sass/_tables.scss */
+  td.TableStyle-NoteTable-BodyA-NoteText-NoteRow,
+  td.TableStyle-TipTable-BodyA-NoteText-NoteRow,
+  td.TableStyle-CautionTable-BodyA-NoteText-NoteRow,
+  td.TableStyle-ImportantTable-BodyA-NoteText-NoteRow {
+    border-top: solid 1px #696969;
+    border-bottom: solid 1px #696969;
+  }
+}
+/* line 39, sass/_tables.scss */
+p ~ table {
+  margin-top: 1.23em;
+  page-break-before: avoid;
+}
+@media print {
+  /* line 39, sass/_tables.scss */
+  p ~ table {
+    margin-top: 5.5pt;
+  }
+}
+
+/**
+td {
+
+	page-break-inside: avoid;
+}
+**/
+/* line 54, sass/_tables.scss */
+td > p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 58, sass/_tables.scss */
+td[class*=NoteRow] {
+  background-size: 60px 60px;
+}
+
+/* line 62, sass/_tables.scss */
+th {
+  font-weight: bold;
+  font-style: normal;
+  font-size: .9em;
+  font-family: Tahoma;
+  text-align: center;
+  mc-hyphenate: never;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+@media print {
+  /* line 62, sass/_tables.scss */
+  th {
+    font-size: 10pt;
+    line-height: 13pt;
+  }
+}
+
+/* line 77, sass/_tables.scss */
+tr.inlineRow {
+  background-color: #cccccc;
+}
+
+/* line 81, sass/_tables.scss */
+td#shaded {
+  background-color: #cccccc;
+}
+
+/* line 85, sass/_tables.scss */
+td.TableStyle-NoteTable-Column-NoteIcon {
+  background-size: 50px auto;
+}
+
+/* line 89, sass/_tables.scss */
+col.halfWidth {
+  width: 50%;
+}
+
+/* line 2, sass/_spans.scss */
+span {
+  page-break-inside: avoid;
+  /*** testing span wrapping. not sure why these were set to never wrap...
+  mc-hyphenate: never;
+  white-space: nowrap;
+  ***/
+}
+
+/* line 11, sass/_spans.scss */
+span.Bullet1 {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+  font-size: 1em;
+}
+@media print {
+  /* line 11, sass/_spans.scss */
+  span.Bullet1 {
+    width: .25in;
+    font-size: 12pt;
+  }
+}
+
+/* line 21, sass/_spans.scss */
+span.Bullet2 {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+  font-size: .718em;
+}
+@media print {
+  /* line 21, sass/_spans.scss */
+  span.Bullet2 {
+    font-size: 6pt;
+    width: .25in;
+  }
+}
+
+/* line 31, sass/_spans.scss */
+span.Bullet3 {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+  font-size: .9em;
+}
+@media print {
+  /* line 31, sass/_spans.scss */
+  span.Bullet3 {
+    width: .25in;
+    font-size: 10pt;
+  }
+}
+
+/* line 41, sass/_spans.scss */
+span.Bullet4 {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+}
+@media print {
+  /* line 41, sass/_spans.scss */
+  span.Bullet4 {
+    font-size: 8.5pt;
+  }
+}
+
+/* line 49, sass/_spans.scss */
+span.Bullet6 {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+  font-size: .7em;
+}
+@media print {
+  /* line 49, sass/_spans.scss */
+  span.Bullet6 {
+    font-size: 5pt;
+    font-family: Wingdings;
+  }
+}
+
+/* line 59, sass/_spans.scss */
+span.CodeInText {
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
+}
+@media print {
+  /* line 59, sass/_spans.scss */
+  span.CodeInText {
+    font-size: 10pt;
+    letter-spacing: -0.5pt;
+  }
+}
+
+/* line 73, sass/_spans.scss */
+span.GUI,
+span.NewTerm,
+span.ToolValue,
+span.WindowName {
+  font-size: .9em;
+  font-weight: bold;
+}
+@media print {
+  /* line 73, sass/_spans.scss */
+  span.GUI,
+  span.NewTerm,
+  span.ToolValue,
+  span.WindowName {
+    font-size: 10pt;
+    font-family: Tahoma;
+  }
+}
+
+/* line 83, sass/_spans.scss */
+span.InlineHeading {
+  font-weight: bold;
+  font-size: 1em;
+  font-family: Verdana, sans-serif;
+}
+@media print {
+  /* line 83, sass/_spans.scss */
+  span.InlineHeading {
+    font-size: 10.5pt;
+  }
+}
+
+/* line 93, sass/_spans.scss */
+span.ListNumber {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+}
+
+/* line 101, sass/_spans.scss */
+span.Ordered-1,
+span.Ordered-2,
+span.Ordered-3,
+span.Ordered-4 {
+  float: left;
+  width: 25px;
+  text-align: left;
+  mc-disabled: true;
+  width: .25in;
+}
+
+/* line 108, sass/_spans.scss */
+span.NoteHeading {
+  font-weight: bold;
+  mc-disabled: true;
+}
+
+/* line 114, sass/_spans.scss */
+span.NoteToMe {
+  color: red;
+}
+
+/* line 119, sass/_spans.scss */
+span.Title,
+MadCap|variable.Title {
+  font-style: italic;
+}
+
+/* line 124, sass/_spans.scss */
+span.FileName {
+  font-family: 'Courier New', monospace;
+  font-size: .95em;
+  letter-spacing: -0.07em;
+}
+
+/*figure out how to avoid having to explicitly apply a class to the dropDownHead's or hotspots. one or the other.
+*
+* duh.  use complex selectors.  create a class for the parent dropDown and nest the * applicable styles inside of it.
+*/
+/* line 7, sass/_madcap.scss */
+MadCap|breadcrumbsProxy {
+  font-size: .9em;
+  border-bottom-style: none;
+  margin-bottom: 0;
+}
+
+/* line 14, sass/_madcap.scss */
+MadCap|DropDown {
+  mc-closed-image: url("../Images/webhelp/chevron.png");
+  mc-open-image: url("../Images/webhelp/chevronDown.png");
+  margin-bottom: 1.23em;
+}
+@media print {
+  /* line 14, sass/_madcap.scss */
+  MadCap|DropDown {
+    margin-bottom: 13pt;
+  }
+}
+
+/* line 24, sass/_madcap.scss */
+.dropDownHotspot:link {
+  font-size: 1em;
+}
+
+/* line 28, sass/_madcap.scss */
+MadCap|DropDownHead {
+  margin-bottom: 1.2em;
+}
+
+/* line 32, sass/_madcap.scss */
+MadCap|DropDownHotspot {
+  mc-heading-level: 3;
+  font-size: 1.23em;
+  margin-bottom: 1.2em;
+  mc-hyphenate: never;
+  page-break-after: avoid;
+  margin-top: 1.40em;
+  font-weight: normal;
+}
+@media print {
+  /* line 32, sass/_madcap.scss */
+  MadCap|DropDownHotspot {
+    color: navy;
+    font-size: 16pt;
+    margin-top: 20pt;
+    margin-bottom: 13.5pt;
+    line-height: 18.5pt;
+    font-family: Tahoma;
+    font-weight: bold;
+    mc-hyphenate: never;
+    page-break-after: avoid;
+    font-style: normal;
+  }
+}
+
+@media print {
+  /* line 36, sass/_madcap.scss */
+  MadCap|DropDownHotspot.FirstStep {
+    mc-auto-number-format: 'CH:Step {n=1}{ }: ';
+  }
+}
+
+@media print {
+  /* line 42, sass/_madcap.scss */
+  MadCap|DropDownHotspot.StepInTitle {
+    mc-auto-number-format: 'CH:Step {n+}{ }: ';
+  }
+}
+
+/* line 51, sass/_madcap.scss */
+MadCap|glossaryProxy,
+MadCap|indexProxy,
+MadCap|tocProxy {
+  border-top-width: 0;
+  border-top-style: none;
+}
+
+/* line 57, sass/_madcap.scss */
+MadCap|glossaryTerm {
+  font-size: 10.5;
+  font-weight: normal;
+  font-style: normal;
+  font-family: Verdana;
+  color: #000000;
+}
+
+/*** removing this - it makes all text blue in chrome
+MadCap|DropDownHotspot:hover
+{
+	color: $color-link-hover;
+}
+***/
+/********* mini TOCs ***************/
+/* line 77, sass/_madcap.scss */
+MadCap|miniTocProxy,
+MadCap|miniTocProxy_0,
+div.MCMiniTocBox,
+div.MCMiniTocBox_0 {
+  border-top: solid 1px #cccccc;
+  padding: 1.23em 0 0 0;
+  mc-auto-number-format: 'Sub-topics:';
+  mc-auto-number-offset: 0;
+  mc-auto-number-position: inside-head;
+  margin-top: 3.69em;
+  margin-left: 0;
+  mc-disabled: true;
+}
+@media print {
+  /* line 77, sass/_madcap.scss */
+  MadCap|miniTocProxy,
+  MadCap|miniTocProxy_0,
+  div.MCMiniTocBox,
+  div.MCMiniTocBox_0 {
+    display: none;
+  }
+}
+
+/* line 95, sass/_madcap.scss */
+MadCap|miniTocProxy.noAutoNumber,
+MadCap|miniTocProxy_0.noAutoNumber,
+div.MCMiniTocBox.noAutoNumber,
+div.MCMiniTocBox_0.noAutoNumber {
+  border-top: none;
+  padding: 1.23em 0 0 0;
+  mc-auto-number-format: '';
+  margin-top: 0;
+  margin-left: 0;
+  mc-disabled: true;
+}
+@media print {
+  /* line 95, sass/_madcap.scss */
+  MadCap|miniTocProxy.noAutoNumber,
+  MadCap|miniTocProxy_0.noAutoNumber,
+  div.MCMiniTocBox.noAutoNumber,
+  div.MCMiniTocBox_0.noAutoNumber {
+    display: none;
+  }
+}
+
+/* line 108, sass/_madcap.scss */
+div.MCMiniTocBox_0 span {
+  margin-top: 0;
+  widows: 3;
+  orphans: 3;
+}
+
+/* line 116, sass/_madcap.scss */
+p.MiniTOC1_0,
+p.MiniTOC1 {
+  font-weight: normal;
+}
+
+/* line 123, sass/_madcap.scss */
+p.MiniTOC2_0,
+p.MiniTOC2 {
+  font-weight: normal;
+}
+
+/* line 130, sass/_madcap.scss */
+p.MiniTOC3_0,
+p.MiniTOC3 {
+  font-weight: normal;
+}
+
+/* line 137, sass/_madcap.scss */
+a.MiniTOC1:link,
+a.MiniTOC2:link,
+a.MiniTOC3:link {
+  color: #477bd3;
+}
+
+/************************/
+/* line 142, sass/_madcap.scss */
+MadCap|xref {
+  mc-format: '{paratext}';
+}
+@media print {
+  /* line 142, sass/_madcap.scss */
+  MadCap|xref {
+    mc-format: "{color blue}{u}{paranum}{quote}{paratext}{quote}{/u}{/color} {pageref}";
+  }
+}
+
+/* line 150, sass/_madcap.scss */
+MadCap|xref.NextStep {
+  mc-format: 'next step';
+  text-decoration: none;
+}
+@media print {
+  /* line 150, sass/_madcap.scss */
+  MadCap|xref.NextStep {
+    mc-format: '{color blue}{u}next step{/u}{/color}';
+  }
+}
+
+/* line 159, sass/_madcap.scss */
+MadCap|xref.StepNumber {
+  mc-format: '{paranumonly}';
+  text-decoration: none;
+}
+
+/* line 1, sass/_restAPI.scss */
+div.method {
+  /* nest all styles for the swagger examples within div.method*/
+}
+/* line 3, sass/_restAPI.scss */
+div.method a.up {
+  display: none;
+}
+/* line 7, sass/_restAPI.scss */
+div.method h4 {
+  margin-bottom: 0;
+}
+
+/* line 1, sass/_glossary.scss */
+div.GlossaryPageTerm a {
+  color: #000;
+  font-weight: bold;
+}
+
+/* line 6, sass/_glossary.scss */
+div.GlossaryPageTerm a:hover {
+  text-decoration: none;
+}
+
+@media print {
+  /* line 11, sass/_glossary.scss */
+  a.GlossaryPageTerm {
+    text-decoration: none;
+    margin-left: -15pt;
+  }
+
+  /* line 16, sass/_glossary.scss */
+  div.GlossaryPageHeading {
+    font-family: Tahoma;
+    font-size: 16pt;
+    color: #000000;
+    font-weight: bold;
+    line-height: 20pt;
+    margin-left: .75in;
+    margin-top: 18pt;
+    margin-bottom: 10pt;
+    padding-left: 0;
+    page-break-after: avoid;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom-color: black;
+  }
+
+  /* line 32, sass/_glossary.scss */
+  div.GlossaryPageDefinition {
+    font-family: Verdana;
+    font-size: 10.5pt;
+    line-height: 13.5pt;
+    margin-bottom: 13.5pt;
+    margin-left: 0;
+    padding-left: .25in;
+    mc-hyphenate: never;
+    color: #000000;
+    widows: 3;
+    orphans: 3;
+    page-break-inside: avoid;
+  }
+
+  /* line 46, sass/_glossary.scss */
+  div.GlossaryPageTerm {
+    font-family: Verdana;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 14pt;
+    margin-left: 0;
+    margin-bottom: 6pt;
+    padding-left: 0;
+    page-break-after: avoid;
+    mc-hyphenate: never;
+  }
+
+  /* line 58, sass/_glossary.scss */
+  div.GlossaryPageEntry {
+    padding-left: 0pt;
+    margin-left: .75in;
+    padding-left: 10px;
+  }
+
+  /* line 65, sass/_glossary.scss */
+  p.GlossaryLetter {
+    font-family: Tahoma;
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 20pt;
+    margin-top: 18pt;
+    margin-left: 1in;
+    margin-bottom: 10pt;
+    page-break-after: avoid;
+  }
+
+  /* line 77, sass/_glossary.scss */
+  p.GlossaryTerm {
+    font-family: Verdana;
+    font-size: 11pt;
+    font-weight: bold;
+    margin-left: 1in;
+    line-height: 14pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+    mc-hyphenate: never;
+  }
+
+  /* line 89, sass/_glossary.scss */
+  p.GlossaryEntry {
+    font-family: Verdana;
+    font-size: 10.5pt;
+    line-height: 13.5pt;
+    margin-bottom: 13.5pt;
+    margin-left: 1.25in;
+  }
+}
+/* line 1, sass/_pipelineExampleTables.scss */
+table.TableStyle-stageExample ~ p {
+  margin-top: 1.23em;
+}
+
+/* line 5, sass/_pipelineExampleTables.scss */
+tr.TableStyle-stageExample-Body-Body1 + tr.TableStyle-stageExample-Body-Body1 {
+  margin-top: 1.23em;
+}
+
+/*** Columns 1 and 5 show document examples, have doc icon backgrounds ***/
+/* line 17, sass/_pipelineExampleTables.scss */
+td.TableStyle-stageExample-BodyB-Column1-Body1,
+td.TableStyle-stageExample-BodyE-Column1-Body1,
+td.TableStyle-stageExample-BodyA-Column5-Body1,
+td.TableStyle-stageExample-BodyB-Column5-Body1,
+td.TableStyle-stageExample-BodyC-Column5-Body1,
+td.TableStyle-stageExample-BodyD-Column5-Body1,
+td.TableStyle-stageExample-BodyE-Column5-Body1,
+td.TableStyle-stageExample-BodyE-Column3-Body1 {
+  background-position: left center;
+  height: 55px;
+}
+
+/* line 22, sass/_pipelineExampleTables.scss */
+td#noborder {
+  border: none;
+}
+
+/* line 26, sass/_pipelineExampleTables.scss */
+td#nobackground {
+  background-image: none;
+}
+
+/* line 30, sass/_pipelineExampleTables.scss */
+td#conditional {
+  border: solid 4px #7649ce;
+  border-radius: 6px;
+  padding-bottom: 1.23em;
+}
+
+/* line 36, sass/_pipelineExampleTables.scss */
+td#conditional > p:first-child {
+  color: #7649ce;
+  font-family: sans-serif;
+  font-size: 120%;
+  font-weight: 600;
+}
+
+/* line 43, sass/_pipelineExampleTables.scss */
+td#dropped {
+  background-image: url("../Images/docDroppedIcon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/*** Columns 2 and 4 have arrow icon backgrounds ***/
+/* line 59, sass/_pipelineExampleTables.scss */
+td.TableStyle-stageExample-BodyA-Column2-Body1,
+td.TableStyle-stageExample-BodyB-Column2-Body1,
+td.TableStyle-stageExample-BodyC-Column2-Body1,
+td.TableStyle-stageExample-BodyD-Column2-Body1,
+td.TableStyle-stageExample-BodyE-Column2-Body1,
+td.TableStyle-stageExample-BodyA-Column4-Body1,
+td.TableStyle-stageExample-BodyB-Column4-Body1,
+td.TableStyle-stageExample-BodyC-Column4-Body1,
+td.TableStyle-stageExample-BodyD-Column4-Body1,
+td.TableStyle-stageExample-BodyE-Column4-Body1 {
+  background-position: 50% 50%;
+}
+
+/* line 72, sass/_pipelineExampleTables.scss */
+td.TableStyle-pipelineExample-BodyA-Input-Body1,
+td.TableStyle-pipelineExample-BodyB-Input-Body1,
+td.TableStyle-pipelineExample-BodyC-Input-Body1,
+td.TableStyle-pipelineExample-BodyD-Input-Body1,
+td.TableStyle-pipelineExample-BodyE-Input-Body1,
+td.TableStyle-pipelineExample-BodyA-Example-Input,
+td.TableStyle-pipelineExample-BodyB-Example-Input,
+td.TableStyle-pipelineExample-BodyC-Example-Input,
+td.TableStyle-pipelineExample-BodyD-Example-Input,
+td.TableStyle-pipelineExample-BodyE-Example-Input {
+  mc-auto-number-format: '{b}Documents from Inputs {/b}';
+}
+
+/* line 80, sass/_pipelineExampleTables.scss */
+td.TableStyle-pipelineExample-BodyA-Example-DownArrow,
+td.TableStyle-pipelineExample-BodyB-Example-DownArrow,
+td.TableStyle-pipelineExample-BodyC-Example-DownArrow,
+td.TableStyle-pipelineExample-BodyD-Example-DownArrow,
+td.TableStyle-pipelineExample-BodyE-Example-DownArrow {
+  background-image: url("../Images/downArrow.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 95, sass/_pipelineExampleTables.scss */
+td.TableStyle-pipelineExample-BodyA-Output-Body1,
+td.TableStyle-pipelineExample-BodyB-Output-Body1,
+td.TableStyle-pipelineExample-BodyC-Output-Body1,
+td.TableStyle-pipelineExample-BodyD-Output-Body1,
+td.TableStyle-pipelineExample-BodyE-Output-Body1,
+td.TableStyle-pipelineExample-BodyA-Example-Output,
+td.TableStyle-pipelineExample-BodyB-Example-Output,
+td.TableStyle-pipelineExample-BodyC-Example-Output,
+td.TableStyle-pipelineExample-BodyD-Example-Output,
+td.TableStyle-pipelineExample-BodyE-Example-Output {
+  mc-auto-number-format: '{b}Documents to Outputs or Next Pipeline {/b}';
+}
+
+/* line 109, sass/_pipelineExampleTables.scss */
+td.TableStyle-stageExample-BodyA-Column3-Body1,
+td.TableStyle-stageExample-BodyB-Column3-Body1,
+td.TableStyle-stageExample-BodyC-Column3-Body1,
+td.TableStyle-stageExample-BodyD-Column3-Body1,
+td.TableStyle-stageExample-BodyE-Column3-Body1,
+td.TableStyle-pipelineExample-BodyA-Example-Stage,
+td.TableStyle-pipelineExample-BodyB-Example-Stage,
+td.TableStyle-pipelineExample-BodyC-Example-Stage,
+td.TableStyle-pipelineExample-BodyD-Example-Stage,
+td.TableStyle-pipelineExample-BodyE-Example-Stage,
+table.stage {
+  border: solid 4px #477bd3;
+  border-radius: 6px;
+}
+
+/* line 114, sass/_pipelineExampleTables.scss */
+col.TableStyle-pipelineExample-Column-Example {
+  align: center;
+  mc-disabled: true;
+}
+
+/* line 119, sass/_pipelineExampleTables.scss */
+div.stageInConditional {
+  border: solid 4px #477bd3;
+  border-radius: 6px;
+  width: 80%;
+  margin: 10% auto auto 10%;
+}
+
+/* line 131, sass/_pipelineExampleTables.scss */
+td.TableStyle-stageExample-BodyA-Column3-Body1 p:first-child,
+td.TableStyle-stageExample-BodyB-Column3-Body1 p:first-child,
+td.TableStyle-stageExample-BodyC-Column3-Body1 p:first-child,
+td.TableStyle-stageExample-BodyD-Column3-Body1 p:first-child,
+td.TableStyle-stageExample-BodyE-Column3-Body1 p:first-child,
+div.stageInConditional p:first-child {
+  color: #477bd3;
+  font-family: sans-serif;
+  font-size: 120%;
+  font-weight: 600;
+  align: center;
+}
+
+/* line 1, sass/_divs.scss */
+div.CodeHighlight {
+  color: red;
+}
+
+@media print {
+  /* line 5, sass/_divs.scss */
+  div.CodeHighlight p {
+    margin-left: 0;
+  }
+}
+
+/* line 12, sass/_divs.scss */
+div.MasterPageBodyContainer {
+  margin-left: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 1.23em;
+}
+
+/* line 19, sass/_divs.scss */
+div.MasterPageBreadcrumbs {
+  margin-bottom: 0;
+  text-align: left;
+  margin-left: 5pt;
+}
+
+/* line 25, sass/_divs.scss */
+div.noBreak {
+  page-break-inside: avoid;
+}
+
+/* line 30, sass/_divs.scss */
+div.snippetAndNoteTableIndent-1 {
+  margin-left: 25px;
+}
+@media print {
+  /* line 30, sass/_divs.scss */
+  div.snippetAndNoteTableIndent-1 {
+    margin-left: 0.25in;
+  }
+}
+
+/* line 30, sass/_divs.scss */
+div.snippetAndNoteTableIndent-2 {
+  margin-left: 50px;
+}
+@media print {
+  /* line 30, sass/_divs.scss */
+  div.snippetAndNoteTableIndent-2 {
+    margin-left: 0.5in;
+  }
+}
+
+/* line 30, sass/_divs.scss */
+div.snippetAndNoteTableIndent-3 {
+  margin-left: 75px;
+}
+@media print {
+  /* line 30, sass/_divs.scss */
+  div.snippetAndNoteTableIndent-3 {
+    margin-left: 0.75in;
+  }
+}
+
+/* line 30, sass/_divs.scss */
+div.snippetAndNoteTableIndent-4 {
+  margin-left: 100px;
+}
+@media print {
+  /* line 30, sass/_divs.scss */
+  div.snippetAndNoteTableIndent-4 {
+    margin-left: 1in;
+  }
+}
+
+/* line 39, sass/_divs.scss */
+div.snippetIndent-1 p.ListBullet-1, div.snippetIndent-1 p.MiniTOC1_0,
+div.snippetIndent-1 p.MiniTOC1 {
+  mc-auto-number-format: 'o';
+  mc-auto-number-class: Bullet2;
+}
+
+/* line 45, sass/_divs.scss */
+div.standardTableIndent-1 {
+  margin-left: 25px;
+}
+@media print {
+  /* line 45, sass/_divs.scss */
+  div.standardTableIndent-1 {
+    margin-left: 1.25in;
+  }
+}
+
+/* line 45, sass/_divs.scss */
+div.standardTableIndent-2 {
+  margin-left: 50px;
+}
+@media print {
+  /* line 45, sass/_divs.scss */
+  div.standardTableIndent-2 {
+    margin-left: 1.5in;
+  }
+}
+
+/* line 45, sass/_divs.scss */
+div.standardTableIndent-3 {
+  margin-left: 75px;
+}
+@media print {
+  /* line 45, sass/_divs.scss */
+  div.standardTableIndent-3 {
+    margin-left: 1.75in;
+  }
+}
+
+/* line 45, sass/_divs.scss */
+div.standardTableIndent-4 {
+  margin-left: 100px;
+}
+@media print {
+  /* line 45, sass/_divs.scss */
+  div.standardTableIndent-4 {
+    margin-left: 2in;
+  }
+}
+
+/* line 2, sass/_paragraphsPdfOnly.scss */
+p.HeaderRight,
+p.HeaderLeft {
+  margin-left: 0;
+  font-family: Tahoma;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+
+/* line 9, sass/_paragraphsPdfOnly.scss */
+p.BackCover {
+  margin-left: 0;
+  margin-bottom: 9pt;
+  font-size: 9pt;
+  margin-top: 0;
+  line-height: 11pt;
+  mc-hyphenate: never;
+}
+
+/* line 18, sass/_paragraphsPdfOnly.scss */
+p.ChapterNumber, p.AppendixLetter {
+  font-size: 80pt;
+  font-style: oblique;
+  font-family: 'Arial Black', sans-serif;
+  color: #ffffff;
+  margin-left: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 28, sass/_paragraphsPdfOnly.scss */
+p.CoverFooterFront, p.CoverFooterBack {
+  font-size: 12pt;
+  font-family: Arial;
+  margin: 0;
+  line-height: 17pt;
+  column-break-before: always;
+}
+
+/* line 36, sass/_paragraphsPdfOnly.scss */
+p.CoverFooterFront {
+  text-align: right;
+}
+
+/* line 41, sass/_paragraphsPdfOnly.scss */
+p.CoverFooterBack {
+  text-align: left;
+}
+
+/* line 47, sass/_paragraphsPdfOnly.scss */
+p.CoverInternalOnly {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 12pt;
+  text-align: right;
+  margin-right: .25in;
+  margin-bottom: 0;
+  line-height: 14pt;
+  color: #cc0000;
+}
+
+/**** front cover styles ****/
+/* line 59, sass/_paragraphsPdfOnly.scss */
+p.DocTitle {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: right;
+  margin-bottom: 0;
+  line-height: 14pt;
+  margin-left: 0;
+  margin-right: .25in;
+}
+
+/* line 71, sass/_paragraphsPdfOnly.scss */
+p.ProductName {
+  margin-left: 0;
+  margin-bottom: 7pt;
+  margin-right: .25in;
+  font-weight: bold;
+  font-style: normal;
+  text-align: right;
+  font-size: 24pt;
+  font-family: Arial;
+  line-height: 25pt;
+}
+
+/* line 84, sass/_paragraphsPdfOnly.scss */
+p.releaseVersions {
+  margin-bottom: 0em;
+  text-align: right;
+  margin-right: 0.25in;
+}
+
+/**** Footer styles ****/
+/* line 92, sass/_paragraphsPdfOnly.scss */
+p.FooterDocTitle, p.FooterDocTitleLandscape {
+  font-family: Tahoma;
+  text-align: center;
+  font-size: 10pt;
+  line-height: 11pt;
+  margin-left: -1.03in;
+  margin-bottom: 0;
+  border-top-length: 9in;
+  border-top-width: .5px;
+  border-top-style: solid;
+  border-top-color: #000000;
+  padding-top: 5pt;
+}
+
+/* line 107, sass/_paragraphsPdfOnly.scss */
+p.FooterHeading {
+  margin-left: -1.03in;
+  margin-bottom: 0;
+  font-size: 10pt;
+  font-family: Tahoma;
+  text-align: center;
+  column-break-after: always;
+}
+
+/* line 116, sass/_paragraphsPdfOnly.scss */
+p.FooterPageNumberLeft, p.FooterPageNumberRight {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-style: normal;
+  column-break-after: always;
+  font-family: Tahoma;
+  font-size: 12pt;
+  line-height: 13pt;
+}
+
+/* line 127, sass/_paragraphsPdfOnly.scss */
+p.FooterPageNumberLeft {
+  margin-left: -1.03in;
+  text-align: left;
+}
+
+/* line 134, sass/_paragraphsPdfOnly.scss */
+p.FooterPageNumberRight {
+  margin-left: 0;
+  padding-right: 0;
+  text-align: right;
+}
+
+/**** PDF index styles ****/
+/* line 143, sass/_paragraphsPdfOnly.scss */
+p.IndexHeading {
+  margin: 13.5pt 0 3pt 0;
+  column-break-after: avoid;
+  page-break-after: avoid;
+  font-family: Verdana;
+  font-size: 12pt;
+  font-weight: bold;
+  line-height: 12pt;
+  text-align: left;
+}
+
+/* line 155, sass/_paragraphsPdfOnly.scss */
+p.Index1, p.Index2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  page-break-inside: avoid;
+  column-break-inside: avoid;
+  font-family: Verdana;
+  font-size: 9pt;
+  line-height: 12pt;
+}
+
+/* line 166, sass/_paragraphsPdfOnly.scss */
+p.Index2 {
+  column-break-before: avoid;
+  page-break-before: avoid;
+  margin-left: .25in;
+  page-break-inside: avoid;
+  page-break-after: auto;
+  column-break-after: auto;
+}
+
+/***paragraph styles for the PDF TOCs***/
+/* line 177, sass/_paragraphsPdfOnly.scss */
+p.TOC1, p.TOC2 {
+  text-align: left;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14pt;
+  font-family: Arial;
+  color: blue;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 22pt;
+  white-space: normal;
+  page-break-after: avoid;
+}
+
+/* line 191, sass/_paragraphsPdfOnly.scss */
+p.TOC2 {
+  font-weight: normal;
+  margin-bottom: 7pt;
+}
+
+/* line 197, sass/_paragraphsPdfOnly.scss */
+p.TOC3, p.TOC4, p.TOC5 {
+  font-size: 12pt;
+  font-family: Tahoma;
+  color: #000000;
+  margin: 0;
+  margin-left: .35in;
+  margin-top: 5pt;
+  line-height: 15pt;
+}
+
+/* line 207, sass/_paragraphsPdfOnly.scss */
+p.TOC4 {
+  margin-left: .65in;
+}
+
+/* line 212, sass/_paragraphsPdfOnly.scss */
+p.TOC5 {
+  margin-left: .85in;
+}
+
+/* line 217, sass/_paragraphsPdfOnly.scss */
+p.TOC6 {
+  color: pink;
+}
+
+/* line 14, sass/importPartials.scss */
+body {
+  font-size: 16px;
+}
+@media print {
+  /* line 14, sass/importPartials.scss */
+  body {
+    font-size: 10.5pt;
+    font-family: Verdana;
+    /* line-height: normal;
+    margin: 10px;*/
+  }
+}
+
+/* line 24, sass/importPartials.scss */
+hr {
+  margin-top: 0;
+  border-bottom-color: #f5f5f5;
+  border-top-color: #f5f5f5;
+  border: 1px groove #cdcdcd;
+  font-family: Tahoma, sans-serif;
+}
+
+/* line 32, sass/importPartials.scss */
+html {
+  font-size: 100%;
+}
+
+/* line 36, sass/importPartials.scss */
+#changebar {
+  border-left: solid 5px #000000;
+  padding-left: 5px;
+}
+
+/* line 41, sass/importPartials.scss */
+#changebar2 {
+  border-left: solid 5px #cc00ff;
+  padding-left: 5px;
+}
+
+/* line 47, sass/importPartials.scss */
+a,
+a:link {
+  color: #477bd3;
+  text-decoration: none;
+}
+
+/* line 52, sass/importPartials.scss */
+a:hover {
+  color: #8db6ff;
+}
+
+/* line 56, sass/importPartials.scss */
+a:visited {
+  color: #7649ce;
+}
