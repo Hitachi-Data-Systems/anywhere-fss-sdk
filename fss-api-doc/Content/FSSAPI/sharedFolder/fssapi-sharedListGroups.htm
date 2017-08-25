@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -50,10 +50,10 @@
                 <p class="NormalIndent-1">The path to the shared or team folder.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/groups</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/groups -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Sales Project"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/groups -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Sales Project"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">share/groups</span> request.</p>
-                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"members": [<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name":"Sales Team",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2135",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId":"2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state":"MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"accountType": "GROUP"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"members": [<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name":"Sales Team",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2135",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId":"2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state":"MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"accountType": "GROUP"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"groupInfo": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Tyler Lomas"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
                 <h2>Description of Response</h2>
                 <p>This section describes the  contents of a  <span class="FileName">share/groups</span> response.</p>
                 <p><span class="GUI">Response content:</span>
@@ -63,7 +63,7 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
                 <p class="NormalIndent-2">The name of the group. The name of the group is acquired from the identity provider (SAML or AD) of the HCP Anywhere system.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>uniqueId (required) : String</p>
-                <p class="NormalIndent-2">The unique identifying string assigned to the group by the group's authentication provider (AD or SAML).</p>
+                <p class="NormalIndent-2">The unique identifying string assigned to the group by the group's authentication provider (AD or SAML).  For AD, this is the user's Security Identifier (SID). </p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>providerId (required) : String</p>
                 <p class="NormalIndent-2">The unique identifying string assigned to the group's authentication provider (AD or SAML) by HCP Anywhere.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>role (required) : Enum</p>
@@ -74,6 +74,10 @@
                 <p class="NormalIndent-2">The Active Directory domain that contains the group's user account. </p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accountType (required): Enum</p>
                 <p class="NormalIndent-2">Identifies whether the returned object is an individual person or a group (USER&#160;or GROUP).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>groupInfo (required): Object</p>
+                <p class="NormalIndent-2">This object lists some additional information about the group:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>displayName : String</p>
+                <p class="NormalIndent-3">The group's display name.&#160;The display name is acquired from the authentication provider (SAML or AD) of the HCP Anywhere system.</p>
             </div>
             <div class="MasterPageBodyAndMiniTOCProxyContainer">
                 <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->

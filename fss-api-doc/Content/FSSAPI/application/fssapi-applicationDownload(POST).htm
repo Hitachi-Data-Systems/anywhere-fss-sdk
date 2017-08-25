@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -74,7 +74,7 @@
                 <p>This section contains an example of a <span class="FileName">client/get</span> (POST) request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
                 <p>The "-o" option is supplied in each request. The "-o" option allows you to specify a local path on your computer where the file is saved instead of having the file streamed to your terminal in bytes. For the Windows desktop application and the Windows Outlook Add-in, make sure to enter "exe" as the extension for the installation file in the "-o" option. For the Mac desktop application, make sure to enter "dmg" as the extension for the installation file in the -o" option. Including the incorrect extension in the "-o" option corrupts the file. </p>
                 <p>Do not include an "i" in the request (such as "kiX"). This corrupts the file.</p>
-                <p class="APICode">curl -kX POST https://anywhere.example.com/fss/public/client/get -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"client": "WINDOWS"}' -o "C:\JSMITH\Desktop\AW.exe"</p>
+                <p class="APICode">curl -kX POST https://anywhere.example.com/fss/public/client/get -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"client": "WINDOWS"}' -o "C:\JSMITH\Desktop\AW.exe"</p>
                 <h2>Example Response<br /></h2>
                 <p>In response to a successful <span class="FileName">client/get</span> (POST) request, no information is returned in the response body. Instead, the installation file is downloaded to the location that you specified in the "-o" option of the request.</p>
             </div>

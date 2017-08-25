@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -73,10 +73,10 @@
                 <p class="NormalIndent-1">A unique string assigned to the  link by HCP Anywhere. The link token is part of the link metadata and is returned in response to a number of link requests.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">link/private/info </span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/private/info -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"itemName": "Sales Overview.pdf", "linkToken": "YK9JjXIvSYlyr0mN" }'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/private/info -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"itemName": "Sales Overview.pdf", "linkToken": "YK9JjXIvSYlyr0mN" }'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">link/private/info</span> request. </p>
-                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"requiresAccessCode":false,<br />&#160;&#160;&#160;&#160;"permissions":["READ"],<br />&#160;&#160;&#160;&#160;"type":"FILE",<br />&#160;&#160;&#160;&#160;"contentType": "PDF",<br />}</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"requiresAccessCode":false,<br />&#160;&#160;&#160;&#160;"permissions":["READ"],<br />&#160;&#160;&#160;&#160;"type":"FILE",<br />&#160;&#160;&#160;&#160;"contentType": "PDF",<br />&#160;&#160;&#160;&#160;"size":32288<br />}</p>
                 <h2>Description of Response</h2>
                 <p>This section describes the  contents of a <span class="FileName">link/private/info</span> response.</p>
                 <p><span class="GUI">Response content:</span>
@@ -90,7 +90,9 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>type (required) : Enum</p>
                 <p class="NormalIndent-1">The type of item (FILE, FOLDER, or BROKEN). If the item that the link points to has been moved, renamed, or deleted, the type  is BROKEN.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>contentType (conditional) : String</p>
-                <p class="NormalIndent-1">If the item is a file, the format of the file is returned (for example, "audio/mp3", "image/jpeg", or "application/pdf").&#160;If the file is an audio or video file and over 5 MB, not a recognized file format, or link preview is disabled by the HCP Anywhere administrator, the contentType is always "application/octet-stream". If the item is a folder, the contentType field is not returned in the response body.</p>
+                <p class="NormalIndent-1">If the item is a file, the format of the file is returned (for example, "audio/mp3", or "image/jpeg").&#160;If the file is an audio or video file and over 5 MB, not a recognized file format, or link preview is disabled by the HCP Anywhere administrator, the contentType is always "application/octet-stream". If the item is a folder, the contentType field is not returned in the response body.</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>size (conditional) : Long</p>
+                <p class="NormalIndent-1">If the item is a file, the size of the file in bytes.</p>
             </div>
             <div class="MasterPageBodyAndMiniTOCProxyContainer">
                 <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->

@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -60,10 +60,10 @@
                 <p class="NormalIndent-1">If true, the link is publicly accessible (accessible without first providing login credentials). If false, the link is internally accessible (accessible only by other HCP Anywhere users in the network). The settings on the Management Console determine the default accessibility of a link (public or internal).</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">link/create</span> request in cURL. In this example, the link points to a folder called "Team-Projects" and  the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/create -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Team-Projects", "expirationDays": 30, "public": true, "accessCode": true, "permissions": ['READ']}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/create -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Team-Projects", "expirationDays": 30, "public": true, "accessCode": true, "permissions": ['READ']}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">link/create</span> request. In an actual response, the etags are much longer.</p>
-                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"url": "https://anywhere.example.com/u/79KZnP1SmZT90pmc/Work-Projects?l",<br />&#160;&#160;&#160;&#160;"path": "/Work Projects",<br />&#160;&#160;&#160;&#160;"expirationDate": 1459440864685,<br />&#160;&#160;&#160;&#160;"public": true,<br />&#160;&#160;&#160;&#160;"accessCode": "8h;nDy0z",<br />&#160;&#160;&#160;&#160;"permission": ["READ"],<br />&#160;&#160;&#160;&#160;&#160;"token": "79KZnP1SmZT90pmc",<br />&#160;&#160;&#160;&#160;&#160;"type":"FOLDER",<br />&#160;&#160;&#160;&#160;&#160;"itemName": "Work Projects"<br />}</p>
+                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"url": "https://anywhere.example.com/u/79KZnP1SmZT90pmc/Work-Projects?l",<br />&#160;&#160;&#160;&#160;"path": "/Work Projects",<br />&#160;&#160;&#160;&#160;"expirationDate": 1459440864685,<br />&#160;&#160;&#160;&#160;"public": true,<br />&#160;&#160;&#160;&#160;"accessible":true,<br />&#160;&#160;&#160;&#160;"accessCode": "8h;nDy0z",<br />&#160;&#160;&#160;&#160;"permission": ["READ"],<br />&#160;&#160;&#160;&#160;"token": "79KZnP1SmZT90pmc",<br />&#160;&#160;&#160;&#160;"type":"FOLDER",<br />&#160;&#160;&#160;&#160;"itemName": "Work Projects"<br />}</p>
                 <h2>Description of Response</h2>
                 <p>This section describes the  contents of a <span class="FileName">link/create</span> response.</p>
                 <p><span class="GUI">Response content:</span>
@@ -76,6 +76,8 @@
                 <p class="NormalIndent-1">The time at which the link expires. This time is returned in Unix format.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>public (required) : Boolean</p>
                 <p class="NormalIndent-1">If true, the link is publicly accessible (accessible without first entering login credentials). If false, the link is internally accessible (accessible only by other HCP Anywhere users in the network).</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>accessible (required) : Boolean</p>
+                <p class="NormalIndent-1">If true, the link is active. If false, the link is inactive.&#160;A link becomes inactive if the file or folder that the link is points to has been moved, renamed, or deleted or link sharing has been disabled by the HCP Anywhere administrator.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>accessCode (conditional) : String</p>
                 <p class="NormalIndent-1">An additional code assigned to the given link by HCP Anywhere.&#160;The person who creates the link decides if the link  requires this additional code. </p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>permissions (required) : String</p>

@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -52,7 +52,7 @@
                 <p class="NormalIndent-1">You can acquire an application's id using a <a href="fssapi-applicationListApplications.htm">client/list</a> request.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">client/clearCredentials</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/client/clearCredentials -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: $PAPIAPIVERSION" -d '{"id": "mndqlcngh"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/client/clearCredentials -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"id": "mndqlcngh"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">client/clearCredentials</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"id": "mndqlcngh",<br />&#160;&#160;&#160;&#160;"nickname": "Windows Computer",<br />&#160;&#160;&#160;&#160;"os": "WINDOWS",<br />&#160;&#160;&#160;&#160;"version": "2.1.1.2",<br />&#160;&#160;&#160;&#160;"lastAccess": 1467921091077,<br />&#160;&#160;&#160;&#160;"needsUpgrade": false,<br />&#160;&#160;&#160;&#160;"inRecovery": false<br />}</p>

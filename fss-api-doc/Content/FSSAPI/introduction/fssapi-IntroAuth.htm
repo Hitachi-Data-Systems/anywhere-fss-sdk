@@ -10,7 +10,8 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -38,9 +39,21 @@
             <div class="MasterPageBodyAndMiniTOCProxyContainer">
                 <h1>Authentication overview</h1>
                 <p>To make a successful request with most  File Sync and Share API endpoints, you need to include an authentication token in the request. The authentication token identifies the user making the request and holds their login credentials. </p>
-                <p>You can acquire an authentication token using one of these endpoints:</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>The <a href="../authentication/fssapi-authAuth.htm">login/oauth</a> endpoint for Active Directory authentication</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>The <a href="../authentication/fssapi-samlAuth.htm">saml/redirect</a> endpoint for SAML authentication </p>
+                <p>You can acquire an authentication token using a <a href="../authentication/fssapi-authAuth.htm">login/oauth</a> request. This request is for Active Directory authentication. </p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
+                    <col class="Column-NoteIcon" />
+                    <col class="Column-NoteText" />
+                    <tbody>
+                        <tr class="Body-Body1">
+                            <td class="BodyB-NoteIcon-Body1">
+                                <img src="../../Resources/Images/noteTables/NoteWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
+                            </td>
+                            <td class="BodyA-NoteText-Body1">
+                                <p class="Note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>The File Sync and Share API does not support SAML authentication.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 <p>If the request is successful, an authentication token is returned in the response body.</p>
                 <p>Once you have an authentication token, you can use the other File Sync and Share API endpoints by supplying the authentication token and any other required parameters of that particular endpoint. The authentication token is supplied as a header in each request. In cURL, the authorization header looks like this:</p>
                 <p class="Display-2">-H "Authorization: Bearer abc="</p>

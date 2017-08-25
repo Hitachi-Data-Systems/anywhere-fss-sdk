@@ -10,7 +10,8 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
+        <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -50,7 +51,7 @@
                 <p class="NormalIndent-1">The path to the deleted file.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">file/restore</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/restore -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Old Power Point.pptx"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/restore -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Old Power Point.pptx"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">file/restore</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"type":"FILE",<br />&#160;&#160;&#160;&#160;"parent":"/",<br />&#160;&#160;&#160;&#160;"name":"Old Power Point.pptx",<br />&#160;&#160;&#160;&#160;"changeTime":1476737091171,<br />&#160;&#160;&#160;&#160;"size":1638633,<br />&#160;&#160;&#160;&#160;"hash":"77ea1",<br />&#160;&#160;&#160;&#160;"access":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;"etag":"YtRQq",<br />&#160;&#160;&#160;&#160;"state":"CREATE"<br />}</p>
@@ -80,11 +81,11 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>state (required) : Enum</p>
                 <p class="NormalIndent-1">The state of the file (CREATE or DELETE). For this response, the state is always CREATE.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sharing (conditional): Object</p>
-                <p class="NormalIndent-1">If the file is within  a shared folder, team folder, or <span class="userVariablesNASShare">mobilized data share</span>, some additional folder information.</p>
+                <p class="NormalIndent-1">If the file is within  a shared folder, team folder, or <span class="userVariablesNASShare">mobilized share</span>, some additional folder information.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>canUserManage: Boolean</p>
                 <p class="NormalIndent-2">If true, the user is the Owner of the shared folder or the Manager of the team folder.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>isMountPoint: Boolean</p>
-                <p class="NormalIndent-2">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and <span class="userVariablesNASShare">mobilized data share</span>s are always mount points although the items within them are not.</p>
+                <p class="NormalIndent-2">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and <span class="userVariablesNASShare">mobilized share</span>s are always mount points although the items within them are not.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>label (conditional) : String</p>
                 <p class="NormalIndent-2">If the item is a shared or team folder, the label of the folder.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type: Enum</p>
@@ -95,6 +96,33 @@
                 <p class="NormalIndent-3">The contact of the team folder.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>quota: Long</p>
                 <p class="NormalIndent-3">The total storage capacity of the team folder. This is returned in bytes.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>backup (conditional): Object</p>
+                <p class="NormalIndent-2">If the file is within a backup folder, the response contains this additional backup information:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isActive: Boolean</p>
+                <p class="NormalIndent-3">If true, the backup folder is connected to the HCP Anywhere desktop application.&#160;</p>
+                <p class="NormalIndent-3">The backup folder can disconnected from the desktop application if the desktop application is deregistered or if the backup feature is disabled by the system administrator.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isMountPoint: Boolean</p>
+                <p class="NormalIndent-3">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. The backup parent folder, which is automatically created when the desktop application is installed with backup enabled, is always a mount point.</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>operatingSystem: Enum</p>
+                <p class="NormalIndent-3">The type of device on which the desktop application is installed (WINDOWS,&#160;WINDOWS NSC, or&#160;MAC). For version 3.0 or later of the Windows desktop application, the operatingSystem is "WINDOWS&#160;NSC".</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>hasAssociatedClient: Boolean</p>
+                <p class="NormalIndent-3">Each backup file or folder is associated with the desktop application that performed its backup. If true, the desktop application  associated with the backup folder is currently registered.&#160;If false, the desktop application  associated with the backup folder is currently deregistered. </p>
+                <table style="width: 92.5%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 75px;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
+                    <col class="Column-NoteIcon" />
+                    <col class="Column-NoteText" />
+                    <tbody>
+                        <tr class="Body-Body1">
+                            <td class="BodyB-NoteIcon-Body1">
+                                <img src="../../Resources/Images/noteTables/NoteWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
+                            </td>
+                            <td class="BodyA-NoteText-Body1">
+                                <p class="Note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>An application can be deregistered if:</p>
+                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>You  deregister it in the User Portal in the <span class="GUI">My Devices</span> window</p>
+                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span> Your administrator  deregisters it in the HCP Anywhere Management Console</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="MasterPageBodyAndMiniTOCProxyContainer">
                 <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->

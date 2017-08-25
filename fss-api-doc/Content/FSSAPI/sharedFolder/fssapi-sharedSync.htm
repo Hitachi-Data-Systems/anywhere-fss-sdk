@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -44,16 +44,12 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>A Collaborator in the shared or team folder</p>
                 <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Synchorization for all Mac apps and Windows apps prior to 3.0</a></span>
                     <div class="MCDropDownBody dropDownBody">
-                        <p>When synchronization is enabled for a shared or team folder, that folder appears in your <span class="userVariableswatchedDirectory">desktop application folder</span>. </p>
-                        <p>When synchronization is disabled for a shared or team folder, that folder does not:</p>
-                        <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span> Appear in your <span class="userVariableswatchedDirectory">desktop application folder</span></p>
-                        <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Use space on your computer</p>
+                        <p>When you sync a folder, it appears in your <span class="userVariableswatchedDirectory">desktop app folder</span> but also uses space on that computer. When you stop syncing a folder, it no longer uses space on your computer and does not appear in the desktop app. </p>
                     </div>
                 </div>
                 <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="10" width="16" alt="Closed" data-mc-alt2="Open" />Synchronization for Windows app 3.0 or later</a></span>
                     <div class="MCDropDownBody dropDownBody">
-                        <p>In version 3.0 of the desktop application, you configure which files are saved locally to your computer and which remain remotely in HCP Anywhere directly in your <span class="userVariableswatchedDirectory">desktop application folder</span>.<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> For more information on doing this, see the <span class="Title">HCP Anywhere User Help</span>.</MadCap:conditionalText></p>
-                        <p>Enabling or disabling synchronization in the User Portal does not affect the shared or team folder in your <span class="userVariableswatchedDirectory">desktop application folder</span>.</p>
+                        <p>Syncing a folder has no effect. The 3.0 and later Windows desktop app uses the concept of remote and local files for managing space.  You can configure whether a file or folder is local (uses space) or remote (does not use space) directly in the desktop app.<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> For more information on doing this, see the <span class="Title">HCP Anywhere User Help</span>.</MadCap:conditionalText></p>
                     </div>
                 </div>
                 <h2>URI</h2>
@@ -67,10 +63,10 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required) : String</p>
                 <p class="NormalIndent-1">The path to the shared or team folder.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sync (required) : Boolean</p>
-                <p class="NormalIndent-1">If true, the shared folder and all its contents synchronize with the given user's <span class="userVariableswatchedDirectory">desktop application folder</span>.  If false, the shared folder does not appear in the given user's <span class="userVariableswatchedDirectory">desktop application folder</span> or use space on the user's computer.</p>
+                <p class="NormalIndent-1">If true, the shared folder and all its contents synchronize with the given user's <span class="userVariableswatchedDirectory">desktop app folder</span>.  If false, the shared folder does not appear in the given user's <span class="userVariableswatchedDirectory">desktop app folder</span> or use space on the user's computer.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/updateSettings</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/updateSettings -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Group Project", "sync": false}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/updateSettings -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Group Project", "sync": false}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of response to a successful share/updateSettings request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"path": "/Group Project",<br />&#160;&#160;&#160;&#160;"type": "SHARED", <br />&#160;&#160;&#160;&#160;"label": "shared",<br />&#160;&#160;&#160;&#160;"sync": false,<br />&#160;&#160;&#160;&#160;"role": "MANAGER",<br />&#160;&#160;&#160;&#160;"owner" {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"username": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName": "John&#160;Smith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userId": "8388608"<br />}</p>

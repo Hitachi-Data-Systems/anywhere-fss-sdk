@@ -33,6 +33,13 @@ p, td {
   }
 }
 
+/* line 103, sass/_variablesAndMixins.scss */
+p.Syntax-1, p.Syntax-2, p.Syntax-3, p.Syntax-4 {
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
+}
+
 /* line 7, sass/_paragraphs.scss */
 p.TaskIntro {
   page-break-after: avoid;
@@ -463,194 +470,239 @@ p.Display-4 {
   font-size: .95em;
 }
 
+/***Syntax**/
+/* line 179, sass/_paragraphs.scss */
+p.Syntax-1 {
+  margin-left: 25px;
+}
+@media print {
+  /* line 179, sass/_paragraphs.scss */
+  p.Syntax-1 {
+    margin-left: 1.25in;
+  }
+}
+
+/* line 179, sass/_paragraphs.scss */
+p.Syntax-2 {
+  margin-left: 50px;
+}
+@media print {
+  /* line 179, sass/_paragraphs.scss */
+  p.Syntax-2 {
+    margin-left: 1.5in;
+  }
+}
+
+/* line 179, sass/_paragraphs.scss */
+p.Syntax-3 {
+  margin-left: 75px;
+}
+@media print {
+  /* line 179, sass/_paragraphs.scss */
+  p.Syntax-3 {
+    margin-left: 1.75in;
+  }
+}
+
+/* line 179, sass/_paragraphs.scss */
+p.Syntax-4 {
+  margin-left: 100px;
+}
+@media print {
+  /* line 179, sass/_paragraphs.scss */
+  p.Syntax-4 {
+    margin-left: 2in;
+  }
+}
+
 /***ordered lists**/
-/* line 180, sass/_paragraphs.scss */
+/* line 191, sass/_paragraphs.scss */
 p.ListNumber-1, p.ListNumberFirst-1 {
   margin-left: 25px;
   mc-auto-number-format: "1:{n+}.";
 }
 @media print {
-  /* line 180, sass/_paragraphs.scss */
+  /* line 191, sass/_paragraphs.scss */
   p.ListNumber-1, p.ListNumberFirst-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 189, sass/_paragraphs.scss */
+/* line 200, sass/_paragraphs.scss */
 p.ListNumberFirst-1 {
   mc-auto-number-format: "1:{n=1}.";
 }
 
-/* line 194, sass/_paragraphs.scss */
+/* line 205, sass/_paragraphs.scss */
 p.ListAlpha-1, p.ListAlphaFirst-1 {
   margin-left: 25px;
   mc-auto-number-format: "5:{A+}.";
 }
 @media print {
-  /* line 194, sass/_paragraphs.scss */
+  /* line 205, sass/_paragraphs.scss */
   p.ListAlpha-1, p.ListAlphaFirst-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 208, sass/_paragraphs.scss */
+/* line 219, sass/_paragraphs.scss */
 p.ListAlphaFirst-1 {
   mc-auto-number-format: "5:{A=1}.";
 }
 
-/* line 218, sass/_paragraphs.scss */
+/* line 229, sass/_paragraphs.scss */
 p.NormalIndent-1 {
   margin-left: 25px;
 }
 @media print {
-  /* line 218, sass/_paragraphs.scss */
+  /* line 229, sass/_paragraphs.scss */
   p.NormalIndent-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 180, sass/_paragraphs.scss */
+/* line 191, sass/_paragraphs.scss */
 p.ListNumber-2, p.ListNumberFirst-2 {
   margin-left: 50px;
   mc-auto-number-format: "2:{n+}.";
 }
 @media print {
-  /* line 180, sass/_paragraphs.scss */
+  /* line 191, sass/_paragraphs.scss */
   p.ListNumber-2, p.ListNumberFirst-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 189, sass/_paragraphs.scss */
+/* line 200, sass/_paragraphs.scss */
 p.ListNumberFirst-2 {
   mc-auto-number-format: "2:{n=1}.";
 }
 
-/* line 194, sass/_paragraphs.scss */
+/* line 205, sass/_paragraphs.scss */
 p.ListAlpha-2, p.ListAlphaFirst-2 {
   margin-left: 50px;
   mc-auto-number-format: "6:{a+}.";
 }
 @media print {
-  /* line 194, sass/_paragraphs.scss */
+  /* line 205, sass/_paragraphs.scss */
   p.ListAlpha-2, p.ListAlphaFirst-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 208, sass/_paragraphs.scss */
+/* line 219, sass/_paragraphs.scss */
 p.ListAlphaFirst-2 {
   mc-auto-number-format: "6:{a=1}.";
 }
 
-/* line 218, sass/_paragraphs.scss */
+/* line 229, sass/_paragraphs.scss */
 p.NormalIndent-2 {
   margin-left: 50px;
 }
 @media print {
-  /* line 218, sass/_paragraphs.scss */
+  /* line 229, sass/_paragraphs.scss */
   p.NormalIndent-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 180, sass/_paragraphs.scss */
+/* line 191, sass/_paragraphs.scss */
 p.ListNumber-3, p.ListNumberFirst-3 {
   margin-left: 75px;
   mc-auto-number-format: "3:{n+}.";
 }
 @media print {
-  /* line 180, sass/_paragraphs.scss */
+  /* line 191, sass/_paragraphs.scss */
   p.ListNumber-3, p.ListNumberFirst-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 189, sass/_paragraphs.scss */
+/* line 200, sass/_paragraphs.scss */
 p.ListNumberFirst-3 {
   mc-auto-number-format: "3:{n=1}.";
 }
 
-/* line 194, sass/_paragraphs.scss */
+/* line 205, sass/_paragraphs.scss */
 p.ListAlpha-3, p.ListAlphaFirst-3 {
   margin-left: 75px;
   mc-auto-number-format: "7:{a+}.";
 }
 @media print {
-  /* line 194, sass/_paragraphs.scss */
+  /* line 205, sass/_paragraphs.scss */
   p.ListAlpha-3, p.ListAlphaFirst-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 208, sass/_paragraphs.scss */
+/* line 219, sass/_paragraphs.scss */
 p.ListAlphaFirst-3 {
   mc-auto-number-format: "7:{a=1}.";
 }
 
-/* line 218, sass/_paragraphs.scss */
+/* line 229, sass/_paragraphs.scss */
 p.NormalIndent-3 {
   margin-left: 75px;
 }
 @media print {
-  /* line 218, sass/_paragraphs.scss */
+  /* line 229, sass/_paragraphs.scss */
   p.NormalIndent-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 180, sass/_paragraphs.scss */
+/* line 191, sass/_paragraphs.scss */
 p.ListNumber-4, p.ListNumberFirst-4 {
   margin-left: 100px;
   mc-auto-number-format: "4:{n+}.";
 }
 @media print {
-  /* line 180, sass/_paragraphs.scss */
+  /* line 191, sass/_paragraphs.scss */
   p.ListNumber-4, p.ListNumberFirst-4 {
     margin-left: 2in;
   }
 }
 
-/* line 189, sass/_paragraphs.scss */
+/* line 200, sass/_paragraphs.scss */
 p.ListNumberFirst-4 {
   mc-auto-number-format: "4:{n=1}.";
 }
 
-/* line 194, sass/_paragraphs.scss */
+/* line 205, sass/_paragraphs.scss */
 p.ListAlpha-4, p.ListAlphaFirst-4 {
   margin-left: 100px;
   mc-auto-number-format: "8:{a+}.";
 }
 @media print {
-  /* line 194, sass/_paragraphs.scss */
+  /* line 205, sass/_paragraphs.scss */
   p.ListAlpha-4, p.ListAlphaFirst-4 {
     margin-left: 2in;
   }
 }
 
-/* line 208, sass/_paragraphs.scss */
+/* line 219, sass/_paragraphs.scss */
 p.ListAlphaFirst-4 {
   mc-auto-number-format: "8:{a=1}.";
 }
 
-/* line 218, sass/_paragraphs.scss */
+/* line 229, sass/_paragraphs.scss */
 p.NormalIndent-4 {
   margin-left: 100px;
 }
 @media print {
-  /* line 218, sass/_paragraphs.scss */
+  /* line 229, sass/_paragraphs.scss */
   p.NormalIndent-4 {
     margin-left: 2in;
   }
 }
 
-/* line 227, sass/_paragraphs.scss */
+/* line 238, sass/_paragraphs.scss */
 p.MasterPageCopyright {
   font-size: 8pt;
   margin-left: 0;
 }
 
-/* line 233, sass/_paragraphs.scss */
+/* line 244, sass/_paragraphs.scss */
 p.NoteToMe {
   font-size: 1.5em;
   font-weight: bold;
@@ -658,47 +710,47 @@ p.NoteToMe {
 }
 
 /****** Note paragraph styles ************/
-/* line 241, sass/_paragraphs.scss */
+/* line 252, sass/_paragraphs.scss */
 p.Caution {
   mc-auto-number-format: '{b}Caution: {/b}';
 }
 
-/* line 245, sass/_paragraphs.scss */
+/* line 256, sass/_paragraphs.scss */
 p.ConditionalSteps {
   mc-auto-number-format: '{b}Conditional Steps: {/b}';
 }
 
-/* line 249, sass/_paragraphs.scss */
+/* line 260, sass/_paragraphs.scss */
 p.Important {
   mc-auto-number-format: '{b}Important: {/b}';
 }
 
-/* line 253, sass/_paragraphs.scss */
+/* line 264, sass/_paragraphs.scss */
 p.Note {
   mc-auto-number-format: '{b}Note: {/b}';
 }
 
-/* line 257, sass/_paragraphs.scss */
+/* line 268, sass/_paragraphs.scss */
 p.Notes {
   mc-auto-number-format: '{b}Notes: {/b}';
 }
 
-/* line 261, sass/_paragraphs.scss */
+/* line 272, sass/_paragraphs.scss */
 p.RepeatStep {
   mc-auto-number-format: '{b}Repeat Step: {/b}';
 }
 
-/* line 265, sass/_paragraphs.scss */
+/* line 276, sass/_paragraphs.scss */
 p.Tip {
   mc-auto-number-format: '{b}Tip:  {/b}';
 }
 
-/* line 269, sass/_paragraphs.scss */
+/* line 280, sass/_paragraphs.scss */
 p.Tips {
   mc-auto-number-format: '{b}Tips:  {/b}';
 }
 
-/* line 273, sass/_paragraphs.scss */
+/* line 284, sass/_paragraphs.scss */
 p.Warning {
   mc-auto-number-format: '{b}WARNING! {/b}';
 }

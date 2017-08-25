@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -32,7 +32,7 @@
         </p>
         <div class="bodyContent">
             <div class="MasterPageBreadcrumbs">
-                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-linkIntro.htm">Link endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Check link access code (internal)</span>
+                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-linkIntro.htm">Link endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Check link acces code (internal)</span>
                 </div>
             </div>
             <hr width="100%" size="0" align="center" />
@@ -73,7 +73,7 @@
                 <p class="NormalIndent-1">An additional code assigned to the given link by HCP Anywhere.&#160;The person who creates the link decides if the link  requires this additional code.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">link/private/checkAccess</span> request in cURL. In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/private/checkAccess -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"linkToken": "XFwAIE7cACdOXAAg", "itemName": "Marketing Agenda.docx", "accessCode": ")X8Q3hNb"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/private/checkAccess -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"linkToken": "XFwAIE7cACdOXAAg", "itemName": "Marketing Agenda.docx", "accessCode": ")X8Q3hNb"}'</p>
                 <h2>Example Response</h2>
                 <p>If the access code is valid, no information is returned in the response body. </p>
                 <p>If the access code is invalid, an 403 (Invalid_Access_Code) is returned in response to the request.</p>

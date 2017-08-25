@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -49,11 +49,11 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>fsId (required) : Long</p>
                 <p class="NormalIndent-1">A unique identifying number assigned to the invitation by HCP Anywhere. You can acquire the fsId of an invitation using a <a href="fssapi-sharedListInvitations.htm">share/listInvitations</a> request.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sync (required) : Boolean</p>
-                <p class="NormalIndent-1">If true, the shared folder and all its contents synchronize with the given user's <span class="userVariableswatchedDirectory">desktop application folder</span>.  If false, the shared folder does not appear in the given user's <span class="userVariableswatchedDirectory">desktop application folder</span> or use space on the user's computer.</p>
+                <p class="NormalIndent-1">If true, the shared folder and all its contents synchronize with the given user's <span class="userVariableswatchedDirectory">desktop app folder</span>.  If false, the shared folder does not appear in the given user's <span class="userVariableswatchedDirectory">desktop app folder</span> or use space on the user's computer.</p>
                 <p class="NormalIndent-1">For more information on synchronization, see the <a href="fssapi-sharedSync.htm">share/updateSettings</a> endpoint.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of an <span class="FileName">share/acceptInvitation</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/acceptInvitation -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"fsId": 1729382256910270467, "sync": true}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/acceptInvitation -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"fsId": 1729382256910270467, "sync": true}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">share/acceptInvitation</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"path":"/Marketing Projects",<br />&#160;&#160;&#160;&#160;"type":"SHARED",<br />&#160;&#160;&#160;&#160;"label": "Shared Folder",<br />&#160;&#160;&#160;&#160;"sync": true,<br />&#160;&#160;&#160;&#160;"role": "MANAGER",<br />&#160;&#160;&#160;&#160;"size":13047,<br />&#160;&#160;&#160;&#160;"owner" {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"username": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName": "John&#160;Smith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userId": "8388608"<br />&#160;&#160;&#160;}<br />}</p>

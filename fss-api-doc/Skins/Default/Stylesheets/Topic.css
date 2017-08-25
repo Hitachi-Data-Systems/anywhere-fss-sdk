@@ -529,12 +529,12 @@ div.MCMiniTocBox_0
 {
 	border-top: none;
 	margin-top: 0;
+	padding-top: 0;
 	margin-left: 0;
 	padding: 0;
 	border-top-width: 1px;
 	border-top-style: none;
 	border-top-color: #cccccc;
-	padding-top: 0;
 	padding-left: 0;
 	margin: 0;
 }

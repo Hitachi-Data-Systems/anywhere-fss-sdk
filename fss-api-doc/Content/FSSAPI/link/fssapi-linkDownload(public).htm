@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -109,11 +109,11 @@
                 <p>This section contains an example of a <span class="FileName">link/public/stream/read</span> POST and GET request in cURL. In these examples, the links point to a file called "Sales&#160;Presentation.docx", the etag of the files is "acdsE==", the access code is "trw3N". In an actual request, the etag and hash are much longer. Since these request accesses public links, an authentication token is not required in these requests.</p>
                 <p><span class="GUI">POST request:</span>
                 </p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/public/stream/read  -H "Content-Type: application/json" -H "Accept: application/octet-stream" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Sales Presentation.pptx", "linkToken": "AS3FMROtxTQTLcUx", "itemName": "Sales Presentation.docx", "etag": "acdsE==", "accessCode": "trw3N"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/public/stream/read  -H "Content-Type: application/json" -H "Accept: application/octet-stream" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Sales Presentation.pptx", "linkToken": "AS3FMROtxTQTLcUx", "itemName": "Sales Presentation.docx", "etag": "acdsE==", "accessCode": "trw3N"}'</p>
                 <p>
                     <br /><span class="GUI">GET request:</span>
                 </p>
-                <p class="APICode">curl -kiX GET "https://anywhere.example.com/fss/public/link/public/stream/read?path=/Sales Presentation.pptx&amp;itemName=Sales Presentation.docx&amp;linkToken=AS3FMROtxTQTLcUx&amp;accessCode=trw3N" -H "If-Match: acdsE==" -H "Content-Type: application/json" -H "Accept: application/octet-stream" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" </p>
+                <p class="APICode">curl -kiX GET "https://anywhere.example.com/fss/public/link/public/stream/read?path=/Sales Presentation.pptx&amp;itemName=Sales Presentation.docx&amp;linkToken=AS3FMROtxTQTLcUx&amp;accessCode=trw3N" -H "If-Match: acdsE==" -H "Content-Type: application/json" -H "Accept: application/octet-stream" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" </p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">link/public/stream/read</span> request.</p>
                 <p class="NormalIndent-1"><span class="CodeInText">This is example text for the HCP Anywhere File Sync and Share API.</span>

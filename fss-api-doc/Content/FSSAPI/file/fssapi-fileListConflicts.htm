@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -47,7 +47,7 @@
                 <p>There are no parameters for a <span class="FileName">file/conflict/list</span> request.</p>
                 <h2>Example Request</h2>
                 <p>In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/conflict/list -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/conflict/list -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">file/conflict/list</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"entries": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "FILE",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"parent": "/",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "Q1 Overview ( jsmith's conflict 2016-10-19 ).docx",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"changeTime": 1469740333000,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"size": 13529,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"hash": "91a94",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"access": "COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"etag": "YtRQq==",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state": "CREATE"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
@@ -65,8 +65,8 @@
                 <p class="NormalIndent-2">The name of the file.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>changeTime (required) : Long</p>
                 <p class="NormalIndent-2">The time at which the file was last accessed or modified. This time is returned in Unix format.</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>size (required) : Long</p>
-                <p class="NormalIndent-1">The size of the file in bytes.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>size (required) : Long</p>
+                <p class="NormalIndent-2">The size of the file in bytes.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>hash (required) : String</p>
                 <p class="NormalIndent-2">The hex encoded sha-384 hash of the file.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>access (required) : String</p>
@@ -79,11 +79,11 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>state (required) : String</p>
                 <p class="NormalIndent-2">The state of the item (CREATE or DELETE).</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>sharing (conditional): Object</p>
-                <p class="NormalIndent-2">If the file is within  a shared folder, team folder, or <span class="userVariablesNASShare">mobilized data share</span>, some additional folder information.</p>
+                <p class="NormalIndent-2">If the file is within  a shared folder, team folder, or <span class="userVariablesNASShare">mobilized share</span>, some additional folder information.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>canUserManage: Boolean</p>
                 <p class="NormalIndent-3">If true, the user is the Owner of the shared folder or the Manager of the team folder.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>isMountPoint: Boolean</p>
-                <p class="NormalIndent-3">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and <span class="userVariablesNASShare">mobilized data share</span>s are always mount points although the items within them are not.</p>
+                <p class="NormalIndent-3">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. Shared folders, team folders, and <span class="userVariablesNASShare">mobilized share</span>s are always mount points although the items within them are not.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>label (conditional) : String</p>
                 <p class="NormalIndent-3">If the item is a shared or team folder, the label of the folder.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>type:Enum</p>

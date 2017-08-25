@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -61,11 +61,11 @@
                 <p>This section contains an example of a basic and form <span class="FileName">login/oauth</span> request in cURL. In these two examples, the username is "jsmith" and the password is "mypassword".</p>
                 <p><span class="GUI">Form authentication:</span>
                 </p>
-                <p class="APICode">curl https://anywhere.example.com/fss/public/login/oauth -iku "jsmith:mypassword" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: application/json"  -H "X-HCPAW-FSS-API-VERSION: 3.0.0 " -d 'grant_type=urn:hds:oauth:negotiate-client'</p>
+                <p class="APICode">curl https://anywhere.example.com/fss/public/login/oauth -iku "jsmith:mypassword" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: application/json"  -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d 'grant_type=urn:hds:oauth:negotiate-client'</p>
                 <p>
                     <br /><span class="GUI">JSON authentication:</span>
                 </p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/login/oauth -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -H "Accept: application/json" -H "Content-Type: application/json" -d '{"username": "jsmith", "password": "mypassword", "grant_type": "urn:hds:oauth:negotiate-client"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/login/oauth -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -H "Accept: application/json" -H "Content-Type: application/json" -d '{"username": "jsmith", "password": "mypassword", "grant_type": "urn:hds:oauth:negotiate-client"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">login/oauth</span> request. In an actual response, the access token and hash are much longer.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"access_token": "abc=",<br />&#160;&#160;&#160;&#160;"token_type": "Bearer",<br />&#160;&#160;&#160;&#160;"expires_in": 2592000<br />}</p>

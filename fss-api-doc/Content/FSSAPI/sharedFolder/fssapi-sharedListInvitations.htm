@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -46,7 +46,7 @@
                 <p>There are no parameters for a <span class="FileName">share/listInvitations</span> request.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/listInvitations</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/listInvitations -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/listInvitations -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of response to a successful <span class="FileName">share/listInvitations</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"invitations":[<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"inviter":"abloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"fsId":1729382256910270467,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"size":3605529,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"label":"Group Project"<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"inviter":"tlomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"fsId":1729382256910270466,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"size":6605546,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"VIEWER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"label":"Q1 Sales Presentations"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>

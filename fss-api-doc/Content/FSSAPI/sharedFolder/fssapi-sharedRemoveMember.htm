@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -50,12 +50,12 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required) : String</p>
                 <p class="NormalIndent-1">The path to the shared or team folder.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>uniqueId (required): String</p>
-                <p class="NormalIndent-1">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML). You can acquire a user's uniqueId using a using a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
+                <p class="NormalIndent-1">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML). You can acquire a user's uniqueId using  a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>providerId (required): String</p>
-                <p class="NormalIndent-1">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere. You can acquire a user's uniqueId using a using a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
+                <p class="NormalIndent-1">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere. You can acquire a user's providerId using  a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/removeMember</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/removeMember -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Group Project", "uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2102","providerId":"2305843009213693953"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/removeMember -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Group Project", "uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2102","providerId":"2305843009213693953"}'</p>
                 <h2>Example Response</h2>
                 <p>For a successful request, no information is returned in the response body.</p>
             </div>

@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -47,7 +47,7 @@
                 <p>There are no parameters for a <span class="FileName">client/list</span> request.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a client/list request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/client/list -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/client/list -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful client/list request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"clients": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"id": "sakfsakdfnaksd",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"nickname": "User Portal",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"os": "Browser",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"version": "None",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"lastAccess": 1467918863681,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"needsUpgrade": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"inRecovery": false<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"id": "mscfsakdfnrtq",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"nickname": "USWAL-JSMITH",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"os": "WINDOWS",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"version": "2.1.1.2",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"lastAccess": 1467920530073,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"needsUpgrade": false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"inRecovery": false<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>

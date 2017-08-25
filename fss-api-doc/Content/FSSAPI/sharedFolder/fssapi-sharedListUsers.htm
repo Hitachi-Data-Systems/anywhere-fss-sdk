@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -50,7 +50,7 @@
                 <p class="NormalIndent-1">The path to the shared or team folder.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/users</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/users -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Marketing Project"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/users -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Marketing Project"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">share/users</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"members": [<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name":"abloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2135",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId":"2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"MANAGER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state":"MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"accountType": "USER"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userInfo": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Alex Bloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual":true<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name":"tlomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2102",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId":"2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state":"MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual":false<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"accountType": "USER"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userInfo": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Tyler Lomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual":true<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
@@ -63,7 +63,7 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
                 <p class="NormalIndent-2">The user's username. The username is acquired from the identity provider (SAML or AD) of that user.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>uniqueId (required) : String</p>
-                <p class="NormalIndent-2">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML).</p>
+                <p class="NormalIndent-2">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML).  For AD, this is the user's Security Identifier (SID). </p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>providerId (required) : String</p>
                 <p class="NormalIndent-2">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>role (required) : Enum</p>
@@ -75,7 +75,7 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accountType (required): Enum</p>
                 <p class="NormalIndent-2">Identifies whether the returned object is an individual person or a group (USER&#160;or GROUP).</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>userInfo (required): Object</p>
-                <p class="NormalIndent-2">Some additional  information about the user:</p>
+                <p class="NormalIndent-2">This object lists some additional  information about the user:</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>individual : Boolean</p>
                 <p class="NormalIndent-3">If true, the folder member was invited individually to the folder. If false, the person was invited to the folder as part of a group.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>displayName : String</p>

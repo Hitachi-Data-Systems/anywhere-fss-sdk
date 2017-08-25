@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -66,7 +66,7 @@
                 <p><span class="GUI">Request body parameters:</span>
                 </p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>file contents (required) : Object</p>
-                <p class="NormalIndent-1">The contents of the file. In cURL, you can use the "--data-binary" option to enter the path to the file you want to upload. </p>
+                <p class="NormalIndent-1">The contents of the file. In cURL, you can use the "-T" option to enter the path to the file you want to upload. </p>
                 <p><span class="GUI">Header parameters:</span>
                 </p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>etag (required)</p>
@@ -74,7 +74,7 @@
                 <p><span class="GUI">Query parameters:</span>
                 </p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required): String</p>
-                <p class="NormalIndent-1">The path in the folder where you want the file to be uploaded. The last entry in the path should be the name of the file that is being uploaded.</p>
+                <p class="NormalIndent-1">The path in the folder where the file is uploaded. </p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>linkToken (required) : String</p>
                 <p class="NormalIndent-1">A unique string assigned to the  link by HCP Anywhere. The link token is part of the link metadata and is returned in response to a number of link requests.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>itemName (required): String</p>
@@ -91,7 +91,7 @@
                 <p class="NormalIndent-1">An additional code assigned to the  link by HCP Anywhere.&#160;The person who creates the link decides if the link  requires this additional code. </p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">link/public/stream/update</span> request in cURL. In this example, the file is uploaded to a folder called "Sales-Reports",  the file is named "Q1-Overview.docx", the outdated etag is "YtRQq==", and the hash is "f8e25". In an actual request, the etag and hash are much longer. Since this request accesses a public link, an authentication token is not required in this request.</p>
-                <p class="APICode">curl -kiX POST "https://anywhere.example.com/fss/public/link/public/stream/update?linkToken=MF77byLe-2giXvtv&amp;itemName=Sales-Reports&amp;path=Q1-Overview.docx&amp;size=2064&amp;hash=f8e25"  -H "Content-Type: application/octet-stream" -H "Accept: application/octet-stream" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -H "If-Match: YtRQq==" --data-binary C:/Users/JSMITH/Documents/Q1-Overview.docx</p>
+                <p class="APICode">curl -kiX POST "https://anywhere.example.com/fss/public/link/public/stream/update?linkToken=MF77byLe-2giXvtv&amp;itemName=Sales-Reports&amp;path=Q1-Overview.docx&amp;size=2064&amp;hash=f8e25"  -H "Content-Type: application/octet-stream" -H "Accept: application/octet-stream" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -H "If-Match: YtRQq==" -T home/Users/JSMITH/Documents/Q1-Overview.docx</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">link/public/stream/update</span> request. In an actual response, the etag and hash are much longer.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"type":"FILE",<br />&#160;&#160;&#160;&#160;"name":"Q1-Overview.docx",<br />&#160;&#160;&#160;&#160;"changeTime":1478092263458,<br />&#160;&#160;&#160;&#160;"size":13047,<br />&#160;&#160;&#160;&#160;"hash":"aafe8",<br />&#160;&#160;&#160;&#160;"access":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;"etag":"NtLQs==",<br />&#160;&#160;&#160;&#160;"state":"CREATE"<br />}</p>
@@ -119,7 +119,7 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>state (required) : Enum</p>
                 <p class="NormalIndent-1">The state of the file (CREATE or DELETE). For this response, the state is always CREATE.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>sharing (conditional): Object</p>
-                <p class="NormalIndent-1">If the file is uploaded into a shared folder, team folder, or <span class="userVariablesNASShare">mobilized data share</span>, some additional folder information.</p>
+                <p class="NormalIndent-1">If the file is uploaded into a shared folder, team folder, or <span class="userVariablesNASShare">mobilized share</span>, some additional folder information.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>canUserManage: Boolean</p>
                 <p class="NormalIndent-2">If true, the user is the Owner of the shared folder or the Manager of the team folder.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>isMountPoint: Boolean</p>
@@ -140,9 +140,27 @@
                 <p class="NormalIndent-2">If true, the backup folder is connected to the HCP Anywhere desktop application.&#160;</p>
                 <p class="NormalIndent-2">The backup folder can disconnected from the desktop application if the desktop application is deregistered or if the backup feature is disabled by the system administrator.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>isMountPoint: Boolean</p>
-                <p class="NormalIndent-2">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. The backup parent folder, which is automatically created when backup is enabled and the given user's desktop application is installed, is always a mount point.</p>
+                <p class="NormalIndent-2">If true, the item is a mount point — also known as mounted filesystem — within the HCP Anywhere filesystem. The backup parent folder, which is automatically created when the desktop application is installed with backup enabled, is always a mount point.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>operatingSystem: Enum</p>
                 <p class="NormalIndent-2">The type of device on which the desktop application is installed (WINDOWS,&#160;WINDOWS NSC, or&#160;MAC). For version 3.0 or later of the Windows desktop application, the operatingSystem is "WINDOWS&#160;NSC".</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>hasAssociatedClient: Boolean</p>
+                <p class="NormalIndent-2">Each backup file or folder is associated with the desktop application that performed its backup. If true, the desktop application  associated with the backup folder is currently registered.&#160;If false, the desktop application  associated with the backup folder is currently deregistered. </p>
+                <table style="width: 95%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 50px;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
+                    <col class="Column-NoteIcon" />
+                    <col class="Column-NoteText" />
+                    <tbody>
+                        <tr class="Body-Body1">
+                            <td class="BodyB-NoteIcon-Body1">
+                                <img src="../../Resources/Images/noteTables/NoteWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
+                            </td>
+                            <td class="BodyA-NoteText-Body1">
+                                <p class="Note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>An application can be deregistered if:</p>
+                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>You  deregister it in the User Portal in the <span class="GUI">My Devices</span> window</p>
+                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span> Your administrator  deregisters it in the HCP Anywhere Management Console</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 <h2>Additional Notes</h2>
                 <p>If an access code was used in the request, a cookie is returned in response header. That header looks like this:</p>
                 <p class="APICode">Set-Cookie: AW-Access-Code=1f04e79f3c8;Version=1;Path=/;Max-Age=600</p>

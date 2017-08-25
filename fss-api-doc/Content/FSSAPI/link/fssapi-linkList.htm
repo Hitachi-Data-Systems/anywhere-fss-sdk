@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -61,7 +61,7 @@
                 <p class="NormalIndent-1">The page token returned in the body of the previous response. The page token identifies where in the list of  you are. </p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">link/list</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/list -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" - d '{"pageSize": 20}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/list -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" - d '{"pageSize": 20}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">link/list</span> request. In an actual response, the pageToken is much longer.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"pageToken": "MnRQq",<br />&#160;&#160;&#160;&#160;"links": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"url":"https://anywhere.example.com/u/jFv48p7b-PeeW_jy/Team_Project?l",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"path":"/Team Project",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"expirationDate":1467831494000,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"public":true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"permissions":["READ"],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"token":"jFv48p7b-PeeW_jy",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "FOLDER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"itemName": "Team&#160;Project"<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"url":"https://anywhere.example.com/a/JoCR6zQAke00gJHr/Sales Reports?l",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"path":"/Sales Reports",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"expirationDate":1470340385769,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"public":false,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"permissions":["READ","Upload"],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"token":"JoCR6zQAke00gJHr",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "FOLDER"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"itemName": "Sales Reports"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
@@ -76,19 +76,21 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>url (required) : String</p>
                 <p class="NormalIndent-2">The actual link.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>path (required) : String</p>
-                <p class="NormalIndent-2">The path to the file or folder that the link points to.</p>
+                <p class="NormalIndent-2">The path to the file or folder where the link is pointing.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>expirationDate (required) : Long</p>
                 <p class="NormalIndent-2">The time at which the link expires. This time is returned in Unix format.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>public (required) : Boolean</p>
-                <p class="NormalIndent-2">If true, the link is publicly accessible (accessible without first entering login credentials). If false, the link is internally accessible (accessible only by other HCP Anywhere users in the network).</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accessCode (optional) : String</p>
+                <p class="NormalIndent-2">If true, the link is publicly accessible (accessible without first entering login credentials). If false, the link is internally accessible (only accessible by other HCP Anywhere users in the network).</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accessible (required) : Boolean</p>
+                <p class="NormalIndent-2">If true, the link is active. If false, the link is inactive.&#160;A link becomes inactive if the file or folder that the link is points to has been moved, renamed, or deleted or link sharing has been disabled by the HCP Anywhere administrator.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accessCode (conditional) : String</p>
                 <p class="NormalIndent-2">An additional code assigned to the  link by HCP Anywhere.&#160;The person who creates the link decides if the link  requires this additional code. </p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>permissions (required) : Enum</p>
                 <p class="NormalIndent-2">The type of operations  a person can perform on the file or folder when accessed through the link:</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>READ — The user can view and download files.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>UPLOAD — If the link is to a folder, the user can upload files to the folder.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>token (required) : String</p>
-                <p class="NormalIndent-2">A unique string assigned to the link by HCP Anywhere. The link token is supplied as a parameter in some of the other link endpoints.</p>
+                <p class="NormalIndent-2">A unique string assigned to the link by HCP Anywhere. The link token is supplied as a parameter in some of the link requests.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required) : Enum</p>
                 <p class="NormalIndent-2">The type of item (FILE or FOLDER).</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>itemName (required) : String</p>

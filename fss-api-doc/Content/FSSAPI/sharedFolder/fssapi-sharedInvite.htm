@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -51,9 +51,9 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required): String</p>
                 <p class="NormalIndent-1">The path to the shared or team folder.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>uniqueId (required): String</p>
-                <p class="NormalIndent-1">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML). You can acquire a user's uniqueId using a using a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
+                <p class="NormalIndent-1">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML). You can acquire a user's uniqueId using  a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>providerId (required): String</p>
-                <p class="NormalIndent-1">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere. You can acquire a user's uniqueId using a using a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
+                <p class="NormalIndent-1">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere. You can acquire a user's providerId using  a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>role (required): Enum</p>
                 <p class="NormalIndent-1">The role of the user who is being invited to the folder:</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>VIEWER — Viewers can view and download the files in the folder. They can also share links to files and folders in the folder if  link sharing is enabled. However, Viewers cannot edit, rename, delete, or move the files already in the folder or upload new files to the folder. Viewers also cannot synchronize the shared or team folder with the desktop application. </p>
@@ -75,7 +75,7 @@
                 </table>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/invite</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/invite -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Sales Team", "uniqueId": "S-1-5-21-3051028520-174195653-2777353501-2108", "providerId": "2305843009213693954", "role": "COLLABORATOR"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/invite -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Sales Team", "uniqueId": "S-1-5-21-3051028520-174195653-2777353501-2108", "providerId": "2305843009213693954", "role": "COLLABORATOR"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of response to a successful <span class="FileName">share/invite</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"path":"/Sales Team",<br />&#160;&#160;&#160;&#160;"type":"SHARED",<br />&#160;&#160;&#160;&#160;"label": "Shared Folder",<br />&#160;&#160;&#160;&#160;"sync": true,<br />&#160;&#160;&#160;&#160;"role": "MANAGER",<br />&#160;&#160;&#160;&#160;"size":13047,<br />&#160;&#160;&#160;&#160;"owner" {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"username": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName": "John&#160;Smith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userId": "8388608"<br />&#160;&#160;&#160;}<br />}</p>

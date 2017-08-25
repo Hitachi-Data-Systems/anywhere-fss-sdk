@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -77,10 +77,10 @@
                 <p>This section contains an example of a JSON and form based <span class="FileName">link/private/multiDownload</span> request in cURL. In these two examples, the authentication token is "abc=". In an actual request, the authentication token is much longer. </p>
                 <p>The "-o" option is supplied in each request. The "-o" option allows you to save the file to a local path on your computer instead of having the file streamed to your terminal in bytes. If you are using the "-o" option, do not include an "i" in the request (such as "kiX"). This corrupts the file.</p>
                 <p>JSON based request:</p>
-                <p class="APICode">curl -kX POST https://anywhere.example.com/fss/public/link/private/multiDownload -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/zip" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"  -d '{"itemName": "Quarterly Overviews", "linkToken": "MF77byLe-2giXvtv", "accessCode": "trw3N" "pathList": ["/Q1-Overview.docx", "/Q1-Overview.docx"]}' -o "C:\JSMITH\Desktop\Overviews.zip"</p>
+                <p class="APICode">curl -kX POST https://anywhere.example.com/fss/public/link/private/multiDownload -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/zip" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"  -d '{"itemName": "Quarterly Overviews", "linkToken": "MF77byLe-2giXvtv", "accessCode": "trw3N" "pathList": ["/Q1-Overview.docx", "/Q1-Overview.docx"]}' -o "C:\JSMITH\Desktop\Overviews.zip"</p>
                 <p>
                     <br />Form based request:</p>
-                <p class="APICode">curl -kX POST "https://anywhere.example.com/fss/public/link/private/multiDownload?itemName=/Quarterly-Overviews&amp;linkToken=MF77byLe-2giXvtv&amp;accessCode=trw3N&amp;pathList=/Q1-Overview.docx&amp;pathList=Q2-Overview.docx" -H "Authorization: Bearer abc=" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: application/zip" -H "X-HCPAW-FSS-API-VERSION: 3.0.0"</p>
+                <p class="APICode">curl -kX POST "https://anywhere.example.com/fss/public/link/private/multiDownload?itemName=/Quarterly-Overviews&amp;linkToken=MF77byLe-2giXvtv&amp;accessCode=trw3N&amp;pathList=/Q1-Overview.docx&amp;pathList=Q2-Overview.docx" -H "Authorization: Bearer abc=" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: application/zip" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"</p>
                 <h2>Example Response<br /></h2>
                 <p>For a successful <span class="FileName">link/private/multiDownload</span> response, no information is returned in the response body. Instead, the .zip file is downloaded to the location that you specified in the "-o" option of the request.</p>
                 <h2>Additional Notes</h2>

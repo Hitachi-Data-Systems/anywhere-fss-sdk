@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -49,6 +49,8 @@
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>fsId (required) : Long</p>
                 <p class="NormalIndent-1">A unique identifying number assigned to the invitation by HCP Anywhere. You can acquire an invitations fsId of an invitation using a <a href="fssapi-sharedListInvitations.htm">share/listInvitations</a> request.</p>
                 <h2>Example Request</h2>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/rejectInvitation -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"fsId": 1729382256910270467}'</p>
+                <h2>Example Response</h2>
                 <p>For a successful <span class="FileName">share/rejectInvitation</span> request, no information is returned in the response body.</p>
             </div>
             <div class="MasterPageBodyAndMiniTOCProxyContainer">

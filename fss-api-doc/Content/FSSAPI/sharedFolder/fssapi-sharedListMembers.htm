@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -54,7 +54,7 @@
                 <p class="NormalIndent-1">The maximum number of items to return in a request. The default is 100.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/members</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/members -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path": "/Marketing Project"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/members -H "Accept: application/json" -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/Marketing Project"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">share/members</span> request. In an actual response, the pageToken is much longer.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"pageToken":"ePMaEj==",<br />&#160;&#160;&#160;&#160;"members": [<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name":"abloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2135",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId":"2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"MANAGER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state":"MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"accountType": "USER"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userInfo": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Alex Bloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual":true<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name":"tlomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId":"S-1-5-21-3051028520-174195653-2777353501-2102",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId":"2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role":"COLLABORATOR",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state":"MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual":false<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"accountType": "USER"<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"userInfo": {<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Tyler Lomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual":true<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
@@ -69,7 +69,7 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
                 <p class="NormalIndent-2">The user or group username. The username is acquired from the identity provider (SAML or AD) of the HCP Anywhere system.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>uniqueId (required) : String</p>
-                <p class="NormalIndent-2">The unique identifying string assigned to the user or group by their authentication provider (AD or SAML).</p>
+                <p class="NormalIndent-2">The unique identifying string assigned to the user or group by their authentication provider (AD or SAML).  For AD, this is the user's Security Identifier (SID). </p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>providerId (required) : String</p>
                 <p class="NormalIndent-2">The unique identifying string assigned to the user's or group's authentication provider (AD or SAML) by HCP Anywhere.</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>role (required) : Enum</p>
@@ -81,11 +81,15 @@
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>accountType (required): Enum</p>
                 <p class="NormalIndent-2">Identifies whether the returned object is an individual person or a group (USER&#160;or GROUP).</p>
                 <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>userInfo (conditional): Object</p>
-                <p class="NormalIndent-2">If a user is returned, some additional information about the user:</p>
+                <p class="NormalIndent-2">If a user is returned, this object is also returned.&#160;This object lists additional information about the user:</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>individual : Boolean</p>
                 <p class="NormalIndent-3">If true, the folder member was invited individually to the folder. If false, the person was invited to the folder as part of a group.</p>
                 <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>displayName : String</p>
                 <p class="NormalIndent-3">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of the HCP Anywhere system.</p>
+                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>groupInfo (required): Object</p>
+                <p class="NormalIndent-2">If a group is returned, this object is also returned. This object lists additional information about the group:</p>
+                <p class="ListBullet-3" data-mc-autonum="–"><span class="autonumber"><span class="Bullet3">–</span></span>displayName : String</p>
+                <p class="NormalIndent-3">The group's display name.&#160;The display name is acquired from the authentication provider (SAML or AD) of the HCP Anywhere system.</p>
             </div>
             <div class="MasterPageBodyAndMiniTOCProxyContainer">
                 <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->

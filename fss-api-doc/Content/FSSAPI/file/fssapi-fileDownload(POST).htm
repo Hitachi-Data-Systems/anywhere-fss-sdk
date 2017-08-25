@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -57,7 +57,7 @@
                 <p class="NormalIndent-1">If an etag is included in the request and forceDownload is set to true, the version of the file that relates to the etag is returned, even if the etag identifies an older version of the file. The default is false.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">file/stream/read</span> (POST) request in cURL. In this example, the file being downloaded is "example.docx", the outdated etag is "xyz==", and the authentication token is "abc=". In an actual request, the etag and the authentication token are much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/stream/read -H "Accept: application/octet-stream" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"path":"/Work-Projects/example.docx", "etag": "xyz=="}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/file/stream/read -H "Accept: application/octet-stream" -H "Content-Type: application/json" -H "Authorization: Bearer abc=" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path":"/Work-Projects/example.docx", "etag": "xyz=="}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">file/stream/read</span> (POST) request.</p>
                 <p class="NormalIndent-1"><span class="CodeInText">This is example text for the HCP Anywhere File Sync and Share API.</span>

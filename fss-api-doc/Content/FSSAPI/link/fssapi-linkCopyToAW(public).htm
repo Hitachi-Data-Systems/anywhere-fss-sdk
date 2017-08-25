@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -78,7 +78,7 @@
                 <p class="NormalIndent-1">The path to each item that is being copied to HCP Anywhere.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">link/public/copyToLocal</span> request in cURL. Since this request accesses a public link, an authentication token is not required in this request.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/public/copyToLocal  -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"itemName": "Sales Team", "linkToken": "MF77byLe-2giXvtv", "pathList": ["Q1-Reports.docx","Q2-Reports.docx"], "destinationPath": "/Sales Reports"}'</p>
+                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/link/public/copyToLocal  -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"itemName": "Sales Team", "linkToken": "MF77byLe-2giXvtv", "pathList": ["Q1-Reports.docx","Q2-Reports.docx"], "destinationPath": "/Sales Reports"}'</p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of a response to a successful <span class="FileName">link/public/copyToLocal</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"successfulCopies":&#160;[<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"path": "/Q1-Report.docx"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;],<br />&#160;&#160;&#160;&#160;"failedCopies":&#160;[<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"path": "/Q2-Report.docx",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"errorMsg": "The destination folder already contains a file or folder with the same name."<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>

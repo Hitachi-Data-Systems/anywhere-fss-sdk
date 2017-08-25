@@ -10,7 +10,7 @@
         <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/HDS_Styles_V2.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
         <script src="../../../Resources/Scripts/jquery.min.js">
@@ -40,7 +40,7 @@
                 <p>This request lists the collaborative folder alerts for a  user. Collaborative folder alerts  include:</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Changes of member role in a folder</p>
                 <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Changes of quota in a team folder</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>The administrator adding or deleting <span class="userVariablesNASShare">mobilized data share</span>s from the user's HCP Anywhere account</p>
+                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>The administrator adding or deleting <span class="userVariablesNASShare">mobilized share</span>s from the user's HCP Anywhere account</p>
                 <h2>URI</h2>
                 <p class="APICode">/fss/public/share/alerts</p>
                 <h2>HTTP Method</h2>
@@ -53,7 +53,7 @@
                 <p class="NormalIndent-1">If true, the alerts are returned and then cleared. If false, the alerts are returned but are not cleared.</p>
                 <h2>Example Request</h2>
                 <p>This section contains an example of a <span class="FileName">share/alerts</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anyhwere.example.com/fss/public/share/alerts -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: 3.0.0" -d '{"dismiss": false}' </p>
+                <p class="APICode">curl -kiX POST https://anyhwere.example.com/fss/public/share/alerts -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"dismiss": false}' </p>
                 <h2>Example Response</h2>
                 <p>This section contains an example of response to a successful <span class="FileName">share/alerts</span> request.</p>
                 <p class="APICode">{<br />&#160;&#160;&#160;&#160;"alerts":[<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"fsId":1729382256910270467,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"label": "Sales Team",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alert": "User jsmith had their role for shared folder with label Sales_Reports updated by user tlomas"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
