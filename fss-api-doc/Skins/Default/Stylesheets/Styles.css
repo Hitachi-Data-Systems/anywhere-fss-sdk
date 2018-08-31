@@ -2,6 +2,12 @@
 
 /* DEBUG log styles */
 
+@font-face
+{
+    font-family: 'Calibri Light';
+    src: url(../../../Content/Resources/Fonts/calibril.ttf);
+}
+
 #DEBUG_Log
 {
 	background-color: #CCCCCC;
@@ -88,7 +94,7 @@ body
 	margin: 0;
 	padding: 0;
 	color: #000000;
-	font-family: Calibri;
+	font-family: 'Calibri Light';
 	font-size: 12px;
 	font-weight: normal;
 	font-style: normal;
@@ -745,8 +751,8 @@ ul.tree
 	background-repeat: no-repeat;
 	background-position: 0 3px;
 	position: relative;
-	color: #707070;
-	font-family: Calibri;
+	color: #000001;
+	font-family: 'Calibri Light', "sans-serif";
 	font-size: 16px;
 	line-height: 1.7em;
 }
@@ -1711,6 +1717,7 @@ a.activityText
 
 #browseSequences.tabs-panel-content
 {
+	background-repeat: repeat;
 	border-top: solid 6px #e1e1e1;
 	background: #ebebeb none;
 	background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
@@ -1724,6 +1731,7 @@ a.activityText
 
 #community.tabs-panel-content
 {
+	background-repeat: repeat;
 	background: #ebebeb none;
 	background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -1736,6 +1744,7 @@ a.activityText
 
 #glossary.tabs-panel-content
 {
+	background-repeat: repeat;
 	background: #ebebeb none;
 	background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -1748,6 +1757,7 @@ a.activityText
 
 #index.tabs-panel-content
 {
+	background-repeat: repeat;
 	background: #ebebeb none;
 	background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -1820,6 +1830,7 @@ a.activityText
 
 #search.tabs-panel-content
 {
+	background-repeat: repeat;
 	background: #ebebeb none;
 	background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -1832,6 +1843,7 @@ a.activityText
 
 #toc.tabs-panel-content
 {
+	background-repeat: repeat;
 	background: #ebebeb none;
 	background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -2235,6 +2247,16 @@ a.activityText
 }
 
 #search-field-sidebar
+{
+	background-image: url('Images/magnifying_glass.png');
+}
+
+#responsive-search-index
+{
+	background-image: url('Images/magnifying_glass.png');
+}
+
+#responsive-search-glossary
 {
 	background-image: url('Images/magnifying_glass.png');
 }

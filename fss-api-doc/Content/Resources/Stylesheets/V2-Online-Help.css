@@ -1,15 +1,24 @@
 /*<meta />*/
 
-@import url('importPartials.css');
+@import url('anywherePartials.css');
 @namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+
+@font-face
+{
+	font-family: 'Calibri Light';
+	src: url(../Fonts/calibril.ttf);
+}
+
 
 body
 {
 	font-size: 16px;
-	line-height: 17pt;
-	color: #696969;
-	margin-right: 30%;
-	font-family: Calibri;
+	line-height: 20pt;
+	margin-right: 20%;
+	margin-left: 20px;
+	color: #000001;
+	font-family: "Calibri Light", Myriad, 'sans-serif';
 }
 
 p.Steps
@@ -25,12 +34,13 @@ p
 	margin-bottom: 13px;
 }
 
-p.ListBullet-5
+p.TopicHeading 
 {
-	text-indent: -25px;
-	margin-left: 125px;
-	mc-auto-number-format: 'o';
-	mc-auto-number-class: Bullet2;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #0a5179;
+	margin-bottom: 1px;
+	margin-top: 10px;
 }
 
 p.NormalIndent-5
@@ -38,10 +48,13 @@ p.NormalIndent-5
 	margin-left: 125px;
 }
 
-p.TopicHeading
+
+p.ListBullet-5
 {
-	font-weight: bold;
-	font-size: 1.1em;
+	text-indent: -25px;
+	margin-left: 125px;
+	mc-auto-number-format: 'o';
+	mc-auto-number-class: Bullet2;
 }
 
 p.MasterPageDocTitleFAQ
@@ -71,6 +84,8 @@ p.APICode
 	border-width: 0.5px;
 	border-color: gray;
 	padding: 5px;
+	margin-bottom: 10px;
+	font-family: monospace;
 }
 
 h1
@@ -79,7 +94,8 @@ h1
 	font-weight: bold;
 	color: #0a5179;
 	margin-top: 12px;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
+	margin-right: 0px;
 }
 
 h2
@@ -105,9 +121,11 @@ h4
 
 h5
 {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	font-weight: bold;
 	color: #0a5179;
+	margin-bottom: 1px;
+	margin-top: 10px;
 }
 
 table.TableStyle-NoteTable
@@ -164,4 +182,11 @@ div.MasterPageBreadcrumbsFAQ
 .StepInTitle
 {
 	mc-auto-number-format: 'CH:Step {n+}{ }: ';
+}
+
+MadCap|DropDownHead
+{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12pt;
 }

@@ -31,10 +31,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   var $selector2 = $('#sidebarButton');
   if ($selector2.length > 0) {
     $('#sidebarButton').on(events, function (e) {
-      e.preventDefault();
+        e.preventDefault();
       $('body').toggleClass('active');
     });
   }
+
+    // Watch for clicks to sidebar toc content leaf nodes to close sidebar
+    var $navigation = $("#navigation #toc")
+    if ($navigation.length > 0) {
+        $navigation.on(events, function (e) {
+            if ($(e.target).parents("li").hasClass("tree-node-leaf")) {
+                $('body').removeClass('active');
+    }
+        });
+    }
 
   // Watch for clicks to show the menu for slide-menu pages
   var $selector3 = $('#menuButton');

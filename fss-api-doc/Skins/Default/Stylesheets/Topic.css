@@ -101,7 +101,7 @@ body
 	cursor: pointer;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	z-index: 10001;
+	z-index: 999;
 }
 
 .MCPopupContainer2
@@ -267,6 +267,7 @@ a.glossaryTerm
 
 .login-dialog.pulse
 {
+	position: fixed;
 	width: 408px;
 	height: 428px;
 	margin-left: -204px;
@@ -636,6 +637,9 @@ a.MiniTOC1:link
 
 .dropDownHead
 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12pt;
 	margin-bottom: 1.2em;
 	text-decoration: none;
 }

@@ -3,13 +3,17 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta data-productName="Hitachi Content Platform Anywhere" />
+        <meta data-productVersion="4.0" />
+        <meta data-docTitle="HCP Anywhere File Sync and Share API Reference Guide" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Request format</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
@@ -28,69 +32,49 @@
         </script>
     </head>
     <body class="MasterPage">
-        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">HCP Anywhere File Sync and Share API Reference Guide</span>
         </p>
         <div class="bodyContent">
             <div class="MasterPageBreadcrumbs">
-                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbs">Request format</span>
+                <div class="nocontent">
+                    <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                    </div>
                 </div>
             </div>
             <hr width="100%" size="0" align="center" />
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <h1>Request format</h1>
-                <p>In general, the File Sync and Share API uses HTTP POST requests with JSON arguments and JSON responses. </p>
-                <p>In each request, you need to include four headers:</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Authorization</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Content-Type</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Accept-Type </p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>X-HCPAW-FSS-API-VERSION </p>
-                <h4>Authorization header</h4>
-                <p>The Authorization header contains an authentication token.&#160;The authentication token specifies the user making the request. </p>
-                <p>You can acquire an authentication token using a <a href="fssapi-authAuth.htm">login/oauth</a> request. This request is for Active Directory authentication. </p>
-                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
-                    <col class="Column-NoteIcon" />
-                    <col class="Column-NoteText" />
-                    <tbody>
-                        <tr class="Body-Body1">
-                            <td class="BodyB-NoteIcon-Body1">
-                                <img src="../../Resources/Images/noteTables/NoteWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
-                            </td>
-                            <td class="BodyA-NoteText-Body1">
-                                <p class="Note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>The File Sync and Share API does not support SAML authentication.</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h4> Content-Type header</h4>
-                <p>The Content-Type header specifies the format of the data supplied in the body of the request you're making. For most requests, the Content-Type is application/json. However, there are some exceptions to this. For example, basic authentication uses an application/x-www-form-urlencoded Content-Type header while both upload and update use an appliction/octet-stream Content-Type header.</p>
-                <p>For the endpoints that use a JSON request body, the Content-Type header looks like this in cURL:</p>
-                <p class="Display-2">-H "Content-Type: application/json"</p>
-                <h4>Accept-Type header</h4>
-                <p>The Accept-Type header specifies the format of the data that is accepted in  response to the request you're making. For most requests, the Accept-Type header is application/json. However, there are some exceptions to this.  For example, the download file endpoints  accept application/octet-stream in response to a request.</p>
-                <p>For the endpoints that accept JSON, the Accept-Type header looks like this in cURL:</p>
-                <p class="Display-2">-H "Accept: application/json"</p>
-                <h4>X-HCPAW-FSS-API-VERSION  header</h4>
-                <p>The X-HCPAW-FSS-API-VERSION  header specifies the File Sync and Share&#160;API version that you are using. The File Sync and Share&#160;API version does not have to be the same as the HCP Anywhere server.&#160;The HCP Anywhere server supports older versions of the&#160;File Sync and Share API.&#160;Version 2.1.1 is the oldest supported File Sync and Share API version .</p>
-                <p>For  an&#160;HCP Anywhere server at version <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>, the X-HCPAW-FSS-API-VERSION header looks like this in cURL:</p>
-                <p class="Display-2">-H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"</p>
-                <h2>URL Request Structure</h2>
-                <p>For each File Sync and Share API endpoint, the URL has the same structure. The URL begins like this:</p>
-                <p class="Display-2">https://anywhere.example.com/fss/public</p>
-                <p>This is followed by the URI of the endpoint you are using. For example, the URL for an upload new file request looks like this in cURL:</p>
-                <p class="Display-2">https://anywhere.example.com/fss/public/file/stream/create</p>
-                <p>In an actual request, “anywhere.example.com” should be replaced with the server that the request is being made to.</p>
-            </div>
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
-            </div>
-            <!--BeginHideIfBranded-->
+            <h1>Request format</h1>
+            <p>In general, the<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesAPIName">File Sync and Share API</span></MadCap:conditionalText> uses HTTP POST requests with JSON arguments and JSON responses. </p>
+            <p>In each request, you typically need to include four headers:</p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Authorization</p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Content-Type</p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>Accept-Type </p>
+            <p class="ListBullet-1" data-mc-autonum="•" data-mc-conditions="awConditions.FSSAPI"><span class="autonumber"><span class="Bullet1">•</span></span>X-HCPAW-FSS-API-VERSION </p>
+            <p>Occasionally, some of the endpoints do not require the Authorization header.</p>
+            <h4>Authorization header</h4>
+            <p>The Authorization header contains an access token.&#160;The access token identifies the<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> user</MadCap:conditionalText> making the request. </p>
+            <p data-mc-conditions="awConditions.FSSAPI">You can acquire an access token using a <a href="fssapi-authAuth.htm">login/oauth</a> request. The <span class="fssAPIVariablesAPIName">File Sync and Share API</span> only supports authentication using an Active Directory (<span class="GUI">AD</span>)&#160;user. The <span class="fssAPIVariablesAPIName">File Sync and Share API</span> does not support SAML authentication.</p>
+            <h4> Content-Type header</h4>
+            <p>The Content-Type header specifies the format of the data supplied in the body of the request you're making. For most requests, the Content-Type is "application/json". However, there are some exceptions to this.<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> For example, basic authentication uses an "application/x-www-form-urlencoded" Content-Type header while both upload and update use an "appliction/octet-stream" Content-Type header.</MadCap:conditionalText></p>
+            <p>For the endpoints that use a JSON request body, the Content-Type header looks like this in cURL:</p>
+            <p class="Syntax-1">-H "Content-Type: application/json"</p>
+            <h4>Accept-Type header</h4>
+            <p>The Accept-Type header specifies the format of the data that is accepted in  response to the request you're making. For most requests, the Accept-Type header is "application/json". However, there are some exceptions to this.  For example, the download file endpoints  accept application/octet-stream in response to a request.</p>
+            <p>For the endpoints that accept JSON, the Accept-Type header looks like this in cURL:</p>
+            <p class="Syntax-1">-H "Accept: application/json"</p>
+            <h4 data-mc-conditions="awConditions.FSSAPI">X-HCPAW-FSS-API-VERSION  header</h4>
+            <p>The<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> X-HCPAW-FSS-API-VERSION</MadCap:conditionalText> header specifies the<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesAPIName">File Sync and Share API</span></MadCap:conditionalText> version that you are using. The<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesAPIName">File Sync and Share API</span></MadCap:conditionalText> version does not have to be the same as the <span class="ProductSpecificVariablesProductName">HCP Anywhere</span> server.<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI">&#160;The <span class="ProductSpecificVariablesProductName">HCP Anywhere</span> server supports older versions of the&#160;<span class="fssAPIVariablesAPIName">File Sync and Share API</span>.&#160;The oldest supported version of the <span class="fssAPIVariablesAPIName">File Sync and Share API</span> is 2.1.1.</MadCap:conditionalText></p>
+            <p>For  an&#160;<span class="ProductSpecificVariablesProductName">HCP Anywhere</span> server on version<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesFSS&#160;API Version">4.0.0</span></MadCap:conditionalText>, the<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> X-HCPAW-FSS-API-VERSION </MadCap:conditionalText> header looks like this in cURL:</p>
+            <p class="Syntax-1" data-mc-conditions="awConditions.FSSAPI">-H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">4.0.0</span>"</p>
+            <h2>URL request structure</h2>
+            <p>For each<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesAPIName">File Sync and Share API</span></MadCap:conditionalText> endpoint, the URL has the same structure. The URL begins like this:</p>
+            <p class="Syntax-1" data-mc-conditions="awConditions.FSSAPI">https://<span class="DataManagementAPIExample Server">anywhere.example.com</span>/fss/public</p>
+            <p>This is followed by the URI of the endpoint you are using. For example, the URL for an upload new file request looks like this in cURL:</p>
+            <p class="Syntax-1" data-mc-conditions="awConditions.FSSAPI">https://<span class="DataManagementAPIExample Server">anywhere.example.com</span>/fss/public/file/stream/create</p>
+            <p>In an actual request, "<span class="DataManagementAPIExample Server">anywhere.example.com</span>" should be replaced with the <span class="ProductSpecificVariablesProductName">HCP Anywhere</span> server that the request is being made to.</p>
             <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
             </p>
-            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
-            </p>
-            <!--EndHideIfBranded-->
-            <!--BeginHideIfBranded-->
-            <!--EndHideIfBranded-->
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2018</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Vantara Corporation</span>. All rights reserved.</span>
+            </p><a style="display: none;" href="../../Resources/Fonts/calibril.ttf">Calibri Light.ttf</a>
         </div>
     </body>
 </html>

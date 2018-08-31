@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Shared folder endpoints">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedHeader%]">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta data-productName="Hitachi Content Platform Anywhere" />
+        <meta data-productVersion="4.0" />
+        <meta data-docTitle="HCP Anywhere File Sync and Share API Reference Guide" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Search for people to invite</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
@@ -28,89 +32,82 @@
         </script>
     </head>
     <body class="MasterPage">
-        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">HCP Anywhere File Sync and Share API Reference Guide</span>
         </p>
         <div class="bodyContent">
             <div class="MasterPageBreadcrumbs">
-                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-sharedIntro.htm">Shared folder endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Search for people  to invite</span>
+                <div class="nocontent">
+                    <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                    </div>
                 </div>
             </div>
             <hr width="100%" size="0" align="center" />
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <h1>Search for people to invite</h1>
-                <p>This request searches for people and groups who are part of the authentication networks (Active Directory and SAML) that are joined to HCP Anywhere.&#160; It is these people and groups who can be invited to a collaborative folder.</p>
-                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
-                    <col class="Column-NoteIcon" />
-                    <col class="Column-NoteText" />
-                    <tbody>
-                        <tr class="Body-Body1">
-                            <td class="BodyB-NoteIcon-Body1">
-                                <img src="../../Resources/Images/noteTables/NoteWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
-                            </td>
-                            <td class="BodyA-NoteText-Body1">
-                                <p class="Notes" data-mc-autonum="&lt;b&gt;Notes: &lt;/b&gt;"><span class="autonumber"><span><b>Notes: </b></span></span>&#160;</p>
-                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>People and groups can  be invited to a collaborative folder using a <a href="fssapi-sharedInvite.htm">share/invite</a> request. </p>
-                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>You can view the list of members in an Active Directory group by using a <a href="fssapi-sharedListGroupMembers.htm">share/listGroupMembers</a> request.</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h2>URI</h2>
-                <p class="APICode">/fss/public/share/invite/search</p>
-                <h2>HTTP Method</h2>
-                <p class="APICode">POST</p>
-                <h2>Parameters</h2>
-                <p>The <span class="FileName">share/invite/search</span> endpoint requires only request body parameters. The  request body  must be in JSON format.</p>
-                <p><span class="GUI">Request body parameters:</span>
-                </p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required): String</p>
-                <p class="NormalIndent-1">The path to the shared or team folder.</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>filter (required): String</p>
-                <p class="NormalIndent-1">The string to search for in the HCP Anywhere network. A successful request returns people and groups in the network whose username or display name match some or all of string supplied in this parameter.</p>
-                <h2>Example Request</h2>
-                <p>This section contains an example of a <span class="FileName">share/invite/search</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/invite/search -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"path": "/share", "filter": "John"}'</p>
-                <h2>Example Response</h2>
-                <p>This section contains an example of response to a successful <span class="FileName">share/invite/search</span> request.</p>
-                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"users":[<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName": "John Smith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId": "S-1-5-21-2619907716-2143139541-2825175134-1131",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId": "2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role": "VIEWER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state": "FORMER_MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "USER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain1.example.com"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
-                <h2>Description of Response</h2>
-                <p>This section describes the  contents of a  <span class="FileName">share/invite/search</span> response.</p>
-                <p><span class="GUI">Response content:</span>
-                </p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>users (required) : Object</p>
-                <p class="NormalIndent-1">The list of people and groups who match the search criteria:</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>displayName (required) : String</p>
-                <p class="NormalIndent-2">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of that user.</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
-                <p class="NormalIndent-2">The user's username. The username is acquired from the identity provider (SAML or AD) of that user.</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>uniqueId (required) : String</p>
-                <p class="NormalIndent-2">The unique identifying string assigned to the user by the user's authentication provider (AD or SAML).  For AD, this is the user's Security Identifier (SID). </p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>providerId (required) : String</p>
-                <p class="NormalIndent-2">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere.</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>role (required) : Enum</p>
-                <p class="NormalIndent-2">The folder role of the member (VIEWER, COLLABORATOR, or MANAGER). The role identifies the operations a user can perform in the folder.</p>
-                <p class="NormalIndent-2">For a person who has never been invited to the folder, the person's role is "VIEWER".</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>state (required) : String</p>
-                <p class="NormalIndent-2">The user's state within the folder (INVITED, MEMBER, FORMER_MEMBER).</p>
-                <p class="NormalIndent-2">For a person who has never been invited to the folder, the person's state is "FORMER_MEMBER".</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required): Enum</p>
-                <p class="NormalIndent-2">Identifies whether the returned object is an individual person or a group (USER&#160;or GROUP).</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>individual (required): Boolean</p>
-                <p class="NormalIndent-2">If true, the folder member was invited individually to the folder. If false, the person was invited to the folder as part of a group.</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>domain (required): String</p>
-                <p class="NormalIndent-1">The Active Directory domain that contains the user's user account. </p>
-            </div>
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
-            </div>
-            <!--BeginHideIfBranded-->
+            <h1>Search for people to invite</h1>
+            <p>This request searches for people and groups who are part of the authentication networks (Active Directory and SAML) that are joined to HCP Anywhere.&#160; It is these people and groups who can be invited to a collaborative folder.</p>
+            <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
+                <col class="Column-NoteIcon" />
+                <col class="Column-NoteText" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-NoteIcon-Body1">
+                            <img src="../../Resources/Images/noteTables/NoteWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
+                        </td>
+                        <td class="BodyA-NoteText-Body1">
+                            <p class="Notes" data-mc-autonum="&lt;b&gt;Notes: &lt;/b&gt;"><span class="autonumber"><span><b>Notes: </b></span></span>&#160;</p>
+                            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>People and groups can  be invited to a collaborative folder using a <a href="fssapi-sharedInvite.htm">share/invite</a> request. </p>
+                            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>You can view the list of members in an Active Directory group by using a <a href="fssapi-sharedListGroupMembers.htm">share/listGroupMembers</a> request.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>URI</h2>
+            <p class="APICode">/fss/public/share/invite/search</p>
+            <h2>HTTP Method</h2>
+            <p class="APICode">POST</p>
+            <h2>Parameters</h2>
+            <p>The <span class="FileName">share/invite/search</span> endpoint requires only request body parameters. The  request body  must be in JSON format.</p>
+            <p><span class="GUI">Request body parameters:</span>
+            </p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>path (required): String</p>
+            <p class="NormalIndent-1">The path to the shared or team folder.</p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>filter (required): String</p>
+            <p class="NormalIndent-1">The string to search for in the HCP Anywhere network. A successful request returns people and groups in the network whose username or display name match some or all of string supplied in this parameter.</p>
+            <h2>Example Request</h2>
+            <p>This section contains an example of a <span class="FileName">share/invite/search</span> request in cURL. In this request, the  access token is "abc=". In an actual request, the access token is much longer.</p>
+            <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/invite/search -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">4.0.0</span>" -d '{"path": "/share", "filter": "John"}'</p>
+            <h2>Example Response</h2>
+            <p>This section contains an example of response to a successful <span class="FileName">share/invite/search</span> request.</p>
+            <p class="APICode">{<br />&#160;&#160;&#160;&#160;"users":[<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName": "John Smith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"uniqueId": "S-1-5-21-2619907716-2143139541-2825175134-1131",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"providerId": "2305843009213693953",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"role": "VIEWER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"state": "FORMER_MEMBER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "USER",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"individual": true,<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain1.example.com"<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
+            <h2>Description of Response</h2>
+            <p>This section describes the  contents of a  <span class="FileName">share/invite/search</span> response.</p>
+            <p><span class="GUI">Response content:</span>
+            </p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>users (required) : Object</p>
+            <p class="NormalIndent-1">The list of people and groups who match the search criteria:</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>displayName (required) : String</p>
+            <p class="NormalIndent-2">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of that user.</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
+            <p class="NormalIndent-2">The user's username. The username is acquired from the identity provider (SAML or AD) of that user.</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>uniqueId (required) : String</p>
+            <p class="NormalIndent-2">A unique identifying string assigned to the user by the user's authentication provider (AD or SAML).  For AD, this is the user's Security Identifier (SID). </p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>providerId (required) : String</p>
+            <p class="NormalIndent-2">The unique identifying string assigned to the user's authentication provider (AD or SAML) by HCP Anywhere.</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>role (required) : Enum</p>
+            <p class="NormalIndent-2">The folder role of the member (VIEWER, COLLABORATOR, or MANAGER). The role identifies the operations a user can perform in the folder.</p>
+            <p class="NormalIndent-2">For a person who has never been invited to the folder, the person's role is "VIEWER".</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>state (required) : String</p>
+            <p class="NormalIndent-2">The user's state within the folder (INVITED, MEMBER, FORMER_MEMBER).</p>
+            <p class="NormalIndent-2">For a person who has never been invited to the folder, the person's state is "FORMER_MEMBER".</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>type (required): Enum</p>
+            <p class="NormalIndent-2">Identifies whether the returned object is an individual person or a group (USER&#160;or GROUP).</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>individual (required): Boolean</p>
+            <p class="NormalIndent-2">If true, the folder member was invited individually to the folder. If false, the person was invited to the folder as part of a group.</p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>domain (required): String</p>
+            <p class="NormalIndent-1">The Active Directory domain that contains the user's user account. </p>
             <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
             </p>
-            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
-            </p>
-            <!--EndHideIfBranded-->
-            <!--BeginHideIfBranded-->
-            <!--EndHideIfBranded-->
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2018</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Vantara Corporation</span>. All rights reserved.</span>
+            </p><a style="display: none;" href="../../Resources/Fonts/calibril.ttf">Calibri Light.ttf</a>
         </div>
     </body>
 </html>

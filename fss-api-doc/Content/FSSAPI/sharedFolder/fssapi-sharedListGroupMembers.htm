@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Shared folder endpoints">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedHeader%]">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta data-productName="Hitachi Content Platform Anywhere" />
+        <meta data-productVersion="4.0" />
+        <meta data-docTitle="HCP Anywhere File Sync and Share API Reference Guide" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>List members in AD group</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/NoteTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
@@ -28,73 +32,66 @@
         </script>
     </head>
     <body class="MasterPage">
-        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">HCP Anywhere File Sync and Share API Reference Guide</span>
         </p>
         <div class="bodyContent">
             <div class="MasterPageBreadcrumbs">
-                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-sharedIntro.htm">Shared folder endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">List members in&#160;AD group</span>
+                <div class="nocontent">
+                    <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                    </div>
                 </div>
             </div>
             <hr width="100%" size="0" align="center" />
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <h1>List members in AD group</h1>
-                <p>This request lists the members of an  Active Directory group.</p>
-                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
-                    <col class="Column-NoteIcon" />
-                    <col class="Column-NoteText" />
-                    <tbody>
-                        <tr class="Body-Body1">
-                            <td class="BodyB-NoteIcon-Body1">
-                                <img src="../../Resources/Images/noteTables/TipWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
-                            </td>
-                            <td class="BodyA-NoteText-Body1">
-                                <p class="Tip" data-mc-autonum="&lt;b&gt;Tip: &#160;&lt;/b&gt;"><span class="autonumber"><span><b>Tip: &#160;</b></span></span>You can invite a groups to shared or team folders using a <a href="fssapi-sharedInvite.htm">share/invite</a> request.</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h2>URI</h2>
-                <p class="APICode">/fss/public/share/listGroupMembers</p>
-                <h2>HTTP Method</h2>
-                <p class="APICode">POST</p>
-                <h2>Parameters</h2>
-                <p>The <span class="FileName">share/listGroupMembers</span> endpoint requires only request body parameters. The  request body  must be in JSON format.</p>
-                <p><span class="GUI">Request body parameters:</span>
-                </p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>name (required): String</p>
-                <p class="NormalIndent-1">The name of the Active&#160;Directory group.</p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>providerId (optional): String</p>
-                <p class="NormalIndent-1">The unique identifying string assigned to the groups's authentication provider (AD or SAML) by HCP Anywhere. You can acquire the uniqueId of a group using a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
-                <h2>Example Request</h2>
-                <p>This section contains an example of a <span class="FileName">share/listGroupMembers</span> request in cURL. In this request, the  authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/listGroupMembers -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>" -d '{"name": "Sales Team", "providerId": "2305843009213653953"}'</p>
-                <h2>Example Response</h2>
-                <p>This section contains an example of response to a successful <span class="FileName">share/listGroupMembers</span> request.</p>
-                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"groupMembers":[<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Alex Bloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "tlomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Tyler Lomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
-                <h2>Description of Response</h2>
-                <p>This section describes the  contents of a  <span class="FileName">share/listGroupMembers</span> response.</p>
-                <p><span class="GUI">Response content:</span>
-                </p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>groupMembers (required) : Object</p>
-                <p class="NormalIndent-1">A list of the members in the Active Directory group:</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
-                <p class="NormalIndent-2">The user's username. The username is acquired from the identity provider (SAML or AD) of that user.</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>displayName (required) : String</p>
-                <p class="NormalIndent-2">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of that user.</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>domain (required): String</p>
-                <p class="NormalIndent-2">The Active Directory domain that contains the user's user account. </p>
-            </div>
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
-            </div>
-            <!--BeginHideIfBranded-->
+            <h1>List members in AD group</h1>
+            <p>This request lists the members of an  Active Directory group.</p>
+            <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/NoteTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoteTable" cellspacing="0">
+                <col class="Column-NoteIcon" />
+                <col class="Column-NoteText" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-NoteIcon-Body1">
+                            <img src="../../Resources/Images/noteTables/TipWebHelp.png" class="Note" style="height: 37px;" data-mc-conditions="GlobalConditions.HelpOnly" />
+                        </td>
+                        <td class="BodyA-NoteText-Body1">
+                            <p class="Tip" data-mc-autonum="&lt;b&gt;Tip: &#160;&lt;/b&gt;"><span class="autonumber"><span><b>Tip: &#160;</b></span></span>You can invite a groups to shared or team folders using a <a href="fssapi-sharedInvite.htm">share/invite</a> request.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>URI</h2>
+            <p class="APICode">/fss/public/share/listGroupMembers</p>
+            <h2>HTTP Method</h2>
+            <p class="APICode">POST</p>
+            <h2>Parameters</h2>
+            <p>The <span class="FileName">share/listGroupMembers</span> endpoint requires only request body parameters. The  request body  must be in JSON format.</p>
+            <p><span class="GUI">Request body parameters:</span>
+            </p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>name (required): String</p>
+            <p class="NormalIndent-1">The name of the Active&#160;Directory group.</p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>providerId (optional): String</p>
+            <p class="NormalIndent-1">The unique identifying string assigned to the groups's authentication provider (AD or SAML) by HCP Anywhere. You can acquire the uniqueId of a group using a <a href="fssapi-sharedSearchForMembersToInvite.htm">share/invite/search</a> request.</p>
+            <h2>Example Request</h2>
+            <p>This section contains an example of a <span class="FileName">share/listGroupMembers</span> request in cURL. In this request, the  access token is "abc=". In an actual request, the access token is much longer.</p>
+            <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/share/listGroupMembers -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">4.0.0</span>" -d '{"name": "Sales Team", "providerId": "2305843009213653953"}'</p>
+            <h2>Example Response</h2>
+            <p>This section contains an example of response to a successful <span class="FileName">share/listGroupMembers</span> request.</p>
+            <p class="APICode">{<br />&#160;&#160;&#160;&#160;"groupMembers":[<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "jsmith",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Alex Bloom",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "tlomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"displayName":"Tyler Lomas",<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"domain": "domain.example.com",<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
+            <h2>Description of Response</h2>
+            <p>This section describes the  contents of a  <span class="FileName">share/listGroupMembers</span> response.</p>
+            <p><span class="GUI">Response content:</span>
+            </p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>groupMembers (required) : Object</p>
+            <p class="NormalIndent-1">A list of the members in the Active Directory group:</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>name (required) : String</p>
+            <p class="NormalIndent-2">The user's username. The username is acquired from the identity provider (SAML or AD) of that user.</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>displayName (required) : String</p>
+            <p class="NormalIndent-2">The user's display name. The display name is acquired from the authentication provider (SAML or AD) of that user.</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>domain (required): String</p>
+            <p class="NormalIndent-2">The Active Directory domain that contains the user's user account. </p>
             <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
             </p>
-            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
-            </p>
-            <!--EndHideIfBranded-->
-            <!--BeginHideIfBranded-->
-            <!--EndHideIfBranded-->
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2018</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Vantara Corporation</span>. All rights reserved.</span>
+            </p><a style="display: none;" href="../../Resources/Fonts/calibril.ttf">Calibri Light.ttf</a>
         </div>
     </body>
 </html>

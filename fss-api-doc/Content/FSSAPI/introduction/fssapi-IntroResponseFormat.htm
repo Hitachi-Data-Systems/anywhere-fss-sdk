@@ -3,13 +3,17 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta data-productName="Hitachi Content Platform Anywhere" />
+        <meta data-productVersion="4.0" />
+        <meta data-docTitle="HCP Anywhere File Sync and Share API Reference Guide" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Response  format</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <link href="../../Resources/TableStyles/ArchivasTable.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
@@ -28,63 +32,64 @@
         </script>
     </head>
     <body class="MasterPage">
-        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">HCP Anywhere File Sync and Share API Reference Guide</span>
         </p>
         <div class="bodyContent">
             <div class="MasterPageBreadcrumbs">
-                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbs">Response format</span>
+                <div class="nocontent">
+                    <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                    </div>
                 </div>
             </div>
             <hr width="100%" size="0" align="center" />
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <h1>Response  format</h1>
-                <p>The table below describes the  headers returned in response to a request. </p>
-                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/ArchivasTable.css');" class="TableStyle-ArchivasTable" cellspacing="0">
-                    <col class="TableStyle-ArchivasTable-Column-Column1" />
-                    <col class="TableStyle-ArchivasTable-Column-Column1" />
-                    <thead>
-                        <tr class="TableStyle-ArchivasTable-Head-Header1">
-                            <th class="TableStyle-ArchivasTable-HeadE-Column1-Header1">Response header</th>
-                            <th class="TableStyle-ArchivasTable-HeadD-Column1-Header1">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="TableStyle-ArchivasTable-Body-Body1">
-                            <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">X-HCPAW-SUPPORTED-FSS-API-VERSIONS</td>
-                            <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The File Sync and Share API versions supported by the HCP Anywhere server.</td>
-                        </tr>
-                        <tr class="TableStyle-ArchivasTable-Body-Body1">
-                            <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">X-HCPAW-FSS-API-VERSION</td>
-                            <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The version of the HCP Anywhere server that the request was made to.</td>
-                        </tr>
-                        <tr class="TableStyle-ArchivasTable-Body-Body1">
-                            <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">X-HCPAW-System-Id</td>
-                            <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The HCP Anywhere system id, which is always the global unique identifier of the system.</td>
-                        </tr>
-                        <tr class="TableStyle-ArchivasTable-Body-Body1">
-                            <td class="TableStyle-ArchivasTable-BodyB-Column1-Body1">Set-Cookie</td>
-                            <td class="TableStyle-ArchivasTable-BodyA-Column1-Body1">
-                                <p> The Set-Cookie header is returned only if:</p>
-                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>You are making a request using one of the link endpoints</p>
-                                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>The request body contains an access code</p>
-                                <p>When returned, the Set-Cookie response header contains a cookie. The cookie can be attached to subsequent link requests where otherwise the access code would be required. </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>The response body content that a request returns is described in the topic for each endpoint.</p>
-            </div>
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
-            </div>
-            <!--BeginHideIfBranded-->
+            <h1>Response  format</h1>
+            <p>The table below describes the  headers returned in response to a<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesAPIName">File Sync and Share API</span></MadCap:conditionalText> request. </p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/ArchivasTable.css');" class="TableStyle-ArchivasTable" cellspacing="0">
+                <col class="TableStyle-ArchivasTable-Column-Column1" />
+                <col class="TableStyle-ArchivasTable-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-ArchivasTable-Head-Header1">
+                        <th class="TableStyle-ArchivasTable-HeadE-Column1-Header1">Response header</th>
+                        <th class="TableStyle-ArchivasTable-HeadD-Column1-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-ArchivasTable-Body-Body1">
+                        <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">
+                            <p data-mc-conditions="awConditions.FSSAPI">X-HCPAW-SUPPORTED-FSS-API-VERSIONS</p>
+                        </td>
+                        <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The<MadCap:conditionalText data-mc-conditions="awConditions.FSSAPI"> <span class="fssAPIVariablesAPIName">File Sync and Share API</span></MadCap:conditionalText> versions supported by the <span class="ProductSpecificVariablesProductName">HCP Anywhere</span> server that the request was made to.</td>
+                    </tr>
+                    <tr class="TableStyle-ArchivasTable-Body-Body1">
+                        <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">
+                            <p data-mc-conditions="awConditions.FSSAPI">X-HCPAW-FSS-API-VERSION</p>
+                        </td>
+                        <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The version of the <span class="ProductSpecificVariablesProductName">HCP Anywhere</span> server that the request was made to.</td>
+                    </tr>
+                    <tr class="TableStyle-ArchivasTable-Body-Body1">
+                        <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">X-HCPAW-System-Id</td>
+                        <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The HCP Anywhere system id, which is always the global unique identifier of the system.</td>
+                    </tr>
+                    <tr class="TableStyle-ArchivasTable-Body-Body1">
+                        <td class="TableStyle-ArchivasTable-BodyE-Column1-Body1">Content-Type</td>
+                        <td class="TableStyle-ArchivasTable-BodyD-Column1-Body1">The type of content returned in the response.&#160;Typically, the Content-Type is "application/json".</td>
+                    </tr>
+                    <tr class="TableStyle-ArchivasTable-Body-Body1" data-mc-conditions="awConditions.FSSAPI">
+                        <td class="TableStyle-ArchivasTable-BodyB-Column1-Body1">Set-Cookie</td>
+                        <td class="TableStyle-ArchivasTable-BodyA-Column1-Body1">
+                            <p> The Set-Cookie header is returned only if:</p>
+                            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>You are making a request using one of the link endpoints</p>
+                            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>The request body contains an access code</p>
+                            <p>When returned, the Set-Cookie response header contains a cookie. The cookie can be attached to subsequent link requests where otherwise the access code would be required. </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The response body content that each <span class="DataManagementAPIAPIName">Data&#160;Management API</span> request returns is described in the topic for each endpoint.</p>
             <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
             </p>
-            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
-            </p>
-            <!--EndHideIfBranded-->
-            <!--BeginHideIfBranded-->
-            <!--EndHideIfBranded-->
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2018</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Vantara Corporation</span>. All rights reserved.</span>
+            </p><a style="display: none;" href="../../Resources/Fonts/calibril.ttf">Calibri Light.ttf</a>
         </div>
     </body>
 </html>

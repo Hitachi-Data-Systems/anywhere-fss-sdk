@@ -1,11 +1,11 @@
 @namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
-/* line 79, sass/_variablesAndMixins.scss */
+/* line 79, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_variablesAndMixins.scss */
 p.ListNumber-1, p.ListNumberFirst-1, p.ListAlpha-1, p.ListAlphaFirst-1, p.ListNumber-2, p.ListNumberFirst-2, p.ListAlpha-2, p.ListAlphaFirst-2, p.ListNumber-3, p.ListNumberFirst-3, p.ListAlpha-3, p.ListAlphaFirst-3, p.ListNumber-4, p.ListNumberFirst-4, p.ListAlpha-4, p.ListAlphaFirst-4 {
   text-indent: -25px;
   mc-auto-number-class: Ordered-1;
 }
 @media print {
-  /* line 79, sass/_variablesAndMixins.scss */
+  /* line 79, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_variablesAndMixins.scss */
   p.ListNumber-1, p.ListNumberFirst-1, p.ListAlpha-1, p.ListAlphaFirst-1, p.ListNumber-2, p.ListNumberFirst-2, p.ListAlpha-2, p.ListAlphaFirst-2, p.ListNumber-3, p.ListNumberFirst-3, p.ListAlpha-3, p.ListAlphaFirst-3, p.ListNumber-4, p.ListNumberFirst-4, p.ListAlpha-4, p.ListAlphaFirst-4 {
     text-indent: -0.25in;
     mc-auto-number-offset: .25in;
@@ -13,7 +13,7 @@ p.ListNumber-1, p.ListNumberFirst-1, p.ListAlpha-1, p.ListAlphaFirst-1, p.ListNu
   }
 }
 
-/* line 87, sass/_variablesAndMixins.scss */
+/* line 87, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_variablesAndMixins.scss */
 p, td {
   margin-top: 0;
   widows: 3;
@@ -23,7 +23,7 @@ p, td {
   mc-hyphenate: never;
 }
 @media print {
-  /* line 87, sass/_variablesAndMixins.scss */
+  /* line 87, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_variablesAndMixins.scss */
   p, td {
     font-family: Verdana;
     margin-left: 1in;
@@ -33,19 +33,12 @@ p, td {
   }
 }
 
-/* line 103, sass/_variablesAndMixins.scss */
-p.Syntax-1, p.Syntax-2, p.Syntax-3, p.Syntax-4 {
-  font-family: 'Courier New', monospace;
-  font-size: 1em;
-  letter-spacing: -0.07em;
-}
-
-/* line 7, sass/_paragraphs.scss */
+/* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.TaskIntro {
   page-break-after: avoid;
 }
 @media print {
-  /* line 7, sass/_paragraphs.scss */
+  /* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.TaskIntro {
     margin-top: 0;
     margin-left: 1in;
@@ -60,7 +53,7 @@ p.TaskIntro {
   }
 }
 
-/* line 24, sass/_paragraphs.scss */
+/* line 24, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Steps {
   font-style: normal;
   font-weight: bold;
@@ -70,14 +63,14 @@ p.Steps {
 
 /***** fixing left-margins on paragraphs that appear within tables in print books***/
 @media print {
-  /* line 32, sass/_paragraphs.scss */
+  /* line 32, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   table p {
     margin-left: 0in;
   }
 }
 
 @media print {
-  /* line 44, sass/_paragraphs.scss */
+  /* line 44, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   table p.NormalIndent-1,
   table p.ListNumber-1,
   table p.ListNumberFirst-1,
@@ -93,7 +86,7 @@ p.Steps {
 }
 
 @media print {
-  /* line 44, sass/_paragraphs.scss */
+  /* line 44, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   table p.NormalIndent-2,
   table p.ListNumber-2,
   table p.ListNumberFirst-2,
@@ -109,7 +102,7 @@ p.Steps {
 }
 
 @media print {
-  /* line 44, sass/_paragraphs.scss */
+  /* line 44, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   table p.NormalIndent-3,
   table p.ListNumber-3,
   table p.ListNumberFirst-3,
@@ -125,7 +118,7 @@ p.Steps {
 }
 
 @media print {
-  /* line 44, sass/_paragraphs.scss */
+  /* line 44, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   table p.NormalIndent-4,
   table p.ListNumber-4,
   table p.ListNumberFirst-4,
@@ -141,7 +134,7 @@ p.Steps {
 /** make this DRYer. Tried it - worked in webhelp but not in print
 * does Flare not accept certain CSS selectors?
 */
-/* line 55, sass/_paragraphs.scss */
+/* line 55, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Code, p[class*=Code], p[class^=Code] {
   margin-bottom: 0;
   font-size: 1em;
@@ -149,7 +142,7 @@ p.Code, p[class*=Code], p[class^=Code] {
   letter-spacing: -0.07em;
 }
 @media print {
-  /* line 55, sass/_paragraphs.scss */
+  /* line 55, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.Code, p[class*=Code], p[class^=Code] {
     font-size: 10pt;
     letter-spacing: -0.5pt;
@@ -157,18 +150,18 @@ p.Code, p[class*=Code], p[class^=Code] {
   }
 }
 
-/* line 67, sass/_paragraphs.scss */
+/* line 67, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Code-SpaceAfter, p[class$="SpaceAfter"], p[class$="SpaceAfter"] {
   margin-bottom: 1.23em;
 }
 @media print {
-  /* line 67, sass/_paragraphs.scss */
+  /* line 67, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.Code-SpaceAfter, p[class$="SpaceAfter"], p[class$="SpaceAfter"] {
     margin-bottom: 13.5pt;
   }
 }
 
-/* line 75, sass/_paragraphs.scss */
+/* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-1 {
   margin-bottom: 0;
   font-size: 1em;
@@ -177,7 +170,7 @@ p.CodeIndent-1 {
   margin-left: 25px;
 }
 @media print {
-  /* line 75, sass/_paragraphs.scss */
+  /* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-1 {
     margin-left: 1.25in;
     font-size: 10pt;
@@ -186,7 +179,7 @@ p.CodeIndent-1 {
   }
 }
 
-/* line 89, sass/_paragraphs.scss */
+/* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-1-SpaceAfter {
   margin-bottom: 0;
   font-size: 1em;
@@ -196,7 +189,7 @@ p.CodeIndent-1-SpaceAfter {
   margin-bottom: 1.23em;
 }
 @media print {
-  /* line 89, sass/_paragraphs.scss */
+  /* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-1-SpaceAfter {
     margin-left: 1.25in;
     font-size: 10pt;
@@ -206,7 +199,7 @@ p.CodeIndent-1-SpaceAfter {
   }
 }
 
-/* line 75, sass/_paragraphs.scss */
+/* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-2 {
   margin-bottom: 0;
   font-size: 1em;
@@ -215,7 +208,7 @@ p.CodeIndent-2 {
   margin-left: 50px;
 }
 @media print {
-  /* line 75, sass/_paragraphs.scss */
+  /* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-2 {
     margin-left: 1.5in;
     font-size: 10pt;
@@ -224,7 +217,7 @@ p.CodeIndent-2 {
   }
 }
 
-/* line 89, sass/_paragraphs.scss */
+/* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-2-SpaceAfter {
   margin-bottom: 0;
   font-size: 1em;
@@ -234,7 +227,7 @@ p.CodeIndent-2-SpaceAfter {
   margin-bottom: 1.23em;
 }
 @media print {
-  /* line 89, sass/_paragraphs.scss */
+  /* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-2-SpaceAfter {
     margin-left: 1.5in;
     font-size: 10pt;
@@ -244,7 +237,7 @@ p.CodeIndent-2-SpaceAfter {
   }
 }
 
-/* line 75, sass/_paragraphs.scss */
+/* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-3 {
   margin-bottom: 0;
   font-size: 1em;
@@ -253,7 +246,7 @@ p.CodeIndent-3 {
   margin-left: 75px;
 }
 @media print {
-  /* line 75, sass/_paragraphs.scss */
+  /* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-3 {
     margin-left: 1.75in;
     font-size: 10pt;
@@ -262,7 +255,7 @@ p.CodeIndent-3 {
   }
 }
 
-/* line 89, sass/_paragraphs.scss */
+/* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-3-SpaceAfter {
   margin-bottom: 0;
   font-size: 1em;
@@ -272,7 +265,7 @@ p.CodeIndent-3-SpaceAfter {
   margin-bottom: 1.23em;
 }
 @media print {
-  /* line 89, sass/_paragraphs.scss */
+  /* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-3-SpaceAfter {
     margin-left: 1.75in;
     font-size: 10pt;
@@ -282,7 +275,7 @@ p.CodeIndent-3-SpaceAfter {
   }
 }
 
-/* line 75, sass/_paragraphs.scss */
+/* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-4 {
   margin-bottom: 0;
   font-size: 1em;
@@ -291,7 +284,7 @@ p.CodeIndent-4 {
   margin-left: 100px;
 }
 @media print {
-  /* line 75, sass/_paragraphs.scss */
+  /* line 75, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-4 {
     margin-left: 2in;
     font-size: 10pt;
@@ -300,7 +293,7 @@ p.CodeIndent-4 {
   }
 }
 
-/* line 89, sass/_paragraphs.scss */
+/* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.CodeIndent-4-SpaceAfter {
   margin-bottom: 0;
   font-size: 1em;
@@ -310,7 +303,7 @@ p.CodeIndent-4-SpaceAfter {
   margin-bottom: 1.23em;
 }
 @media print {
-  /* line 89, sass/_paragraphs.scss */
+  /* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.CodeIndent-4-SpaceAfter {
     margin-left: 2in;
     font-size: 10pt;
@@ -320,7 +313,7 @@ p.CodeIndent-4-SpaceAfter {
   }
 }
 
-/* line 107, sass/_paragraphs.scss */
+/* line 107, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.DraftWatermark, p.Draft {
   text-align: center;
   color: red;
@@ -331,7 +324,7 @@ p.DraftWatermark, p.Draft {
   line-height: 17pt;
 }
 
-/* line 118, sass/_paragraphs.scss */
+/* line 118, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ExampleHeading {
   margin-bottom: 2pt;
   font-weight: bold;
@@ -340,7 +333,7 @@ p.ExampleHeading {
   page-break-after: avoid;
 }
 @media print {
-  /* line 118, sass/_paragraphs.scss */
+  /* line 118, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ExampleHeading {
     font-family: Tahoma;
     font-size: 10pt;
@@ -350,12 +343,12 @@ p.ExampleHeading {
   }
 }
 
-/* line 134, sass/_paragraphs.scss */
+/* line 134, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Legal {
   font-size: .9em;
 }
 @media print {
-  /* line 134, sass/_paragraphs.scss */
+  /* line 134, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.Legal {
     margin-left: 0;
     margin-bottom: 9pt;
@@ -367,7 +360,7 @@ p.Legal {
 }
 
 /*** unordered lists ***/
-/* line 148, sass/_paragraphs.scss */
+/* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListBullet-1, p.MiniTOC1_0,
 p.MiniTOC1 {
   margin-left: 25px;
@@ -376,7 +369,7 @@ p.MiniTOC1 {
   mc-auto-number-class: Bullet1;
 }
 @media print {
-  /* line 148, sass/_paragraphs.scss */
+  /* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListBullet-1, p.MiniTOC1_0,
   p.MiniTOC1 {
     text-indent: -0.25in;
@@ -386,7 +379,7 @@ p.MiniTOC1 {
   }
 }
 
-/* line 148, sass/_paragraphs.scss */
+/* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListBullet-2, p.MiniTOC2_0,
 p.MiniTOC2 {
   margin-left: 50px;
@@ -395,7 +388,7 @@ p.MiniTOC2 {
   mc-auto-number-class: Bullet2;
 }
 @media print {
-  /* line 148, sass/_paragraphs.scss */
+  /* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListBullet-2, p.MiniTOC2_0,
   p.MiniTOC2 {
     text-indent: -0.25in;
@@ -405,7 +398,7 @@ p.MiniTOC2 {
   }
 }
 
-/* line 148, sass/_paragraphs.scss */
+/* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListBullet-3, p.MiniTOC3_0,
 p.MiniTOC3 {
   margin-left: 75px;
@@ -414,7 +407,7 @@ p.MiniTOC3 {
   mc-auto-number-class: Bullet3;
 }
 @media print {
-  /* line 148, sass/_paragraphs.scss */
+  /* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListBullet-3, p.MiniTOC3_0,
   p.MiniTOC3 {
     text-indent: -0.25in;
@@ -424,7 +417,7 @@ p.MiniTOC3 {
   }
 }
 
-/* line 148, sass/_paragraphs.scss */
+/* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListBullet-4 {
   margin-left: 100px;
   text-indent: -25px;
@@ -432,7 +425,7 @@ p.ListBullet-4 {
   mc-auto-number-class: Bullet4;
 }
 @media print {
-  /* line 148, sass/_paragraphs.scss */
+  /* line 148, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListBullet-4 {
     text-indent: -0.25in;
     mc-auto-number-offset: .25in;
@@ -442,267 +435,263 @@ p.ListBullet-4 {
 }
 
 /*** Display ***/
-/* line 170, sass/_paragraphs.scss */
+/* line 170, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Display-1 {
   margin-left: 25px;
   font-family: Tahoma;
   font-size: .95em;
 }
 
-/* line 170, sass/_paragraphs.scss */
+/* line 170, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Display-2 {
   margin-left: 50px;
   font-family: Tahoma;
   font-size: .95em;
 }
 
-/* line 170, sass/_paragraphs.scss */
+/* line 170, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Display-3 {
   margin-left: 75px;
   font-family: Tahoma;
   font-size: .95em;
 }
 
-/* line 170, sass/_paragraphs.scss */
+/* line 170, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Display-4 {
   margin-left: 100px;
   font-family: Tahoma;
   font-size: .95em;
 }
 
-/***Syntax**/
-/* line 179, sass/_paragraphs.scss */
+/*** Syntax ***/
+/* line 179, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
+p.Syntax-0 {
+  margin-left: 0px;
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
+}
+
+/* line 179, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Syntax-1 {
   margin-left: 25px;
-}
-@media print {
-  /* line 179, sass/_paragraphs.scss */
-  p.Syntax-1 {
-    margin-left: 1.25in;
-  }
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
 }
 
-/* line 179, sass/_paragraphs.scss */
+/* line 179, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Syntax-2 {
   margin-left: 50px;
-}
-@media print {
-  /* line 179, sass/_paragraphs.scss */
-  p.Syntax-2 {
-    margin-left: 1.5in;
-  }
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
 }
 
-/* line 179, sass/_paragraphs.scss */
+/* line 179, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Syntax-3 {
   margin-left: 75px;
-}
-@media print {
-  /* line 179, sass/_paragraphs.scss */
-  p.Syntax-3 {
-    margin-left: 1.75in;
-  }
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
 }
 
-/* line 179, sass/_paragraphs.scss */
+/* line 179, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Syntax-4 {
   margin-left: 100px;
-}
-@media print {
-  /* line 179, sass/_paragraphs.scss */
-  p.Syntax-4 {
-    margin-left: 2in;
-  }
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: -0.07em;
 }
 
 /***ordered lists**/
-/* line 191, sass/_paragraphs.scss */
+/* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumber-1, p.ListNumberFirst-1 {
   margin-left: 25px;
   mc-auto-number-format: "1:{n+}.";
 }
 @media print {
-  /* line 191, sass/_paragraphs.scss */
+  /* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListNumber-1, p.ListNumberFirst-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 200, sass/_paragraphs.scss */
+/* line 198, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumberFirst-1 {
   mc-auto-number-format: "1:{n=1}.";
 }
 
-/* line 205, sass/_paragraphs.scss */
+/* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlpha-1, p.ListAlphaFirst-1 {
   margin-left: 25px;
   mc-auto-number-format: "5:{A+}.";
 }
 @media print {
-  /* line 205, sass/_paragraphs.scss */
+  /* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListAlpha-1, p.ListAlphaFirst-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 219, sass/_paragraphs.scss */
+/* line 217, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlphaFirst-1 {
   mc-auto-number-format: "5:{A=1}.";
 }
 
-/* line 229, sass/_paragraphs.scss */
+/* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.NormalIndent-1 {
   margin-left: 25px;
 }
 @media print {
-  /* line 229, sass/_paragraphs.scss */
+  /* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.NormalIndent-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 191, sass/_paragraphs.scss */
+/* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumber-2, p.ListNumberFirst-2 {
   margin-left: 50px;
   mc-auto-number-format: "2:{n+}.";
 }
 @media print {
-  /* line 191, sass/_paragraphs.scss */
+  /* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListNumber-2, p.ListNumberFirst-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 200, sass/_paragraphs.scss */
+/* line 198, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumberFirst-2 {
   mc-auto-number-format: "2:{n=1}.";
 }
 
-/* line 205, sass/_paragraphs.scss */
+/* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlpha-2, p.ListAlphaFirst-2 {
   margin-left: 50px;
   mc-auto-number-format: "6:{a+}.";
 }
 @media print {
-  /* line 205, sass/_paragraphs.scss */
+  /* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListAlpha-2, p.ListAlphaFirst-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 219, sass/_paragraphs.scss */
+/* line 217, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlphaFirst-2 {
   mc-auto-number-format: "6:{a=1}.";
 }
 
-/* line 229, sass/_paragraphs.scss */
+/* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.NormalIndent-2 {
   margin-left: 50px;
 }
 @media print {
-  /* line 229, sass/_paragraphs.scss */
+  /* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.NormalIndent-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 191, sass/_paragraphs.scss */
+/* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumber-3, p.ListNumberFirst-3 {
   margin-left: 75px;
   mc-auto-number-format: "3:{n+}.";
 }
 @media print {
-  /* line 191, sass/_paragraphs.scss */
+  /* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListNumber-3, p.ListNumberFirst-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 200, sass/_paragraphs.scss */
+/* line 198, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumberFirst-3 {
   mc-auto-number-format: "3:{n=1}.";
 }
 
-/* line 205, sass/_paragraphs.scss */
+/* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlpha-3, p.ListAlphaFirst-3 {
   margin-left: 75px;
   mc-auto-number-format: "7:{a+}.";
 }
 @media print {
-  /* line 205, sass/_paragraphs.scss */
+  /* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListAlpha-3, p.ListAlphaFirst-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 219, sass/_paragraphs.scss */
+/* line 217, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlphaFirst-3 {
   mc-auto-number-format: "7:{a=1}.";
 }
 
-/* line 229, sass/_paragraphs.scss */
+/* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.NormalIndent-3 {
   margin-left: 75px;
 }
 @media print {
-  /* line 229, sass/_paragraphs.scss */
+  /* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.NormalIndent-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 191, sass/_paragraphs.scss */
+/* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumber-4, p.ListNumberFirst-4 {
   margin-left: 100px;
   mc-auto-number-format: "4:{n+}.";
 }
 @media print {
-  /* line 191, sass/_paragraphs.scss */
+  /* line 189, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListNumber-4, p.ListNumberFirst-4 {
     margin-left: 2in;
   }
 }
 
-/* line 200, sass/_paragraphs.scss */
+/* line 198, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListNumberFirst-4 {
   mc-auto-number-format: "4:{n=1}.";
 }
 
-/* line 205, sass/_paragraphs.scss */
+/* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlpha-4, p.ListAlphaFirst-4 {
   margin-left: 100px;
   mc-auto-number-format: "8:{a+}.";
 }
 @media print {
-  /* line 205, sass/_paragraphs.scss */
+  /* line 203, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.ListAlpha-4, p.ListAlphaFirst-4 {
     margin-left: 2in;
   }
 }
 
-/* line 219, sass/_paragraphs.scss */
+/* line 217, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ListAlphaFirst-4 {
   mc-auto-number-format: "8:{a=1}.";
 }
 
-/* line 229, sass/_paragraphs.scss */
+/* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.NormalIndent-4 {
   margin-left: 100px;
 }
 @media print {
-  /* line 229, sass/_paragraphs.scss */
+  /* line 227, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
   p.NormalIndent-4 {
     margin-left: 2in;
   }
 }
 
-/* line 238, sass/_paragraphs.scss */
+/* line 236, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.MasterPageCopyright {
   font-size: 8pt;
   margin-left: 0;
 }
 
-/* line 244, sass/_paragraphs.scss */
+/* line 242, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.NoteToMe {
   font-size: 1.5em;
   font-weight: bold;
@@ -710,98 +699,98 @@ p.NoteToMe {
 }
 
 /****** Note paragraph styles ************/
-/* line 252, sass/_paragraphs.scss */
+/* line 250, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Caution {
   mc-auto-number-format: '{b}Caution: {/b}';
 }
 
-/* line 256, sass/_paragraphs.scss */
+/* line 254, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.ConditionalSteps {
   mc-auto-number-format: '{b}Conditional Steps: {/b}';
 }
 
-/* line 260, sass/_paragraphs.scss */
+/* line 258, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Important {
   mc-auto-number-format: '{b}Important: {/b}';
 }
 
-/* line 264, sass/_paragraphs.scss */
+/* line 262, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Note {
   mc-auto-number-format: '{b}Note: {/b}';
 }
 
-/* line 268, sass/_paragraphs.scss */
+/* line 266, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Notes {
   mc-auto-number-format: '{b}Notes: {/b}';
 }
 
-/* line 272, sass/_paragraphs.scss */
+/* line 270, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.RepeatStep {
   mc-auto-number-format: '{b}Repeat Step: {/b}';
 }
 
-/* line 276, sass/_paragraphs.scss */
+/* line 274, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Tip {
   mc-auto-number-format: '{b}Tip:  {/b}';
 }
 
-/* line 280, sass/_paragraphs.scss */
+/* line 278, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Tips {
   mc-auto-number-format: '{b}Tips:  {/b}';
 }
 
-/* line 284, sass/_paragraphs.scss */
+/* line 282, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphs.scss */
 p.Warning {
   mc-auto-number-format: '{b}WARNING! {/b}';
 }
 
 /*use mixins to shorten this; all the headers share the same margins, etc.*/
-/* line 3, sass/_headers.scss */
+/* line 3, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .NewPage {
   page-break-before: always;
 }
 
-/* line 7, sass/_headers.scss */
+/* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .FirstStepInTitle {
   mc-auto-number-format: 'CH:Step {n=1}{ }: ';
 }
 
-/* line 11, sass/_headers.scss */
+/* line 11, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .FirstStepInTitleConditional {
   mc-auto-number-format: 'CH:Step {n=1}{ } (conditional): ';
 }
 
-/* line 15, sass/_headers.scss */
+/* line 15, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .StepInTitle {
   mc-auto-number-format: 'CH:Step {n+}{ }: ';
 }
 
-/* line 19, sass/_headers.scss */
+/* line 19, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .StepInTitleConditional {
   mc-auto-number-format: 'CH:Step {n+}{ } (conditional): ';
 }
 
-/* line 23, sass/_headers.scss */
+/* line 23, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .FirstSubStepInTitle {
   mc-auto-number-format: 'CH:Step {n}{a=1}: ';
 }
 
-/* line 27, sass/_headers.scss */
+/* line 27, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .FirstSubStepInTitleConditional {
   mc-auto-number-format: 'CH:Step {n}{a=1} (conditional): ';
 }
 
-/* line 31, sass/_headers.scss */
+/* line 31, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .SubStepInTitle {
   mc-auto-number-format: 'CH:Step {n}{a+}: ';
 }
 
-/* line 35, sass/_headers.scss */
+/* line 35, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 .SubStepInTitleConditional {
   mc-auto-number-format: 'CH:Step {n}{a+} (conditional): ';
 }
 
-/* line 40, sass/_headers.scss */
+/* line 40, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h1 {
   mc-heading-level: 2;
   font-size: 1.52em;
@@ -814,7 +803,7 @@ h1 {
   font-weight: normal;
 }
 @media print {
-  /* line 40, sass/_headers.scss */
+  /* line 40, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h1 {
     color: #000000;
     font-size: 24pt;
@@ -833,13 +822,13 @@ h1 {
   }
 }
 
-/* line 62, sass/_headers.scss */
+/* line 62, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h1.TOCTitle {
   mc-heading-level: 0;
   mc-auto-number-position: none;
 }
 
-/* line 72, sass/_headers.scss */
+/* line 72, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h1.Unnumbered {
   page-break-before: avoid;
   margin-left: 0;
@@ -848,19 +837,19 @@ h1.Unnumbered {
   mc-auto-number-class: NoDisplay;
 }
 
-/* line 82, sass/_headers.scss */
+/* line 82, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h1.Appendix {
   mc-auto-number-format: 'Appendix {chapnum}: ';
   mc-auto-number-class: NoDisplay;
 }
 
-/* line 88, sass/_headers.scss */
+/* line 88, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h1.AppendixUnnumbered {
   mc-auto-number-format: 'Appendix: ';
   mc-auto-number-class: NoDisplay;
 }
 
-/* line 94, sass/_headers.scss */
+/* line 94, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h2 {
   mc-heading-level: 3;
   font-size: 1.23em;
@@ -871,7 +860,7 @@ h2 {
   font-weight: normal;
 }
 @media print {
-  /* line 94, sass/_headers.scss */
+  /* line 94, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h2 {
     color: navy;
     font-size: 16pt;
@@ -886,7 +875,7 @@ h2 {
   }
 }
 
-/* line 99, sass/_headers.scss */
+/* line 99, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h3 {
   mc-heading-level: 4;
   font-size: 1.23em;
@@ -897,7 +886,7 @@ h3 {
   font-weight: normal;
 }
 @media print {
-  /* line 99, sass/_headers.scss */
+  /* line 99, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h3 {
     color: navy;
     font-size: 14pt;
@@ -912,7 +901,7 @@ h3 {
   }
 }
 
-/* line 115, sass/_headers.scss */
+/* line 115, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h4 {
   mc-heading-level: 5;
   font-size: 1.23em;
@@ -923,7 +912,7 @@ h4 {
   font-weight: normal;
 }
 @media print {
-  /* line 115, sass/_headers.scss */
+  /* line 115, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h4 {
     font-size: 12pt;
     color: #00008f;
@@ -938,7 +927,7 @@ h4 {
   }
 }
 
-/* line 130, sass/_headers.scss */
+/* line 130, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h5, h6 {
   font-size: 1em;
   mc-heading-level: 0;
@@ -950,7 +939,7 @@ h5, h6 {
   margin-top: 1.40em;
 }
 @media print {
-  /* line 130, sass/_headers.scss */
+  /* line 130, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h5, h6 {
     margin-left: 1in;
     font-size: 10.5pt;
@@ -963,12 +952,12 @@ h5, h6 {
   }
 }
 
-/* line 147, sass/_headers.scss */
+/* line 147, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h6 {
   font-size: .85em;
 }
 
-/* line 153, sass/_headers.scss */
+/* line 153, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h5.bugDescription, h6.bugDescription {
   margin-left: 0;
   margin-top: 0;
@@ -977,12 +966,12 @@ h5.bugDescription, h6.bugDescription {
 }
 
 /***h5's for 3rd party stuff*****/
-/* line 163, sass/_headers.scss */
+/* line 163, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h5.LicenseHeading, h6.LicenseHeading {
   mc-heading-level: 3;
 }
 
-/* line 169, sass/_headers.scss */
+/* line 169, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h5.PackageHeading, h6.PackageHeading, h5.LicenseHeading, h6.LicenseHeading {
   font-size: 11.5pt;
   margin-top: 22pt;
@@ -993,7 +982,7 @@ h5.PackageHeading, h6.PackageHeading, h5.LicenseHeading, h6.LicenseHeading {
   border-top-color: #000000;
 }
 @media print {
-  /* line 169, sass/_headers.scss */
+  /* line 169, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h5.PackageHeading, h6.PackageHeading, h5.LicenseHeading, h6.LicenseHeading {
     font-family: Tahoma;
     font-weight: bold;
@@ -1003,7 +992,7 @@ h5.PackageHeading, h6.PackageHeading, h5.LicenseHeading, h6.LicenseHeading {
   }
 }
 
-/* line 184, sass/_headers.scss */
+/* line 184, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
 h5.VendorAndCopyrightHeading, h6.VendorAndCopyrightHeading {
   font-size: 11.5pt;
   line-height: 14pt;
@@ -1011,7 +1000,7 @@ h5.VendorAndCopyrightHeading, h6.VendorAndCopyrightHeading {
   page-break-before: avoid;
 }
 @media print {
-  /* line 184, sass/_headers.scss */
+  /* line 184, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_headers.scss */
   h5.VendorAndCopyrightHeading, h6.VendorAndCopyrightHeading {
     font-family: Tahoma;
     font-weight: bold;
@@ -1021,24 +1010,24 @@ h5.VendorAndCopyrightHeading, h6.VendorAndCopyrightHeading {
   }
 }
 
-/* line 2, sass/_images.scss */
+/* line 2, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 p img {
   vertical-align: middle;
 }
 
-/* line 7, sass/_images.scss */
+/* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 img.FullWidth {
   width: 100%;
   height: auto;
 }
 @media print {
-  /* line 7, sass/_images.scss */
+  /* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
   img.FullWidth {
     width: 5.5in;
   }
 }
 
-/* line 16, sass/_images.scss */
+/* line 16, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 img.Note {
   width: 41px;
   height: 37px;
@@ -1046,7 +1035,7 @@ img.Note {
   margin-right: 3px;
 }
 @media print {
-  /* line 16, sass/_images.scss */
+  /* line 16, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
   img.Note {
     width: .41in;
     height: .37in;
@@ -1054,19 +1043,19 @@ img.Note {
   }
 }
 
-/* line 29, sass/_images.scss */
+/* line 29, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 img.Warning {
   float: right;
   margin-right: 6px;
 }
 @media print {
-  /* line 29, sass/_images.scss */
+  /* line 29, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
   img.Warning {
     margin-right: .06in;
   }
 }
 
-/* line 38, sass/_images.scss */
+/* line 38, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 img.Tip {
   width: 34px;
   height: 50px;
@@ -1075,7 +1064,7 @@ img.Tip {
   margin-right: 10px;
 }
 @media print {
-  /* line 38, sass/_images.scss */
+  /* line 38, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
   img.Tip {
     width: .34in;
     height: .5in;
@@ -1084,18 +1073,18 @@ img.Tip {
   }
 }
 
-/* line 53, sass/_images.scss */
+/* line 53, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 [class^="icon-"].StandaloneImage {
   margin-top: 0;
   font-size: 2em;
 }
 
-/* line 58, sass/_images.scss */
+/* line 58, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_images.scss */
 [class^="icon-"].orange {
   color: #d14912;
 }
 
-/* line 1, sass/_tables.scss */
+/* line 1, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 caption {
   text-align: left;
   font-style: italic;
@@ -1104,7 +1093,7 @@ caption {
   line-height: 11pt;
 }
 
-/* line 9, sass/_tables.scss */
+/* line 9, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 table {
   caption-side: top;
   mc-caption-repeat: true;
@@ -1112,14 +1101,14 @@ table {
   width: 100%;
 }
 @media print {
-  /* line 9, sass/_tables.scss */
+  /* line 9, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
   table {
     width: 5.5in;
     margin-left: 1in;
   }
 }
 
-/* line 23, sass/_tables.scss */
+/* line 23, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 table.TableStyle-NoteTable,
 table.TableStyle-TipTable,
 table.TableStyle-ImportantTable,
@@ -1129,7 +1118,7 @@ table.TableStyle-CautionTable {
 }
 
 @media print {
-  /* line 33, sass/_tables.scss */
+  /* line 33, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
   td.TableStyle-NoteTable-BodyA-NoteText-NoteRow,
   td.TableStyle-TipTable-BodyA-NoteText-NoteRow,
   td.TableStyle-CautionTable-BodyA-NoteText-NoteRow,
@@ -1138,13 +1127,13 @@ table.TableStyle-CautionTable {
     border-bottom: solid 1px #696969;
   }
 }
-/* line 39, sass/_tables.scss */
+/* line 39, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 p ~ table {
   margin-top: 1.23em;
   page-break-before: avoid;
 }
 @media print {
-  /* line 39, sass/_tables.scss */
+  /* line 39, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
   p ~ table {
     margin-top: 5.5pt;
   }
@@ -1156,17 +1145,17 @@ td {
 	page-break-inside: avoid;
 }
 **/
-/* line 54, sass/_tables.scss */
+/* line 54, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 td > p:last-child {
   margin-bottom: 0;
 }
 
-/* line 58, sass/_tables.scss */
+/* line 58, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 td[class*=NoteRow] {
   background-size: 60px 60px;
 }
 
-/* line 62, sass/_tables.scss */
+/* line 62, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 th {
   font-weight: bold;
   font-style: normal;
@@ -1178,34 +1167,34 @@ th {
   vertical-align: bottom;
 }
 @media print {
-  /* line 62, sass/_tables.scss */
+  /* line 62, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
   th {
     font-size: 10pt;
     line-height: 13pt;
   }
 }
 
-/* line 77, sass/_tables.scss */
+/* line 77, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 tr.inlineRow {
   background-color: #cccccc;
 }
 
-/* line 81, sass/_tables.scss */
+/* line 81, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 td#shaded {
   background-color: #cccccc;
 }
 
-/* line 85, sass/_tables.scss */
+/* line 85, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 td.TableStyle-NoteTable-Column-NoteIcon {
   background-size: 50px auto;
 }
 
-/* line 89, sass/_tables.scss */
+/* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_tables.scss */
 col.halfWidth {
   width: 50%;
 }
 
-/* line 2, sass/_spans.scss */
+/* line 2, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span {
   page-break-inside: avoid;
   /*** testing span wrapping. not sure why these were set to never wrap...
@@ -1214,7 +1203,7 @@ span {
   ***/
 }
 
-/* line 11, sass/_spans.scss */
+/* line 11, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Bullet1 {
   float: left;
   width: 25px;
@@ -1223,14 +1212,14 @@ span.Bullet1 {
   font-size: 1em;
 }
 @media print {
-  /* line 11, sass/_spans.scss */
+  /* line 11, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.Bullet1 {
     width: .25in;
     font-size: 12pt;
   }
 }
 
-/* line 21, sass/_spans.scss */
+/* line 21, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Bullet2 {
   float: left;
   width: 25px;
@@ -1239,14 +1228,14 @@ span.Bullet2 {
   font-size: .718em;
 }
 @media print {
-  /* line 21, sass/_spans.scss */
+  /* line 21, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.Bullet2 {
     font-size: 6pt;
     width: .25in;
   }
 }
 
-/* line 31, sass/_spans.scss */
+/* line 31, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Bullet3 {
   float: left;
   width: 25px;
@@ -1255,14 +1244,14 @@ span.Bullet3 {
   font-size: .9em;
 }
 @media print {
-  /* line 31, sass/_spans.scss */
+  /* line 31, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.Bullet3 {
     width: .25in;
     font-size: 10pt;
   }
 }
 
-/* line 41, sass/_spans.scss */
+/* line 41, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Bullet4 {
   float: left;
   width: 25px;
@@ -1270,13 +1259,13 @@ span.Bullet4 {
   mc-disabled: true;
 }
 @media print {
-  /* line 41, sass/_spans.scss */
+  /* line 41, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.Bullet4 {
     font-size: 8.5pt;
   }
 }
 
-/* line 49, sass/_spans.scss */
+/* line 49, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Bullet6 {
   float: left;
   width: 25px;
@@ -1285,28 +1274,28 @@ span.Bullet6 {
   font-size: .7em;
 }
 @media print {
-  /* line 49, sass/_spans.scss */
+  /* line 49, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.Bullet6 {
     font-size: 5pt;
     font-family: Wingdings;
   }
 }
 
-/* line 59, sass/_spans.scss */
+/* line 59, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.CodeInText {
   font-family: 'Courier New', monospace;
   font-size: 1em;
   letter-spacing: -0.07em;
 }
 @media print {
-  /* line 59, sass/_spans.scss */
+  /* line 59, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.CodeInText {
     font-size: 10pt;
     letter-spacing: -0.5pt;
   }
 }
 
-/* line 73, sass/_spans.scss */
+/* line 73, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.GUI,
 span.NewTerm,
 span.ToolValue,
@@ -1315,7 +1304,7 @@ span.WindowName {
   font-weight: bold;
 }
 @media print {
-  /* line 73, sass/_spans.scss */
+  /* line 73, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.GUI,
   span.NewTerm,
   span.ToolValue,
@@ -1325,20 +1314,20 @@ span.WindowName {
   }
 }
 
-/* line 83, sass/_spans.scss */
+/* line 83, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.InlineHeading {
   font-weight: bold;
   font-size: 1em;
   font-family: Verdana, sans-serif;
 }
 @media print {
-  /* line 83, sass/_spans.scss */
+  /* line 83, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
   span.InlineHeading {
     font-size: 10.5pt;
   }
 }
 
-/* line 93, sass/_spans.scss */
+/* line 93, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.ListNumber {
   float: left;
   width: 25px;
@@ -1346,7 +1335,7 @@ span.ListNumber {
   mc-disabled: true;
 }
 
-/* line 101, sass/_spans.scss */
+/* line 101, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Ordered-1,
 span.Ordered-2,
 span.Ordered-3,
@@ -1358,24 +1347,24 @@ span.Ordered-4 {
   width: .25in;
 }
 
-/* line 108, sass/_spans.scss */
+/* line 108, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.NoteHeading {
   font-weight: bold;
   mc-disabled: true;
 }
 
-/* line 114, sass/_spans.scss */
+/* line 114, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.NoteToMe {
   color: red;
 }
 
-/* line 119, sass/_spans.scss */
+/* line 119, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.Title,
 MadCap|variable.Title {
   font-style: italic;
 }
 
-/* line 124, sass/_spans.scss */
+/* line 124, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_spans.scss */
 span.FileName {
   font-family: 'Courier New', monospace;
   font-size: .95em;
@@ -1386,37 +1375,37 @@ span.FileName {
 *
 * duh.  use complex selectors.  create a class for the parent dropDown and nest the * applicable styles inside of it.
 */
-/* line 7, sass/_madcap.scss */
+/* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|breadcrumbsProxy {
   font-size: .9em;
   border-bottom-style: none;
   margin-bottom: 0;
 }
 
-/* line 14, sass/_madcap.scss */
+/* line 14, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|DropDown {
   mc-closed-image: url("../Images/webhelp/chevron.png");
   mc-open-image: url("../Images/webhelp/chevronDown.png");
   margin-bottom: 1.23em;
 }
 @media print {
-  /* line 14, sass/_madcap.scss */
+  /* line 14, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|DropDown {
     margin-bottom: 13pt;
   }
 }
 
-/* line 24, sass/_madcap.scss */
+/* line 24, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 .dropDownHotspot:link {
   font-size: 1em;
 }
 
-/* line 28, sass/_madcap.scss */
+/* line 28, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|DropDownHead {
   margin-bottom: 1.2em;
 }
 
-/* line 32, sass/_madcap.scss */
+/* line 32, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|DropDownHotspot {
   mc-heading-level: 3;
   font-size: 1.23em;
@@ -1427,7 +1416,7 @@ MadCap|DropDownHotspot {
   font-weight: normal;
 }
 @media print {
-  /* line 32, sass/_madcap.scss */
+  /* line 32, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|DropDownHotspot {
     color: navy;
     font-size: 16pt;
@@ -1443,20 +1432,20 @@ MadCap|DropDownHotspot {
 }
 
 @media print {
-  /* line 36, sass/_madcap.scss */
+  /* line 36, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|DropDownHotspot.FirstStep {
     mc-auto-number-format: 'CH:Step {n=1}{ }: ';
   }
 }
 
 @media print {
-  /* line 42, sass/_madcap.scss */
+  /* line 42, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|DropDownHotspot.StepInTitle {
     mc-auto-number-format: 'CH:Step {n+}{ }: ';
   }
 }
 
-/* line 51, sass/_madcap.scss */
+/* line 51, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|glossaryProxy,
 MadCap|indexProxy,
 MadCap|tocProxy {
@@ -1464,7 +1453,7 @@ MadCap|tocProxy {
   border-top-style: none;
 }
 
-/* line 57, sass/_madcap.scss */
+/* line 57, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|glossaryTerm {
   font-size: 10.5;
   font-weight: normal;
@@ -1480,7 +1469,7 @@ MadCap|DropDownHotspot:hover
 }
 ***/
 /********* mini TOCs ***************/
-/* line 77, sass/_madcap.scss */
+/* line 77, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|miniTocProxy,
 MadCap|miniTocProxy_0,
 div.MCMiniTocBox,
@@ -1495,7 +1484,7 @@ div.MCMiniTocBox_0 {
   mc-disabled: true;
 }
 @media print {
-  /* line 77, sass/_madcap.scss */
+  /* line 77, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|miniTocProxy,
   MadCap|miniTocProxy_0,
   div.MCMiniTocBox,
@@ -1504,7 +1493,7 @@ div.MCMiniTocBox_0 {
   }
 }
 
-/* line 95, sass/_madcap.scss */
+/* line 95, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|miniTocProxy.noAutoNumber,
 MadCap|miniTocProxy_0.noAutoNumber,
 div.MCMiniTocBox.noAutoNumber,
@@ -1517,7 +1506,7 @@ div.MCMiniTocBox_0.noAutoNumber {
   mc-disabled: true;
 }
 @media print {
-  /* line 95, sass/_madcap.scss */
+  /* line 95, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|miniTocProxy.noAutoNumber,
   MadCap|miniTocProxy_0.noAutoNumber,
   div.MCMiniTocBox.noAutoNumber,
@@ -1526,32 +1515,32 @@ div.MCMiniTocBox_0.noAutoNumber {
   }
 }
 
-/* line 108, sass/_madcap.scss */
+/* line 108, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 div.MCMiniTocBox_0 span {
   margin-top: 0;
   widows: 3;
   orphans: 3;
 }
 
-/* line 116, sass/_madcap.scss */
+/* line 116, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 p.MiniTOC1_0,
 p.MiniTOC1 {
   font-weight: normal;
 }
 
-/* line 123, sass/_madcap.scss */
+/* line 123, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 p.MiniTOC2_0,
 p.MiniTOC2 {
   font-weight: normal;
 }
 
-/* line 130, sass/_madcap.scss */
+/* line 130, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 p.MiniTOC3_0,
 p.MiniTOC3 {
   font-weight: normal;
 }
 
-/* line 137, sass/_madcap.scss */
+/* line 137, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 a.MiniTOC1:link,
 a.MiniTOC2:link,
 a.MiniTOC3:link {
@@ -1559,67 +1548,67 @@ a.MiniTOC3:link {
 }
 
 /************************/
-/* line 142, sass/_madcap.scss */
+/* line 142, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|xref {
   mc-format: '{paratext}';
 }
 @media print {
-  /* line 142, sass/_madcap.scss */
+  /* line 142, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|xref {
     mc-format: "{color blue}{u}{paranum}{quote}{paratext}{quote}{/u}{/color} {pageref}";
   }
 }
 
-/* line 150, sass/_madcap.scss */
+/* line 150, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|xref.NextStep {
   mc-format: 'next step';
   text-decoration: none;
 }
 @media print {
-  /* line 150, sass/_madcap.scss */
+  /* line 150, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
   MadCap|xref.NextStep {
     mc-format: '{color blue}{u}next step{/u}{/color}';
   }
 }
 
-/* line 159, sass/_madcap.scss */
+/* line 159, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_madcap.scss */
 MadCap|xref.StepNumber {
   mc-format: '{paranumonly}';
   text-decoration: none;
 }
 
-/* line 1, sass/_restAPI.scss */
+/* line 1, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_restAPI.scss */
 div.method {
   /* nest all styles for the swagger examples within div.method*/
 }
-/* line 3, sass/_restAPI.scss */
+/* line 3, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_restAPI.scss */
 div.method a.up {
   display: none;
 }
-/* line 7, sass/_restAPI.scss */
+/* line 7, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_restAPI.scss */
 div.method h4 {
   margin-bottom: 0;
 }
 
-/* line 1, sass/_glossary.scss */
+/* line 1, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
 div.GlossaryPageTerm a {
   color: #000;
   font-weight: bold;
 }
 
-/* line 6, sass/_glossary.scss */
+/* line 6, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
 div.GlossaryPageTerm a:hover {
   text-decoration: none;
 }
 
 @media print {
-  /* line 11, sass/_glossary.scss */
+  /* line 11, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   a.GlossaryPageTerm {
     text-decoration: none;
     margin-left: -15pt;
   }
 
-  /* line 16, sass/_glossary.scss */
+  /* line 16, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   div.GlossaryPageHeading {
     font-family: Tahoma;
     font-size: 16pt;
@@ -1636,7 +1625,7 @@ div.GlossaryPageTerm a:hover {
     border-bottom-color: black;
   }
 
-  /* line 32, sass/_glossary.scss */
+  /* line 32, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   div.GlossaryPageDefinition {
     font-family: Verdana;
     font-size: 10.5pt;
@@ -1651,7 +1640,7 @@ div.GlossaryPageTerm a:hover {
     page-break-inside: avoid;
   }
 
-  /* line 46, sass/_glossary.scss */
+  /* line 46, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   div.GlossaryPageTerm {
     font-family: Verdana;
     font-size: 11pt;
@@ -1664,14 +1653,14 @@ div.GlossaryPageTerm a:hover {
     mc-hyphenate: never;
   }
 
-  /* line 58, sass/_glossary.scss */
+  /* line 58, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   div.GlossaryPageEntry {
     padding-left: 0pt;
     margin-left: .75in;
     padding-left: 10px;
   }
 
-  /* line 65, sass/_glossary.scss */
+  /* line 65, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   p.GlossaryLetter {
     font-family: Tahoma;
     font-size: 16pt;
@@ -1683,7 +1672,7 @@ div.GlossaryPageTerm a:hover {
     page-break-after: avoid;
   }
 
-  /* line 77, sass/_glossary.scss */
+  /* line 77, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   p.GlossaryTerm {
     font-family: Verdana;
     font-size: 11pt;
@@ -1695,7 +1684,7 @@ div.GlossaryPageTerm a:hover {
     mc-hyphenate: never;
   }
 
-  /* line 89, sass/_glossary.scss */
+  /* line 89, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_glossary.scss */
   p.GlossaryEntry {
     font-family: Verdana;
     font-size: 10.5pt;
@@ -1704,18 +1693,18 @@ div.GlossaryPageTerm a:hover {
     margin-left: 1.25in;
   }
 }
-/* line 1, sass/_pipelineExampleTables.scss */
+/* line 1, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 table.TableStyle-stageExample ~ p {
   margin-top: 1.23em;
 }
 
-/* line 5, sass/_pipelineExampleTables.scss */
+/* line 5, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 tr.TableStyle-stageExample-Body-Body1 + tr.TableStyle-stageExample-Body-Body1 {
   margin-top: 1.23em;
 }
 
 /*** Columns 1 and 5 show document examples, have doc icon backgrounds ***/
-/* line 17, sass/_pipelineExampleTables.scss */
+/* line 17, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-stageExample-BodyB-Column1-Body1,
 td.TableStyle-stageExample-BodyE-Column1-Body1,
 td.TableStyle-stageExample-BodyA-Column5-Body1,
@@ -1728,24 +1717,24 @@ td.TableStyle-stageExample-BodyE-Column3-Body1 {
   height: 55px;
 }
 
-/* line 22, sass/_pipelineExampleTables.scss */
+/* line 22, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td#noborder {
   border: none;
 }
 
-/* line 26, sass/_pipelineExampleTables.scss */
+/* line 26, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td#nobackground {
   background-image: none;
 }
 
-/* line 30, sass/_pipelineExampleTables.scss */
+/* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td#conditional {
   border: solid 4px #7649ce;
   border-radius: 6px;
   padding-bottom: 1.23em;
 }
 
-/* line 36, sass/_pipelineExampleTables.scss */
+/* line 36, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td#conditional > p:first-child {
   color: #7649ce;
   font-family: sans-serif;
@@ -1753,7 +1742,7 @@ td#conditional > p:first-child {
   font-weight: 600;
 }
 
-/* line 43, sass/_pipelineExampleTables.scss */
+/* line 43, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td#dropped {
   background-image: url("../Images/docDroppedIcon.svg");
   background-repeat: no-repeat;
@@ -1761,7 +1750,7 @@ td#dropped {
 }
 
 /*** Columns 2 and 4 have arrow icon backgrounds ***/
-/* line 59, sass/_pipelineExampleTables.scss */
+/* line 59, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-stageExample-BodyA-Column2-Body1,
 td.TableStyle-stageExample-BodyB-Column2-Body1,
 td.TableStyle-stageExample-BodyC-Column2-Body1,
@@ -1775,7 +1764,7 @@ td.TableStyle-stageExample-BodyE-Column4-Body1 {
   background-position: 50% 50%;
 }
 
-/* line 72, sass/_pipelineExampleTables.scss */
+/* line 72, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-pipelineExample-BodyA-Input-Body1,
 td.TableStyle-pipelineExample-BodyB-Input-Body1,
 td.TableStyle-pipelineExample-BodyC-Input-Body1,
@@ -1789,7 +1778,7 @@ td.TableStyle-pipelineExample-BodyE-Example-Input {
   mc-auto-number-format: '{b}Documents from Inputs {/b}';
 }
 
-/* line 80, sass/_pipelineExampleTables.scss */
+/* line 80, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-pipelineExample-BodyA-Example-DownArrow,
 td.TableStyle-pipelineExample-BodyB-Example-DownArrow,
 td.TableStyle-pipelineExample-BodyC-Example-DownArrow,
@@ -1800,7 +1789,7 @@ td.TableStyle-pipelineExample-BodyE-Example-DownArrow {
   background-repeat: no-repeat;
 }
 
-/* line 95, sass/_pipelineExampleTables.scss */
+/* line 95, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-pipelineExample-BodyA-Output-Body1,
 td.TableStyle-pipelineExample-BodyB-Output-Body1,
 td.TableStyle-pipelineExample-BodyC-Output-Body1,
@@ -1814,7 +1803,7 @@ td.TableStyle-pipelineExample-BodyE-Example-Output {
   mc-auto-number-format: '{b}Documents to Outputs or Next Pipeline {/b}';
 }
 
-/* line 109, sass/_pipelineExampleTables.scss */
+/* line 109, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-stageExample-BodyA-Column3-Body1,
 td.TableStyle-stageExample-BodyB-Column3-Body1,
 td.TableStyle-stageExample-BodyC-Column3-Body1,
@@ -1830,13 +1819,13 @@ table.stage {
   border-radius: 6px;
 }
 
-/* line 114, sass/_pipelineExampleTables.scss */
+/* line 114, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 col.TableStyle-pipelineExample-Column-Example {
   align: center;
   mc-disabled: true;
 }
 
-/* line 119, sass/_pipelineExampleTables.scss */
+/* line 119, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 div.stageInConditional {
   border: solid 4px #477bd3;
   border-radius: 6px;
@@ -1844,7 +1833,7 @@ div.stageInConditional {
   margin: 10% auto auto 10%;
 }
 
-/* line 131, sass/_pipelineExampleTables.scss */
+/* line 131, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_pipelineExampleTables.scss */
 td.TableStyle-stageExample-BodyA-Column3-Body1 p:first-child,
 td.TableStyle-stageExample-BodyB-Column3-Body1 p:first-child,
 td.TableStyle-stageExample-BodyC-Column3-Body1 p:first-child,
@@ -1858,133 +1847,133 @@ div.stageInConditional p:first-child {
   align: center;
 }
 
-/* line 1, sass/_divs.scss */
+/* line 1, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.CodeHighlight {
   color: red;
 }
 
 @media print {
-  /* line 5, sass/_divs.scss */
+  /* line 5, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.CodeHighlight p {
     margin-left: 0;
   }
 }
 
-/* line 12, sass/_divs.scss */
+/* line 12, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.MasterPageBodyContainer {
   margin-left: 5pt;
   margin-top: 5pt;
   margin-bottom: 1.23em;
 }
 
-/* line 19, sass/_divs.scss */
+/* line 19, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.MasterPageBreadcrumbs {
   margin-bottom: 0;
   text-align: left;
   margin-left: 5pt;
 }
 
-/* line 25, sass/_divs.scss */
+/* line 25, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.noBreak {
   page-break-inside: avoid;
 }
 
-/* line 30, sass/_divs.scss */
+/* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.snippetAndNoteTableIndent-1 {
   margin-left: 25px;
 }
 @media print {
-  /* line 30, sass/_divs.scss */
+  /* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.snippetAndNoteTableIndent-1 {
     margin-left: 0.25in;
   }
 }
 
-/* line 30, sass/_divs.scss */
+/* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.snippetAndNoteTableIndent-2 {
   margin-left: 50px;
 }
 @media print {
-  /* line 30, sass/_divs.scss */
+  /* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.snippetAndNoteTableIndent-2 {
     margin-left: 0.5in;
   }
 }
 
-/* line 30, sass/_divs.scss */
+/* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.snippetAndNoteTableIndent-3 {
   margin-left: 75px;
 }
 @media print {
-  /* line 30, sass/_divs.scss */
+  /* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.snippetAndNoteTableIndent-3 {
     margin-left: 0.75in;
   }
 }
 
-/* line 30, sass/_divs.scss */
+/* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.snippetAndNoteTableIndent-4 {
   margin-left: 100px;
 }
 @media print {
-  /* line 30, sass/_divs.scss */
+  /* line 30, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.snippetAndNoteTableIndent-4 {
     margin-left: 1in;
   }
 }
 
-/* line 39, sass/_divs.scss */
+/* line 39, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.snippetIndent-1 p.ListBullet-1, div.snippetIndent-1 p.MiniTOC1_0,
 div.snippetIndent-1 p.MiniTOC1 {
   mc-auto-number-format: 'o';
   mc-auto-number-class: Bullet2;
 }
 
-/* line 45, sass/_divs.scss */
+/* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.standardTableIndent-1 {
   margin-left: 25px;
 }
 @media print {
-  /* line 45, sass/_divs.scss */
+  /* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.standardTableIndent-1 {
     margin-left: 1.25in;
   }
 }
 
-/* line 45, sass/_divs.scss */
+/* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.standardTableIndent-2 {
   margin-left: 50px;
 }
 @media print {
-  /* line 45, sass/_divs.scss */
+  /* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.standardTableIndent-2 {
     margin-left: 1.5in;
   }
 }
 
-/* line 45, sass/_divs.scss */
+/* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.standardTableIndent-3 {
   margin-left: 75px;
 }
 @media print {
-  /* line 45, sass/_divs.scss */
+  /* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.standardTableIndent-3 {
     margin-left: 1.75in;
   }
 }
 
-/* line 45, sass/_divs.scss */
+/* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
 div.standardTableIndent-4 {
   margin-left: 100px;
 }
 @media print {
-  /* line 45, sass/_divs.scss */
+  /* line 45, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_divs.scss */
   div.standardTableIndent-4 {
     margin-left: 2in;
   }
 }
 
-/* line 2, sass/_paragraphsPdfOnly.scss */
+/* line 2, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.HeaderRight,
 p.HeaderLeft {
   margin-left: 0;
@@ -1993,7 +1982,7 @@ p.HeaderLeft {
   line-height: 12pt;
 }
 
-/* line 9, sass/_paragraphsPdfOnly.scss */
+/* line 9, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.BackCover {
   margin-left: 0;
   margin-bottom: 9pt;
@@ -2003,7 +1992,7 @@ p.BackCover {
   mc-hyphenate: never;
 }
 
-/* line 18, sass/_paragraphsPdfOnly.scss */
+/* line 18, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.ChapterNumber, p.AppendixLetter {
   font-size: 80pt;
   font-style: oblique;
@@ -2014,7 +2003,7 @@ p.ChapterNumber, p.AppendixLetter {
   vertical-align: top;
 }
 
-/* line 28, sass/_paragraphsPdfOnly.scss */
+/* line 28, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.CoverFooterFront, p.CoverFooterBack {
   font-size: 12pt;
   font-family: Arial;
@@ -2023,17 +2012,17 @@ p.CoverFooterFront, p.CoverFooterBack {
   column-break-before: always;
 }
 
-/* line 36, sass/_paragraphsPdfOnly.scss */
+/* line 36, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.CoverFooterFront {
   text-align: right;
 }
 
-/* line 41, sass/_paragraphsPdfOnly.scss */
+/* line 41, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.CoverFooterBack {
   text-align: left;
 }
 
-/* line 47, sass/_paragraphsPdfOnly.scss */
+/* line 47, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.CoverInternalOnly {
   font-family: Arial;
   font-weight: bold;
@@ -2046,7 +2035,7 @@ p.CoverInternalOnly {
 }
 
 /**** front cover styles ****/
-/* line 59, sass/_paragraphsPdfOnly.scss */
+/* line 59, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.DocTitle {
   font-family: Arial;
   font-weight: bold;
@@ -2058,7 +2047,7 @@ p.DocTitle {
   margin-right: .25in;
 }
 
-/* line 71, sass/_paragraphsPdfOnly.scss */
+/* line 71, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.ProductName {
   margin-left: 0;
   margin-bottom: 7pt;
@@ -2071,7 +2060,7 @@ p.ProductName {
   line-height: 25pt;
 }
 
-/* line 84, sass/_paragraphsPdfOnly.scss */
+/* line 84, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.releaseVersions {
   margin-bottom: 0em;
   text-align: right;
@@ -2079,7 +2068,7 @@ p.releaseVersions {
 }
 
 /**** Footer styles ****/
-/* line 92, sass/_paragraphsPdfOnly.scss */
+/* line 92, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.FooterDocTitle, p.FooterDocTitleLandscape {
   font-family: Tahoma;
   text-align: center;
@@ -2094,7 +2083,7 @@ p.FooterDocTitle, p.FooterDocTitleLandscape {
   padding-top: 5pt;
 }
 
-/* line 107, sass/_paragraphsPdfOnly.scss */
+/* line 107, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.FooterHeading {
   margin-left: -1.03in;
   margin-bottom: 0;
@@ -2104,7 +2093,7 @@ p.FooterHeading {
   column-break-after: always;
 }
 
-/* line 116, sass/_paragraphsPdfOnly.scss */
+/* line 116, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.FooterPageNumberLeft, p.FooterPageNumberRight {
   margin-bottom: 0;
   font-weight: bold;
@@ -2115,13 +2104,13 @@ p.FooterPageNumberLeft, p.FooterPageNumberRight {
   line-height: 13pt;
 }
 
-/* line 127, sass/_paragraphsPdfOnly.scss */
+/* line 127, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.FooterPageNumberLeft {
   margin-left: -1.03in;
   text-align: left;
 }
 
-/* line 134, sass/_paragraphsPdfOnly.scss */
+/* line 134, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.FooterPageNumberRight {
   margin-left: 0;
   padding-right: 0;
@@ -2129,7 +2118,7 @@ p.FooterPageNumberRight {
 }
 
 /**** PDF index styles ****/
-/* line 143, sass/_paragraphsPdfOnly.scss */
+/* line 143, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.IndexHeading {
   margin: 13.5pt 0 3pt 0;
   column-break-after: avoid;
@@ -2141,7 +2130,7 @@ p.IndexHeading {
   text-align: left;
 }
 
-/* line 155, sass/_paragraphsPdfOnly.scss */
+/* line 155, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.Index1, p.Index2 {
   margin-top: 0;
   margin-bottom: 0;
@@ -2152,7 +2141,7 @@ p.Index1, p.Index2 {
   line-height: 12pt;
 }
 
-/* line 166, sass/_paragraphsPdfOnly.scss */
+/* line 166, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.Index2 {
   column-break-before: avoid;
   page-break-before: avoid;
@@ -2163,7 +2152,7 @@ p.Index2 {
 }
 
 /***paragraph styles for the PDF TOCs***/
-/* line 177, sass/_paragraphsPdfOnly.scss */
+/* line 177, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.TOC1, p.TOC2 {
   text-align: left;
   font-weight: bold;
@@ -2178,13 +2167,13 @@ p.TOC1, p.TOC2 {
   page-break-after: avoid;
 }
 
-/* line 191, sass/_paragraphsPdfOnly.scss */
+/* line 191, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.TOC2 {
   font-weight: normal;
   margin-bottom: 7pt;
 }
 
-/* line 197, sass/_paragraphsPdfOnly.scss */
+/* line 197, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.TOC3, p.TOC4, p.TOC5 {
   font-size: 12pt;
   font-family: Tahoma;
@@ -2195,27 +2184,27 @@ p.TOC3, p.TOC4, p.TOC5 {
   line-height: 15pt;
 }
 
-/* line 207, sass/_paragraphsPdfOnly.scss */
+/* line 207, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.TOC4 {
   margin-left: .65in;
 }
 
-/* line 212, sass/_paragraphsPdfOnly.scss */
+/* line 212, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.TOC5 {
   margin-left: .85in;
 }
 
-/* line 217, sass/_paragraphsPdfOnly.scss */
+/* line 217, C:/git/anywhere-doc/anywhereDocProject/Content/Resources/Stylesheets/Sass_Stylesheets/_paragraphsPdfOnly.scss */
 p.TOC6 {
   color: pink;
 }
 
-/* line 14, sass/importPartials.scss */
+/* line 14, Sass_Stylesheets/anywherePartials.scss */
 body {
   font-size: 16px;
 }
 @media print {
-  /* line 14, sass/importPartials.scss */
+  /* line 14, Sass_Stylesheets/anywherePartials.scss */
   body {
     font-size: 10.5pt;
     font-family: Verdana;
@@ -2224,7 +2213,7 @@ body {
   }
 }
 
-/* line 24, sass/importPartials.scss */
+/* line 24, Sass_Stylesheets/anywherePartials.scss */
 hr {
   margin-top: 0;
   border-bottom-color: #f5f5f5;
@@ -2233,36 +2222,36 @@ hr {
   font-family: Tahoma, sans-serif;
 }
 
-/* line 32, sass/importPartials.scss */
+/* line 32, Sass_Stylesheets/anywherePartials.scss */
 html {
   font-size: 100%;
 }
 
-/* line 36, sass/importPartials.scss */
+/* line 36, Sass_Stylesheets/anywherePartials.scss */
 #changebar {
   border-left: solid 5px #000000;
   padding-left: 5px;
 }
 
-/* line 41, sass/importPartials.scss */
+/* line 41, Sass_Stylesheets/anywherePartials.scss */
 #changebar2 {
   border-left: solid 5px #cc00ff;
   padding-left: 5px;
 }
 
-/* line 47, sass/importPartials.scss */
+/* line 47, Sass_Stylesheets/anywherePartials.scss */
 a,
 a:link {
   color: #477bd3;
   text-decoration: none;
 }
 
-/* line 52, sass/importPartials.scss */
+/* line 52, Sass_Stylesheets/anywherePartials.scss */
 a:hover {
   color: #8db6ff;
 }
 
-/* line 56, sass/importPartials.scss */
+/* line 56, Sass_Stylesheets/anywherePartials.scss */
 a:visited {
   color: #7649ce;
 }

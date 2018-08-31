@@ -73,14 +73,15 @@
 		display: block;
 		height: 60px;
 		background: #f5f5f5 none;
+		-pie-background: #f5f5f5;
 	}
 
 	#responsiveHeader .logo
 	{
 		margin: auto;
 		height: 100%;
-		background-repeat: no-repeat;
 		background-position: center center;
+		background-repeat: no-repeat;
 		background: none;
 	}
 
@@ -113,7 +114,15 @@
 	{
 		overflow-y: auto;
 		overflow-x: hidden;
-		background-color: #f1f1f1;
+		background-repeat: repeat;
+		background: #ebebeb none;
+		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
+		background: -webkit-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
+		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	#normalLoginBtn
@@ -132,6 +141,7 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ebebeb 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ebebeb, #f3f3f3);
 	}
 
 	#contentBodyInner
@@ -153,8 +163,16 @@
 
 	.button
 	{
-		background-repeat: no-repeat;
 		background-position: center center;
+		background-repeat: no-repeat;
+		background: #ececec;
+		background: -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.login-button.feedback-required
@@ -208,7 +226,6 @@
 		text-shadow: none;
 		-webkit-text-shadow: none;
 		-moz-text-shadow: none;
-		background-clip: padding-box;
 		background: #707070;
 		background: -moz-linear-gradient(top, #898782 0%, #898782 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#898782), color-stop(100%,#898782));
@@ -216,6 +233,8 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
+		background-clip: padding-box;
 	}
 
 	.tabs-nav li#TocTab,
@@ -252,6 +271,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tree li div span a
@@ -326,6 +346,7 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	.tabs-panel-search
@@ -708,10 +729,12 @@
 	body
 	{
 		background: #f5f5f5 none;
+		-pie-background: #f5f5f5;
 	}
 
 	#browseSequences.tabs-panel-content
 	{
+		background-repeat: repeat;
 		background: #ebebeb none;
 		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -719,10 +742,12 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	#community.tabs-panel-content
 	{
+		background-repeat: repeat;
 		background: #ebebeb none;
 		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -730,10 +755,12 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	#glossary.tabs-panel-content
 	{
+		background-repeat: repeat;
 		background: #ebebeb none;
 		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -741,10 +768,12 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	#index.tabs-panel-content
 	{
+		background-repeat: repeat;
 		background: #ebebeb none;
 		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -752,6 +781,7 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	#index .tree-node.tree-node-expanded > div
@@ -789,6 +819,7 @@
 
 	#search.tabs-panel-content
 	{
+		background-repeat: repeat;
 		background: #ebebeb none;
 		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -796,10 +827,12 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	#toc.tabs-panel-content
 	{
+		background-repeat: repeat;
 		background: #ebebeb none;
 		background: -moz-linear-gradient(top, #ebebeb 0%, #ebebeb 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#ebebeb));
@@ -807,6 +840,7 @@
 		background: -o-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: -ms-linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
 		background: linear-gradient(top, #ebebeb 0%,#ebebeb 100%);
+		-pie-background: linear-gradient(#ebebeb, #ebebeb);
 	}
 
 	.tree-node.tree-node-collapsed > div
@@ -892,6 +926,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tabs-nav li#CommunityTab.tabs-nav-active
@@ -903,6 +938,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tabs-nav li#GlossaryTab.tabs-nav-active
@@ -914,6 +950,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tabs-nav li#IndexTab.tabs-nav-active
@@ -925,6 +962,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tabs-nav li#SearchTab.tabs-nav-active
@@ -936,6 +974,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tabs-nav li#TocTab.tabs-nav-active
@@ -947,6 +986,7 @@
 		background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
 		background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+		-pie-background: linear-gradient(#ffffff, #f3f3f3);
 	}
 
 	.tabs-nav li.tabs-nav-inactive .tabs-nav-text
@@ -963,6 +1003,7 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
 	}
 
 	.tabs-nav li#CommunityTab.tabs-nav-inactive
@@ -974,6 +1015,7 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
 	}
 
 	.tabs-nav li#GlossaryTab.tabs-nav-inactive
@@ -985,6 +1027,7 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
 	}
 
 	.tabs-nav li#IndexTab.tabs-nav-inactive
@@ -996,6 +1039,7 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
 	}
 
 	.tabs-nav li#SearchTab.tabs-nav-inactive
@@ -1007,6 +1051,7 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
 	}
 
 	.tabs-nav li#TocTab.tabs-nav-inactive
@@ -1018,6 +1063,7 @@
 		background: -o-linear-gradient(top, #898782 0%,#898782 100%);
 		background: -ms-linear-gradient(top, #898782 0%,#898782 100%);
 		background: linear-gradient(top, #898782 0%,#898782 100%);
+		-pie-background: linear-gradient(#898782, #898782);
 	}
 
 	#search-field::-webkit-input-placeholder
@@ -1042,92 +1088,172 @@
 
 	.button.collapse-all-button
 	{
-		
+		background: #ececec url('Images/collapse.png') no-repeat center center;
+		background: url('Images/collapse.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/collapse.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/collapse.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/collapse.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/collapse.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/collapse.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.current-topic-index-button
 	{
-		
+		background-repeat: no-repeat;
+		background: #ececec;
+		background: -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.edit-user-profile-button
 	{
-		
+		background: #ececec url('Images/edit-profile.png') no-repeat center center;
+		background: url('Images/edit-profile.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/edit-profile.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/edit-profile.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/edit-profile.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/edit-profile.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/edit-profile.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/edit-profile.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.expand-all-button
 	{
-		
+		background: #ececec url('Images/expand.png') no-repeat center center;
+		background: url('Images/expand.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/expand.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/expand.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/expand.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/expand.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/expand.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.login-button
 	{
-		
+		background: #ececec url('Images/login.png') no-repeat center center;
+		background: url('Images/login.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/login.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/login.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/login.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/login.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/login.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/login.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.next-topic-button
 	{
-		
+		background: #ececec url('Images/navigate-next.png') no-repeat center center;
+		background: url('Images/navigate-next.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/navigate-next.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/navigate-next.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/navigate-next.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/navigate-next.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/navigate-next.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.previous-topic-button
 	{
-		
+		background: #ececec url('Images/navigate-previous.png') no-repeat center center;
+		background: url('Images/navigate-previous.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/navigate-previous.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/navigate-previous.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/navigate-previous.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/navigate-previous.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/navigate-previous.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.print-button
 	{
-		
+		background: #ececec url('Images/printer.png') no-repeat center center;
+		background: url('Images/printer.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/printer.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/printer.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/printer.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/printer.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/printer.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.remove-highlight-button
 	{
-		
+		background: #ececec url('Images/highlight.png') no-repeat center center;
+		background: url('Images/highlight.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/highlight.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/highlight.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/highlight.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/highlight.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/highlight.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.select-language-button
 	{
-		
+		background: #ececec url('Images/select-language.png') no-repeat center center;
+		background: url('Images/select-language.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/select-language.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/select-language.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/select-language.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/select-language.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/select-language.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.select-skin-button
 	{
-		
+		background: #ececec url('Images/select-skin.png') no-repeat center center;
+		background: url('Images/select-skin.png') no-repeat center center, -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/select-skin.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ececec));
+		background: url('Images/select-skin.png') no-repeat center center, -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+		background: url('Images/select-skin.png') no-repeat center center, -o-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/select-skin.png') no-repeat center center, -ms-linear-gradient(top, #ffffff 0%,#ececec 100%);
+		background: url('Images/select-skin.png') no-repeat center center, linear-gradient(top, #ffffff 0%,#ececec 100%);
+		-pie-background: url('Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
 	}
 
 	.button.topic-ratings-button
 	{
-		
+		background: transparent url('Images/star-full.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Images/star-full.png') no-repeat center center;
 	}
 
 	.button.topic-ratings-empty-button
 	{
-		
+		background: transparent url('Images/star-empty.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Images/star-empty.png') no-repeat center center;
 	}
 
 	.toolbar-button-drop-down
 	{
-		
+		background-color: #FFFFFF;
 	}
 
 	.toolbar-button-drop-down.select-language-drop-down
 	{
-		
+		background-color: #FFFFFF;
 	}
 
 	.toolbar-button-drop-down.select-language-drop-down ul li:hover
 	{
-		
+		background-color: #E5EFF7;
 	}
 
 	.toolbar-button-drop-down.select-skin-drop-down
 	{
-		
+		background-color: #FFFFFF;
 	}
 
 	.toolbar-button-drop-down.select-skin-drop-down ul li:hover
 	{
-		
+		background-color: #E5EFF7;
 	}
 
 	.button-separator

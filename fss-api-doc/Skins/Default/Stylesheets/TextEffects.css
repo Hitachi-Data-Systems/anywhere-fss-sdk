@@ -296,10 +296,10 @@ a.MCToggler_Open.MCTogglerHotSpot
 	position: absolute;
 	z-index: 50;
 	color: #707070;
-	border-top: solid 4px #00FFFFFF;
-	border-right: solid 4px #00FFFFFF;
-	border-bottom: solid 4px #00FFFFFF;
-	border-left: solid 4px #00FFFFFF;
+	border-top: solid 4px transparent;
+	border-right: solid 4px transparent;
+	border-bottom: solid 4px transparent;
+	border-left: solid 4px transparent;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
@@ -387,8 +387,6 @@ a.MCToggler_Open.MCTogglerHotSpot
 .button
 {
 	line-height: 22px;
-	position: relative;
-	/* need this to workaround CSS3PIE known issue: http://css3pie.com/documentation/known-issues/#z-index */
 	margin: 0px 4px;
 	float: left;
 	cursor: pointer;
@@ -486,6 +484,7 @@ a.MCToggler_Open.MCTogglerHotSpot
 	padding-right: 12px;
 	padding-top: 0px;
 	padding-bottom: 0px;
+	background-repeat: no-repeat;
 	width: auto;
 	background: #ececec;
 	background: -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
@@ -997,6 +996,32 @@ span.SearchHighlight10
 	._Skins_SideMenu
 	{
 		display: none !important;
+	}
+
+	.menu.mc-component
+	{
+		display: none !important;
+	}
+
+	.off-canvas-content
+	{
+		box-shadow: none !important;
+	}
+
+	.sidenav-wrapper
+	{
+		display: none !important;
+	}
+
+	.sidenav-layout
+	{
+		height: auto !important;
+		display: block !important;
+	}
+
+	*
+	{
+		overflow: visible !important;
 	}
 }
 

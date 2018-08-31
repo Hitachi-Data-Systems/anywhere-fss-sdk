@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="User endpoints">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="welcomeUser.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedHeader%]">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta data-productName="Hitachi Content Platform Anywhere" />
+        <meta data-productVersion="4.0" />
+        <meta data-docTitle="HCP Anywhere File Sync and Share API Reference Guide" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>List restore points</title>
-        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/V2-Online-Help.css" rel="stylesheet" />
         <script src="../../../Resources/Scripts/custom.modernizr.js">
         </script>
@@ -27,50 +31,43 @@
         </script>
     </head>
     <body class="MasterPage">
-        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">Hitachi Content Platform Anywhere File Sync and Share API Reference Guide</span>
+        <p class="MasterPageDocTitle"><span class="GlobalVariablesDocTitle">HCP Anywhere File Sync and Share API Reference Guide</span>
         </p>
         <div class="bodyContent">
             <div class="MasterPageBreadcrumbs">
-                <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="fssapi-userIntro.htm">User endpoints</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">List restore points</span>
+                <div class="nocontent">
+                    <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                    </div>
                 </div>
             </div>
             <hr width="100%" size="0" align="center" />
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <h1>List restore points</h1>
-                <p>This request lists the restore points available to a user.  A restore point is a snapshot of the filesystem at a certain point in time. Restore points can be used in a number of other requests. For example, you can a restore point in a <a href="../path/fssapi-pathDownloadMultiple.htm">path/zip</a> request to download files and folders as they were at a previous point in time.</p>
-                <p>The restore points available to a user are determined by the HCP Anywhere administrator. In the HCP Anywhere Management Console, restore points are set through extended versioning.</p>
-                <h2>URI</h2>
-                <p class="APICode">/fss/public/user/restorePoints/list</p>
-                <h2>HTTP Method</h2>
-                <p class="APICode">POST</p>
-                <h2>Parameters</h2>
-                <p>There are no parameters for a <span class="FileName">user/restorePoints/list</span> request.</p>
-                <h2>Example Request</h2>
-                <p>This section contains an example of a <span class="FileName">user/restorePoints/list</span> request in cURL. In this request, the authentication token is "abc=". In an actual request, the authentication token is much longer.</p>
-                <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/user/restorePoints/list -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">3.0.3</span>"</p>
-                <h2>Example Response</h2>
-                <p>This section contains an example of a response to a successful <span class="FileName">user/restorePoints/list</span> request.</p>
-                <p class="APICode">{<br />&#160;&#160;&#160;&#160;"restorePoints": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"point": 1481173199999<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"point": 1481086799999<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
-                <h2>Description of Response</h2>
-                <p>This section describes the  contents of a <span class="FileName">user/restorePoints/list</span> response.</p>
-                <p><span class="GUI">Response content:</span>
-                </p>
-                <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>resoterPoints (required): Object</p>
-                <p class="NormalIndent-1">A list of the user's available restore points.</p>
-                <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>point (required): Long</p>
-                <p class="NormalIndent-2">A restore point available to the user. </p>
-            </div>
-            <div class="MasterPageBodyAndMiniTOCProxyContainer">
-                <!--the inline styling on the MiniTOC proxy is OK.  It does NOT appear in the output and the mc-toc-depth property is required for including the correct items in the Mini TOC-->
-            </div>
-            <!--BeginHideIfBranded-->
+            <h1>List restore points</h1>
+            <p>This request lists the restore points available to a user.  A restore point is a snapshot of the filesystem at a certain point in time. Restore points can be used in a number of other requests. For example, you can a restore point in a <a href="../path/fssapi-pathDownloadMultiple.htm">path/zip</a> request to download files and folders as they were at a previous point in time.</p>
+            <p>The restore points available to a user are determined by the HCP Anywhere administrator. In the HCP Anywhere Management Console, restore points are set through extended versioning.</p>
+            <h2>URI</h2>
+            <p class="APICode">/fss/public/user/restorePoints/list</p>
+            <h2>HTTP Method</h2>
+            <p class="APICode">POST</p>
+            <h2>Parameters</h2>
+            <p>There are no parameters for a <span class="FileName">user/restorePoints/list</span> request.</p>
+            <h2>Example Request</h2>
+            <p>This section contains an example of a <span class="FileName">user/restorePoints/list</span> request in cURL. In this request, the access token is "abc=". In an actual request, the access token is much longer.</p>
+            <p class="APICode">curl -kiX POST https://anywhere.example.com/fss/public/user/restorePoints/list -H "Authorization: Bearer abc=" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-HCPAW-FSS-API-VERSION: <span class="fssAPIVariablesFSS&#160;API Version">4.0.0</span>"</p>
+            <h2>Example Response</h2>
+            <p>This section contains an example of a response to a successful <span class="FileName">user/restorePoints/list</span> request.</p>
+            <p class="APICode">{<br />&#160;&#160;&#160;&#160;"restorePoints": [<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"point": 1481173199999<br />&#160;&#160;&#160;&#160;&#160;&#160;},<br />&#160;&#160;&#160;&#160;&#160;&#160;{<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"point": 1481086799999<br />&#160;&#160;&#160;&#160;&#160;&#160;}<br />&#160;&#160;&#160;]<br />}</p>
+            <h2>Description of Response</h2>
+            <p>This section describes the  contents of a <span class="FileName">user/restorePoints/list</span> response.</p>
+            <p><span class="GUI">Response content:</span>
+            </p>
+            <p class="ListBullet-1" data-mc-autonum="•"><span class="autonumber"><span class="Bullet1">•</span></span>resoterPoints (required): Object</p>
+            <p class="NormalIndent-1">A list of the user's available restore points.</p>
+            <p class="ListBullet-2" data-mc-autonum="o"><span class="autonumber"><span class="Bullet2">o</span></span>point (required): Long</p>
+            <p class="NormalIndent-2">A restore point available to the user. </p>
             <p class="MasterPageLegalLinks"><i><a href="../../Resources/WebHelpLegal/Trademark.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Trademarks</a> and <a href="../../Resources/WebHelpLegal/LegalDisclaimer.htm" class="MCTopicPopup MCTopicPopupHotSpot a aPopup" data-mc-width="auto" data-mc-height="auto">Legal Disclaimer</a></i>
             </p>
-            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2017</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Data Systems Corporation</span>. All rights reserved.</span>
-            </p>
-            <!--EndHideIfBranded-->
-            <!--BeginHideIfBranded-->
-            <!--EndHideIfBranded-->
+            <p style="font-size: 9pt;margin-left:0;"><span style="font-size: 8pt;">© <span class="GlobalVariablesCopyright">2018</span> <span class="GlobalVariablesCopyrightOwner">Hitachi Vantara Corporation</span>. All rights reserved.</span>
+            </p><a style="display: none;" href="../../Resources/Fonts/calibril.ttf">Calibri Light.ttf</a>
         </div>
     </body>
 </html>
