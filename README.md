@@ -32,14 +32,14 @@ The SDK is availble at [Maven Central](http://search.maven.org/#search%7Cga%7C1%
 <dependency>
   <groupId>com.hds.hcpaw</groupId>
   <artifactId>anywhere-fss-sdk</artifactId>
-  <version>4.5.0.43</version>
+  <version>4.6.0.43</version>
 </dependency>
 ```
 
 ### Gradle
 ```
 dependencies 
-    compile 'com.hds.hcpaw:anywhere-fss-sdk:4.5.0.43'
+    compile 'com.hds.hcpaw:anywhere-fss-sdk:4.6.0.43'
 }
 ```
 
